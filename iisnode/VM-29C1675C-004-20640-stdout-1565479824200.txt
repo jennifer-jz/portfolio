@@ -1,0 +1,105 @@
+{ common: 
+   { title: 'Zhao',
+     url: 'http://localhost',
+     port: '2019',
+     path: 'E:/web/node/zhao3/' },
+  commontype: { title: 'text', url: 'text', port: 'text', path: 'text' },
+  commonquestions: 
+   { title: 'Enter Sitename',
+     url: 'Enter Site Url',
+     port: 'Enter Site Port',
+     path: 'Enter Root Path' },
+  database: 
+   { user: 'root',
+     host: 'localhost',
+     password: 'root',
+     database: '' },
+  databasetype: { user: 'text', password: 'text', host: 'text', database: 'text' },
+  databasequestions: 
+   { user: 'Enter Database Username',
+     password: 'Enter Database Password',
+     host: 'Enter Database Host',
+     database: 'Enter Database Name' },
+  html: {} }
+[0mGET / [32m200 [0m32.141 ms - -[0m
+[0mGET /stylesheets/mystyle.css [36m304 [0m4.261 ms - -[0m
+[0mGET /javascripts/demo.js [36m304 [0m0.723 ms - -[0m
+[0mGET /javascripts/home.js [36m304 [0m0.425 ms - -[0m
+[0mGET /img/scidict2-min.jpg [32m200 [0m4.711 ms - 30082[0m
+[0mGET /img/usercenter2-min.jpg [32m200 [0m1.026 ms - 34147[0m
+[0mGET /png/prjmanage2-min.png [32m200 [0m0.942 ms - 53376[0m
+[0mGET /img/yeepay2-min.jpg [32m200 [0m1.062 ms - 45844[0m
+[0mGET /img/orderonline2-min.jpg [32m200 [0m0.848 ms - 58858[0m
+[0mGET /img/seat-min.jpg [32m200 [0m0.997 ms - 27226[0m
+[0mGET /png/workbench1-min.jpg [32m200 [0m0.778 ms - 61372[0m
+[0mGET /png/docgeneration-min.jpg [32m200 [0m0.871 ms - 58910[0m
+[0mGET /experience [32m200 [0m8.684 ms - -[0m
+[0mGET /stylesheets/mystyle.css [36m304 [0m0.462 ms - -[0m
+$arr.html at router { title: 'Products Developed-Juanjuan Zhao\'s Home',
+  tpl: 'product',
+  smarty: 
+   { block: {},
+     break: false,
+     capture: {},
+     continue: false,
+     counter: {},
+     cycle: {},
+     foreach: {},
+     section: {},
+     now: 1565479834,
+     const: {},
+     config: {},
+     current_dir: '/',
+     template: 'common/footer.tpl',
+     ldelim: '{',
+     rdelim: '}',
+     version: '2.9' },
+  subject: '',
+  activedemo: '',
+  activelink: '',
+  category: '',
+  tag: '' }
+[0mGET /product [32m200 [0m7.374 ms - -[0m
+[0mGET /stylesheets/mystyle.css [36m304 [0m0.486 ms - -[0m
+[0mGET /png/workbench-tasklist.jpg [32m200 [0m106.838 ms - 175150[0m
+[0mGET /javascripts/product.js [32m200 [0m0.783 ms - 2080[0m
+[0mGET /png/scidict.png [32m200 [0m137.046 ms - 97415[0m
+[0mGET /img/samplecenter2.jpg [32m200 [0m11.310 ms - 169638[0m
+[0mGET /png/submitorder2.jpg [32m200 [0m116.524 ms - 169611[0m
+[0mGET /png/docgeneration.jpg [32m200 [0m117.327 ms - 237048[0m
+[0mGET /img/usercenter2.jpg [32m200 [0m108.607 ms - 120821[0m
+[0mGET /png/invoicesystem.png [32m200 [0m5.210 ms - 175553[0m
+[0mGET /img/yeepay2.jpg [32m200 [0m10.975 ms - 68045[0m
+[0mGET /img/seat.jpg [32m200 [0m2.175 ms - 44164[0m
+[0mGET /png/docprocess1.jpg [32m200 [0m2.012 ms - 196979[0m
+[0mGET /png/hrmanage.png [32m200 [0m1.759 ms - 168697[0m
+[0mGET /png/prjmanage2.png [32m200 [0m3.343 ms - 119083[0m
+[0mGET /png/ordermanage.jpg [32m200 [0m3.642 ms - 240078[0m
+[0mGET /img/scidict2.jpg [32m200 [0m2.026 ms - 112060[0m
+[0mGET /img/scientrans2.jpg [32m200 [0m2.310 ms - 180276[0m
+[0mGET /png/workbench1.jpg [32m200 [0m12.132 ms - 252342[0m
+[0mGET /capability [32m200 [0m4.963 ms - -[0m
+[0mGET /stylesheets/mystyle.css [36m304 [0m0.784 ms - -[0m
+[0mGET /img/orderonline2.jpg [32m200 [0m133.128 ms - 81003[0m
+[0mGET /png/workbench-edit.jpg [32m200 [0m346.769 ms - 264325[0m
+[0mGET /nlp [32m200 [0m3.975 ms - -[0m
+[0mGET /stylesheets/mystyle.css [36m304 [0m0.610 ms - -[0m
+[0mGET /img/textanalysis.jpg [32m200 [0m3.419 ms - 117873[0m
+[0mGET /img/term_pair_check.png [32m200 [0m2.062 ms - 153250[0m
+[0mGET /javascripts/courseprjs.js [32m200 [0m0.804 ms - 2955[0m
+[0mGET /img/related_word.png [32m200 [0m2.030 ms - 24791[0m
+[0mGET /img/find_replace.png [32m200 [0m16.508 ms - 80134[0m
+[0mGET /aboutme [32m200 [0m3.502 ms - -[0m
+[0mGET /stylesheets/mystyle.css [36m304 [0m0.488 ms - -[0m
+[0mGET /home [32m200 [0m8.217 ms - -[0m
+[0mGET /img/usercenter2-min.jpg [36m304 [0m1.001 ms - -[0m
+[0mGET /stylesheets/mystyle.css [36m304 [0m1.550 ms - -[0m
+[0mGET /img/scidict2-min.jpg [36m304 [0m0.355 ms - -[0m
+[0mGET /javascripts/demo.js [36m304 [0m0.473 ms - -[0m
+[0mGET /javascripts/home.js [36m304 [0m1.174 ms - -[0m
+[0mGET /img/orderonline2-min.jpg [36m304 [0m1.952 ms - -[0m
+[0mGET /png/prjmanage2-min.png [36m304 [0m0.878 ms - -[0m
+[0mGET /img/seat-min.jpg [36m304 [0m1.434 ms - -[0m
+[0mGET /png/workbench1-min.jpg [36m304 [0m0.988 ms - -[0m
+[0mGET /img/yeepay2-min.jpg [36m304 [0m1.813 ms - -[0m
+[0mGET /png/docgeneration-min.jpg [36m304 [0m0.492 ms - -[0m

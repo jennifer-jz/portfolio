@@ -1,0 +1,35 @@
+{ common: 
+   { title: 'Zhao',
+     url: 'http://localhost',
+     port: '2019',
+     path: 'C:/D/web/node/zhao3/' },
+  commontype: { title: 'text', url: 'text', port: 'text', path: 'text' },
+  commonquestions: 
+   { title: 'Enter Sitename',
+     url: 'Enter Site Url',
+     port: 'Enter Site Port',
+     path: 'Enter Root Path' },
+  database: 
+   { user: 'root',
+     host: 'localhost',
+     password: 'root',
+     database: '' },
+  databasetype: { user: 'text', password: 'text', host: 'text', database: 'text' },
+  databasequestions: 
+   { user: 'Enter Database Username',
+     password: 'Enter Database Password',
+     host: 'Enter Database Host',
+     database: 'Enter Database Name' },
+  html: {} }
+[0mGET / [32m200 [0m93.327 ms - -[0m
+[0mGET /stylesheets/mystyle.css [32m200 [0m8.664 ms - 2971[0m
+[0mGET /stylesheets/gallery.css [32m200 [0m14.821 ms - 4849[0m
+[0mGET /img/scidict2.jpg [32m200 [0m6.122 ms - 112060[0m
+[0mGET /png/prjmanage2.png [32m200 [0m21.256 ms - 119083[0m
+[0mGET /img/usercenter2.jpg [32m200 [0m21.087 ms - 120821[0m
+[0mGET /img/seat.jpg [32m200 [0m5.029 ms - 44164[0m
+[0mGET /img/orderonline2.jpg [32m200 [0m4.685 ms - 81003[0m
+[0mGET /img/yeepay2.jpg [32m200 [0m3.016 ms - 68045[0m
+[0mGET /png/docgeneration.jpg [32m200 [0m24.858 ms - 237048[0m
+[0mGET /png/workbench1.jpg [32m200 [0m78.442 ms - 252342[0m
+[0mGET /favicon.ico [33m404 [0m1884.406 ms - 1008[0m

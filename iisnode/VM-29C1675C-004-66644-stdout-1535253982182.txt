@@ -1,0 +1,41 @@
+{ common: 
+   { title: 'Zhao',
+     url: 'http://localhost',
+     port: '2019',
+     path: 'C:/D/web/node/zhao3/' },
+  commontype: { title: 'text', url: 'text', port: 'text', path: 'text' },
+  commonquestions: 
+   { title: 'Enter Sitename',
+     url: 'Enter Site Url',
+     port: 'Enter Site Port',
+     path: 'Enter Root Path' },
+  database: 
+   { user: 'root',
+     host: 'localhost',
+     password: 'root',
+     database: '' },
+  databasetype: { user: 'text', password: 'text', host: 'text', database: 'text' },
+  databasequestions: 
+   { user: 'Enter Database Username',
+     password: 'Enter Database Password',
+     host: 'Enter Database Host',
+     database: 'Enter Database Name' },
+  html: {} }
+[0mGET / [32m200 [0m30.342 ms - -[0m
+[0mGET /stylesheets/gallery.css [36m304 [0m4.246 ms - -[0m
+[0mGET /img/scidict2.jpg [36m304 [0m0.775 ms - -[0m
+[0mGET /img/usercenter2.jpg [36m304 [0m0.677 ms - -[0m
+[0mGET /png/prjmanage2.png [36m304 [0m0.608 ms - -[0m
+[0mGET /stylesheets/mystyle.css [36m304 [0m0.658 ms - -[0m
+[0mGET /img/orderonline2.jpg [36m304 [0m0.568 ms - -[0m
+[0mGET /img/yeepay2.jpg [36m304 [0m0.639 ms - -[0m
+[0mGET /png/docgeneration.jpg [36m304 [0m1.211 ms - -[0m
+[0mGET /img/seat.jpg [36m304 [0m0.629 ms - -[0m
+[0mGET /png/workbench1.jpg [36m304 [0m0.591 ms - -[0m
+[0mGET /nlp [32m200 [0m8.276 ms - -[0m
+[0mGET /stylesheets/gallery.css [36m304 [0m1.351 ms - -[0m
+[0mGET /stylesheets/mystyle.css [36m304 [0m1.684 ms - -[0m
+[0mGET /img/textanalysis.jpg [32m200 [0m9.802 ms - 117873[0m
+[0mGET /img/term_pair_check.png [32m200 [0m1.366 ms - 153250[0m
+[0mGET /img/related_word.png [32m200 [0m0.968 ms - 24791[0m
+[0mGET /img/find_replace.png [32m200 [0m0.822 ms - 80134[0m
