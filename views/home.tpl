@@ -11,9 +11,11 @@
 
 <div class="intro">
   <div class="name"><h4>Juanjuan Zhao</h4>
-    <a href="doc/resume.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i></a><a href="doc/resume.docx" target="_blank"><i class="fa fa-file-word-o"></i></a><a href="https://www.linkedin.com/in/jennifer-zhao-dallas" target="_blank"><i class="fa fa-linkedin-square" style="font-size:26px"></i></a>
+    <a href="doc/resume.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i></a><a href="doc/resume.docx" target="_blank"><i class="fa fa-file-word-o"></i></a><a href="{$contactInfo.linkedIn}" target="_blank"><i class="fa fa-linkedin-square" style="font-size:26px"></i></a>
   </div>
-  <p>IT Professional with 8 years of experience developing or leading development of Enterprise Resource Planning (ERP) software system, Computer-Aided Translation (CAT) workbench, online bilingual dictionary, and e-commerce website using C#, asp.Net, SQL, Node, Express, React, Typescript, heavily exposed to Java, Javascript ES6, HTML/CSS, LESS, Bootstrap, jQuery, Ajax, Office Programming, and involved with NLP and ML.</p>
+  <p>
+    {$selfIntroText}
+  </p>
 </div>
 
   <div class="row">

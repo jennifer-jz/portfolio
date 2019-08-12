@@ -14,16 +14,21 @@
 	</div>
 
 <div class="about">
-<p>I am an IT professional with 8 years of experience developing or leading development of Enterprise Resource Planning (ERP) software system, Computer-Aided Translation (CAT) workbench, online bilingual dictionary, and e-commerce website using C#, asp.Net, SQL, Node, Express, React, Typescript, heavily exposed to Java, Javascript ES6, HTML/CSS, LESS, Bootstrap, jQuery, Ajax, Office Programming, and involved with Natural Language Processing and Machine Learning.</p>
-<p>I’m currently open for positions in the southern bay area, CA as a senior software engineer, full-stack developer, or technical lead. </p>
-<p>My current location is Mountain View, CA.</p>
+<p>
+	I am an {$selfIntroText}
+</p>
+<p>
+	I’m currently open for positions in the southern bay area, CA as a senior software engineer, 
+	full-stack developer, or technical lead. 
+</p>
+<p>My current location is {$contactInfo.location}.</p>
 <p>If you are impressed with my portfolio, please feel free to contact me.</p>
 </div>
 
 <div class="contactme">
-	<p><a><i class="fa fa-envelope-square"></i></a><a href="mailto:jesczhao@gmail.com?Subject=Work Info" target="_top">jesczhao@gmail.com</a></p>
-	<p><a><i class="fa fa-linkedin-square"></i></a><a href="https://www.linkedin.com/in/jennifer-zhao-24907a69/" target="_blank">https://www.linkedin.com/in/jennifer-zhao-ca</a></p>
-	<p><a><i class="fa fa-phone-square"></i></a>469-863-2621</p>
+	<p><a><i class="fa fa-envelope-square"></i></a><a href="mailto:{$contactInfo.email}?Subject=Work Info" target="_top">{$contactInfo.email}</a></p>
+	<p><a><i class="fa fa-linkedin-square"></i></a><a href="{$contactInfo.linkedIn}" target="_blank">{$contactInfo.linkedIn}</a></p>
+	<p><a><i class="fa fa-phone-square"></i></a>{$contactInfo.phone}</p>
 </div>
 </div>
 </div>

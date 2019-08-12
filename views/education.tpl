@@ -15,7 +15,7 @@
 	</div>
     
 	<div class="inlinelist courses">
-	<div class="subtitle">Courses <em>GPA: 3.576</em></div>
+	<div class="subtitle">Courses</div>
 	<div>
 		<i class="fa fa-caret-right"></i>
 		<p>Artificial Intelligence</p>

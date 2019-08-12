@@ -9,6 +9,8 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 
+var constants = require('./shared/constants');
+
 var app = express();
 
 $arr = [];
@@ -20,6 +22,9 @@ $arr.html = {};
 $arr.html.rootpath = $arr.common.url+":"+$arr.common.port;
 
 $arr.common.path = __dirname;
+
+$arr.html.selfIntroText = constants.selfIntroText;
+$arr.html.contactInfo = constants.contactInfo;
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
