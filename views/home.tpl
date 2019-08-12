@@ -10,8 +10,16 @@
 <div class="container-fluid bg-3 works">
 
 <div class="intro">
-  <div class="name"><h4>Juanjuan Zhao</h4>
-    <a href="doc/resume.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i></a><a href="doc/resume.docx" target="_blank"><i class="fa fa-file-word-o"></i></a><a href="{$contactInfo.linkedIn}" target="_blank"><i class="fa fa-linkedin-square" style="font-size:26px"></i></a>
+  <div class="name"><h4>Juanjuan Zhao (also Jennifer)</h4>
+    <a href="{$filePath.resumePdfPath}" target="_blank">
+      <i class="fa fa-file-pdf-o"></i>
+    </a>
+    <a href="{$filePath.resumeDocPath}" target="_blank">
+      <i class="fa fa-file-word-o"></i>
+    </a>
+    <a href="{$contactInfo.linkedIn}" target="_blank">
+      <i class="fa fa-linkedin-square" style="font-size:26px"></i>
+    </a>
   </div>
   <p>
     {$selfIntroText}

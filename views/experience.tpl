@@ -8,7 +8,28 @@
 {include file="common/nav_shade.tpl" nocache}
 
 <div class="container-fluid bg-3 works">
-	<p>2018.08 –Present <span>Senior Lead Software Engineer</span>DevelopScripts LLC., Richardson, Texas</p>
+	<p>2019.02 –Present <span>Senior Software Engineer</span>Shape Security, Mountain View, CA</p>
+
+	<table>
+		<tr>
+			<td>&nbsp;</td>
+			<td>
+				<p><span>Development and Transformation of Alert System Web Portal</span></p>
+				<ul>
+					<li>Alerts data visualization by customizing D3 libraries</li>
+					<li>Website usability improvement by innovating features</li>
+					<li>Incrementally refactor legacy code</li>
+					<li>Address tech debts by introducing new technologies: React Hooks & Styled Components</li>
+					<li>Improve API performance by identifying bottlenecks of query building in Django</li>
+					<li>Code review, release deployment, and mentor juniors</li>
+				</ul>
+				<p><span>Tech Stack</span> Node, React, Redux, Webpack, Babel, Python Django, MySQL, 
+				Scss, Styled-Components, D3, ESLint, Git, Jenkins, Docker, Kubernetes, Google Cloud</p>
+			</td>
+		</tr>
+	</table>
+
+	<p>2018.08 – 2018.12 <span>Senior Lead Software Engineer</span>DevelopScripts, Richardson, Texas</p>
 
 	<table>
 		<tr>
@@ -16,10 +37,11 @@
 			<td>
 				<p><span>Lead Development of Website Features and Tech-Training</span></p>
 				<ul>
-					<li>Lead development and best practices in implementing website features</li>
-					<li>Recommend solutions to client requirement</li>
-					<li>Website issues troubleshooting and urgent bugs fixing</li>
-					<li>Progressive refactor code repository</li>
+					<li>Develop e-Commerce website features and online auction functionalities</li>
+					<li>Lead development and recommend best coding practices of the team</li>
+					<li>Root cause analysis and urgent fix of website issues</li>
+					<li>Requirement engineering based on communication with direct clients</li>
+					<li>Refactor code repository progressively</li>
 					<li>Interview, tech-training and knowledge sharing</li>
 				</ul>
 				<p><span>Tech Stack</span> Node, Express, MySQL, Bootstrap, Javascript, JSON, Html5, CSS3, jQuery, Ajax, PHP, GIT version control and SVN, AWS, Assembla, Ubuntu Linux</p>
@@ -27,15 +49,15 @@
 		</tr>
 	</table>
 
-	<p>2018.01 –2018.07 <span>Full-Stack Developer</span>VoidRay INC., Richardson, Texas</p>
+	<p>2018.01 –2018.07 <span>Full-Stack Developer</span>VoidRay (now Vega), Richardson, Texas</p>
 
 	<table>
 		<tr>
 			<td>&nbsp;</td>
 			<td>
-				<p><span>Development of Web UI and Backend of a Medication Dispensing System using Node, React, Typescript, Less, Postgres, Typeorm and Mongo</span></p>
+				<p><span>Full Stack Development of Medication Dispensing System using Node, React, Typescript, Less, Postgres, Typeorm and Mongo</span></p>
 				<ul>
-					<li>Implement front-end features based on UI mockups</li>
+					<li>Implement website features based on UI mockups</li>
 					<li>Create restful API endpoint; Create database model & repository</li>
 					<li>Create reusable React component</li>
 					<li>Pull request review on GitHub</li>
@@ -46,7 +68,7 @@
 		</tr>
 	</table>
 
-	<p>2017.08 –2017.12 <span>Node.JS Developer & Development Lead</span>DevelopScripts LLC., Richardson, Texas</p>
+	<p>2017.08 –2017.12 <span>Node.JS Developer & Development Lead</span>DevelopScripts, Richardson, Texas</p>
 
 	<table>
 		<tr>
@@ -73,11 +95,32 @@
 			<td>
 				<p><span>Title: Senior Software Engineer</span></p>
 				<p><span>Development of an <a href="{$rootpath}/product/erp" target="_blank">Enterprise Resource Planning (ERP) System</a> for Translation Automation using .NET C# and MSSQL</span></p>
-				<p>Develop an enterprise management system for translation automation, comprised of functional modules of order management, client management, HR management, translation project management, proofreading quality monitoring, management, and bilingual corpus management. Microsoft <a href="{$rootpath}/product/msword" target="_blank">Office Programming</a> is used in text preprocessing and generation for translation automation. Sentence splitting, Chinese word segmentation, and phrase chunking are implemented.</p>
+				<p>
+					Develop an enterprise management system for translation automation, including subsystems of order 
+					management, client management, HR management, translation project management, translation and 
+					editing quality monitoring system, and bilingual corpus management. Implement text extraction 
+					and generation from/to MS Office Word using Microsoft 
+					<a href="{$rootpath}/product/msword" target="_blank">Office Programming</a>. 
+					Develop fully owned NLP algorithms for sentence splitting, Chinese word segmentation, and phrase chunking, tailored 
+					for bilingual text.
+				</p>
 				<p><span>Development of a <a href="{$rootpath}/product/scidict" target="_blank">Bilingual Dictionary</a> using .NET Web</span></p>
-				<p>Develop a wholly owned bilingual dictionary, <a href="http://www.scidict.org" target="_blank">SCIdict</a>, with fast response to fuzzy query match. Browser server architecture is implemented. The query server networks with browser and remote client-side to return query result. IR technologies are tailored to prioritize terminology ranking. Reverse indexing is used considering query efficiency and single server scenario. Automatic failure check and restart of query server are also implemented.</p>
+				<p>
+					Develop a wholly owned bilingual dictionary, <a href="http://www.scidict.org" target="_blank">SCIdict</a>, 
+					with less than 1 sec. response time to fuzzy string match request among up to 100 million entries. 
+					Implement a dictionary server that feeds data for both web UI and desktop client applications. 
+					Information retrieval technologies are used to prioritize terminology ranking. Inverted index is 
+					used to boost query performance in larger than million entries. Automatic failure check and 
+					restart of query server are also implemented.
+				</p>
 				<p><span>Development of a <a href="{$rootpath}/product/workbench" target="_blank">Computer-Aided Translation Workbench</a> using .NET C#</span></p>
-				<p>Develop a computer-aided translation workbench, using client server architecture. The client-side workbench is a translation editing interface, supported with task management, bilingual dictionary, as well as spell check, grammatical check and phrase check. Real-time bilingual sentence alignment is implemented on the editing interface. NLP related Text analysis is implemented on the remote server.</p>
+				<p>
+					Develop a computer-aided translation workbench, as a desktop client software that helps translators 
+					and editors in the translation workflow. Implement modules of task management, bilingual dictionary 
+					desktop client, spell check, grammatical check, terminology extraction and translation suggestion, 
+					and phrase translation check, as well as a real-time bilingual sentence alignment toolkit on the 
+					editor’s interface to enable full text editing with reference to source.
+				</p>
 			</td>
 		</tr>
 		<tr>

@@ -23,8 +23,7 @@ $arr.html.rootpath = $arr.common.url+":"+$arr.common.port;
 
 $arr.common.path = __dirname;
 
-$arr.html.selfIntroText = constants.selfIntroText;
-$arr.html.contactInfo = constants.contactInfo;
+$arr.html = {...$arr.html, ...constants};
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

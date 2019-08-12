@@ -6,19 +6,21 @@ Less, Scss, Styled Components, React Hooks, D3, jQuery, Ajax, and involved in Ja
 NLP and ML, currently passionate in full stack web development and architecture, fully open to latest technologies.
 `;
 
-var email = 'jesczhao@gmail.com';
-var phone = '650-314-3134';
-var location = 'Mountain View, CA';
-var linkedIn = 'https://www.linkedin.com/in/jennifer-zhao-ca';
-
 var contactInfo = {
-    email,
-    phone,
-    location,
-    linkedIn,
+    email: 'jesczhao@gmail.com',
+    phone: '650-314-3134',
+    location: 'Mountain View, CA',
+    futureLocation: 'Austin, TX or The Southern Bay Area',
+    linkedIn: 'https://www.linkedin.com/in/jennifer-zhao-ca',
 };
+
+var filePath = {
+    resumeDocPath: 'doc/resume.docx',
+    resumePdfPath: 'doc/resume.pdf',
+}
 
 module.exports = {
     selfIntroText,
     contactInfo,
+    filePath,
 };
