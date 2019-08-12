@@ -19,7 +19,7 @@ $arr = conf['section'];
 $arr.html = {};
 $arr.html.rootpath = $arr.common.url+":"+$arr.common.port;
 
-// console.log('$arr global', $arr);
+$arr.common.path = __dirname;
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -59,3 +59,5 @@ module.exports = app;
 
 var server = http.createServer(app).listen(2019);
 //var server = http.createServer(app).listen(process.env.PORT);
+
+console.log(`Server running at ${$arr.html.rootpath}`);
