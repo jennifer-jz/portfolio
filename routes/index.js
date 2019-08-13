@@ -1,34 +1,33 @@
 var express = require('express');
 var router = express.Router();
 var common = require('../module/common');
-
 var hometitle = "Juanjuan Zhao's Home";
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   $arr.html.title = hometitle;
   $arr.html.tpl = "home";
-  common.loadTemplate(req, res, $arr.html,'home.tpl');
+  common.loadTemplate(req, res, $arr.html);
 });
 
 router.get('/home', function(req, res, next) {
   $arr.html.title = hometitle;
   $arr.html.tpl = "home";
-  common.loadTemplate(req, res, $arr.html,'home.tpl');
+  common.loadTemplate(req, res, $arr.html);
 });
 
 router.get(['/education', '/education/:subject'], function(req, res, next) {
   $arr.html.title = "Education-" + hometitle;
   $arr.html.tpl = "education";
   $arr.html.subject = req.params.subject; 
-  common.loadTemplate(req, res, $arr.html,'education.tpl');
+  common.loadTemplate(req, res, $arr.html);
 });
 
 router.get('/experience', function(req, res, next) {
   $arr.html.title = "Work Experiences-" + hometitle;
   $arr.html.tpl = "experience";
   $arr.html.subject = ""; 
-  common.loadTemplate(req, res, $arr.html,'experience.tpl');
+  common.loadTemplate(req, res, $arr.html);
 });
 
 router.get(['/product', '/product/:activedemo'], function(req, res, next) {
@@ -50,27 +49,26 @@ router.get(['/product', '/product/:activedemo'], function(req, res, next) {
     res.redirect('/product');
   }
 
-  console.log('$arr.html at router', $arr.html);
-  common.loadTemplate(req, res, $arr.html,'product.tpl');
+  common.loadTemplate(req, res, $arr.html);
 });
 
 router.get('/capability', function(req, res, next) {
   $arr.html.title = "Capability-" + hometitle;
   $arr.html.tpl = "capability";
-  common.loadTemplate(req, res, $arr.html,'capability.tpl');
+  common.loadTemplate(req, res, $arr.html);
 });
 
 router.get('/solution', function(req, res, next) {
   $arr.html.title = "Solution-" + hometitle;
   $arr.html.tpl = "solution";
-  common.loadTemplate(req, res, $arr.html,'solution.tpl');
+  common.loadTemplate(req, res, $arr.html);
 });
 
 router.get('/nlp', function(req, res, next) {
   $arr.html.title = "Natural Language Processing-" + hometitle;
   $arr.html.tpl = "nlp";
   $arr.html.subject = ""; 
-  common.loadTemplate(req, res, $arr.html,'nlp.tpl');
+  common.loadTemplate(req, res, $arr.html);
 });
 
 router.get('/resume', function(req, res, next) {
@@ -81,8 +79,7 @@ router.get('/resume', function(req, res, next) {
 router.get('/aboutme', function(req, res, next) {
   $arr.html.title = "Contact Me-" + hometitle;
   $arr.html.tpl = "aboutme";
-  common.loadTemplate(req, res, $arr.html,'aboutme.tpl');
+  common.loadTemplate(req, res, $arr.html);
 });
-
 
 module.exports = router;

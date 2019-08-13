@@ -1,15 +1,10 @@
 var nsmarty = require('nsmarty');
-exports.loadTemplate = function(req,res,arr,filename) {
-// arr.file = filename;
-	//arr.headered = headered;  
-	 
-	 nsmarty.tpl_path = $arr['common'].path + '/views/'; 
-	 // console.log(2);
-	  nsmarty.clearCache(filename);
 
-    function onlyUnique(value, index, self) { 
-    	return self.indexOf(value) === index;
-    }
+exports.loadTemplate = function(req,res,arr) {
+    var filename = arr.tpl + '.tpl';
+
+    nsmarty.tpl_path = $arr['common'].path + '/views/'; 
+    nsmarty.clearCache(filename);
 
     res.setHeader('Content-Type', 'text/html; charset=UTF-8');   
     stream = nsmarty.assign(filename, arr);

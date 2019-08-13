@@ -13,17 +13,27 @@ var constants = require('./shared/constants');
 
 var app = express();
 
-$arr = [];
 var fs = require('fs'), ini = require('ini'); 
 
 var conf = ini.parse(fs.readFileSync('./config.ini', 'utf-8'));
-$arr = conf['section'];
-$arr.html = {};
-$arr.html.rootpath = $arr.common.url+":"+$arr.common.port;
 
-$arr.common.path = __dirname;
+var { common } = conf['section'];
+var { version = '' } = common;
 
-$arr.html = {...$arr.html, ...constants};
+var rootSubPath = version ? '/' + version : '';
+var rootpath = common.url+":"+common.port + rootSubPath;
+
+var html = {
+  rootpath,
+  rootSubPath,
+  ...constants,
+};
+
+$arr = {
+  ...conf['section'],
+  common: { ...common, path: __dirname },
+  html,
+}
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -35,11 +45,10 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(rootSubPath || '/', express.static(path.join(__dirname, 'public')));
 
-
-app.use('/', index);
-app.use('/users', users);
+app.use(rootSubPath || '/', index);
+app.use(rootSubPath + '/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
