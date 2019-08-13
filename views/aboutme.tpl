@@ -26,9 +26,9 @@
 	I am an {$selfIntroText}
 </p>
 <p>
-	I basically spent 10 years in China working in translation industry, out of which 7 years are technology focused, 
+	I basically spent 10 years in China working in translation industry, out of which 7 years were technology focused, 
 	including 3 years as a web development manager and 4 years as a senior software engineer. All my efforts in the period 
-	are to build an automated system to help innovate traditional translation workflow and enhance core competitiveness of 
+	were to build an automated system to help innovate traditional translation workflow and enhance core competitiveness of 
 	Cross Language.
 </p>
 <p>
