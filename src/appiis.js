@@ -1,6 +1,6 @@
 var http = require('http');
 
-var app = require('./app');
+var app = require('./app_v1');
 require('./global');
 
 module.exports = app;

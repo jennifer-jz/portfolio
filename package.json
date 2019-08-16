@@ -4,7 +4,11 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "app": "node app.js"
+    "app": "node app.js",
+    "index": "node ./src/index.js",
+    "build": "webpack --mode production",
+    "dev": "webpack-dev-server --open --mode development",
+    "lint": "eslint src/**/*.js"
   },
   "dependencies": {
     "body-parser": "~1.18.2",
@@ -17,6 +21,25 @@
     "morgan": "~1.9.0",
     "nsmarty": "0.0.1",
     "q": "^1.5.1",
+    "react-router-dom": "^5.0.1",
     "serve-favicon": "~2.4.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel": "^6.23.0",
+    "babel-loader": "^8.0.6",
+    "eslint": "^6.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-hot-loader": "^4.12.11",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.8.0"
   }
 }
