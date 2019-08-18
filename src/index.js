@@ -1,15 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
-import Router from './modules/Router';
-
-const title = 'React with Webpack and Babel';
+import { Router } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
+import RouterComponent from './modules/common/Router';
+import './public/stylesheets/style.css';
+import './public/stylesheets/mystyle.css';
 
 ReactDOM.render(
-  <BrowserRouter>
-    <Router />
-  </BrowserRouter>,
+  <Router history={createBrowserHistory()}>
+    <RouterComponent />
+  </Router>,
   document.getElementById('root')
 );
- 
+
 module.hot.accept();

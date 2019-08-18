@@ -7,20 +7,23 @@ NLP and ML, currently passionate in full stack web development and architecture,
 `;
 
 const contactInfo = {
-    email: 'jesczhao@gmail.com',
-    phone: '650-314-3134',
-    location: 'Mountain View, CA',
-    futureLocation: 'Austin, TX or The Southern Bay Area',
-    linkedIn: 'https://www.linkedin.com/in/jennifer-zhao-ca',
+  email: 'jesczhao@gmail.com',
+  phone: '650-314-3134',
+  location: 'Mountain View, CA',
+  futureLocation: 'Austin, TX or The Southern Bay Area',
+  linkedIn: 'https://www.linkedin.com/in/jennifer-zhao-ca',
 };
 
 const filePath = {
-    resumeDocPath: 'doc/resume.docx',
-    resumePdfPath: 'doc/resume.pdf',
-}
+  resumeDocPath: 'doc/resume.docx',
+  resumePdfPath: 'doc/resume.pdf',
+};
+
+const homeTitle = "Juanjuan Zhao's Home";
 
 export {
-    selfIntroText,
-    contactInfo,
-    filePath,
+  selfIntroText,
+  contactInfo,
+  filePath,
+  homeTitle,
 };
