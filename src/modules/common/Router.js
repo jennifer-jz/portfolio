@@ -18,7 +18,7 @@ const Router = () => {
         <Switch>
           <Route exact path='/' component={Home} />
           <Route path='/home' component={Home} />
-          <Route path='/education/:subject'
+          <Route path='/education'
             render={(props) =>
               <Education
                 title="Education"

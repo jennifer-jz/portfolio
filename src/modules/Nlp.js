@@ -9,6 +9,6 @@ const Nlp = () => {
   return (
     <div />
   );
-}
+};
 
 export default Nlp;
