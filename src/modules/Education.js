@@ -2,10 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import DocumentMeta from 'react-document-meta';
 import { getMetaData } from '../utils';
+import { Link } from '../components';
 
 const Education = (props) => {
   const meta = getMetaData(props);
   const { subject } = props;
+  console.log('props in education', props);
   return (
     <DocumentMeta {...meta}>
       <div className="container-fluid bg-3 works">
@@ -20,24 +22,24 @@ const Education = (props) => {
           <div>
             <i className="fa fa-caret-right"></i>
             <p>Artificial Intelligence</p>
-            <p className={ subject === "nlp" ? "active" : "" }><a href="{$rootpath}/education/nlp">Natural Language Processing</a></p>
-            <p className={ subject === "ir" ? "active" : "" }><a href="{$rootpath}/education/ir">Information Retrieval</a></p>
-            <p className={ subject === "ml" ? "active" : "" }><a href="{$rootpath}/education/ml">Machine Learning</a></p>
+            <p className={ subject === "nlp" ? "active" : "" }><Link to="/education/nlp">Natural Language Processing</Link></p>
+            <p className={ subject === "ir" ? "active" : "" }><Link to="/education/ir">Information Retrieval</Link></p>
+            <p className={ subject === "ml" ? "active" : "" }><Link to="/education/ml">Machine Learning</Link></p>
             <p>Computer Vision</p>
           </div>
           <div>
             <i className="fa fa-caret-right"></i>
-            <p className={ subject === "algorithm" ? "active" : "" }><a href="{$rootpath}/education/algorithm">Algorithm Analysis and Data Structures</a></p>
+            <p className={ subject === "algorithm" ? "active" : "" }><Link to="/education/algorithm">Algorithm Analysis and Data Structures</Link></p>
             <p>Database Design</p>
-            <p className={ subject === "os" ? "active" : "" }><a href="{$rootpath}/education/os">Operating Systems Concepts</a></p>
+            <p className={ subject === "os" ? "active" : "" }><Link to="/education/os">Operating Systems Concepts</Link></p>
             <p>Discrete Structure</p>
             <p>Computer Architecture</p>
           </div>
           <div>
             <i className="fa fa-caret-right"></i>
             <p>Cloud Computing</p>
-            <p className={ subject === "web" ? "active" : "" }><a href="{$rootpath}/education/web">Web Programming Languages</a></p>
-            <p className={ subject === "hci" ? "active" : "" }><a href="{$rootpath}/education/hci">Human Computer Interaction</a></p>
+            <p className={ subject === "web" ? "active" : "" }><Link to="/education/web">Web Programming Languages</Link></p>
+            <p className={ subject === "hci" ? "active" : "" }><Link to="/education/hci">Human Computer Interaction</Link></p>
           </div>
         </div>
 
@@ -47,7 +49,7 @@ const Education = (props) => {
               <div className="panel panel-info">
                 <div className="panel-heading">
                   <h4 className="panel-title">
-                    <a href="{$rootpath}/education">Course Projects</a>
+                    <Link to="/education">Course Projects</Link>
                   </h4>
                 </div>
                 <div id="courseprj">
@@ -59,7 +61,11 @@ const Education = (props) => {
                     <p className="os java unix">2017.02 – 2017.04 <span>Simulation of Multiple Processes and IPC</span></p>
                     <p className="os java unix">2017.03 – 2017.04 <span>Simulation of Post Office with Threads and Semaphores</span></p>
                     <p className="os java unix">2017.03 – 2017.04 <span>Implementing Network Communication Using Sockets</span></p>
-                    <p className="web bootstrap html css bootstrap">2017.05 – 2017.06 <span>A Personal Website </span><a href="http://www.utdallas.edu/~jxz161030" target="_blank"><i className="fa fa-link"></i></a></p>
+                    <p className="web bootstrap html css bootstrap">2017.05 – 2017.06 <span>A Personal Website </span>
+                      <Link href="http://www.utdallas.edu/~jxz161030">
+                        <i className="fa fa-link"></i>
+                      </Link>
+                    </p>
                     <p className="web bootstrap html css php mysql jquery">2017.06 – 2017.07 <span>Form Validation for User Login</span></p>
                     <p className="web ajax php html css mysql">2017.06 – 2017.07 <span>Populating Historical Baby Names from External Data Source</span></p>
                     <p className="web ajax php html css mysql bootstrap javascript jquery">2017.06 – 2017.07 <span>A Music Concert Ticket Ordering Website</span></p>

@@ -34,7 +34,10 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx']
+    extensions: ['*', '.js', '.jsx'],
+    alias: {
+      shared: path.resolve(__dirname, 'src/shared')
+    },
   },
   output: {
     path: __dirname + '/dist',

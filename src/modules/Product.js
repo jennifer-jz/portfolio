@@ -9,13 +9,13 @@ const Product = (props) => {
   return (
     <DocumentMeta {...meta}>
       <div id="myBtnContainer">
-        <Link id="all" className="btn btn-secondary active" href="{$rootpath}/product"> All</Link>
-        <Link id="featured" className="btn btn-secondary" href="{$rootpath}/product/featured"> Featured</Link>
-        <Link id="workbench" className="btn btn-secondary" href="{$rootpath}/product/workbench"> Translation Workbench</Link>
-        <Link id="erp" className="btn btn-secondary" href="{$rootpath}/product/erp"> ERP System</Link>
-        <Link id="website" className="btn btn-secondary" href="{$rootpath}/product/website"> Web Products</Link>
-        <Link id="msword" className="btn btn-secondary" href="{$rootpath}/product/msword"> MS Word Development</Link>
-        <Link id="scidict" className="btn btn-secondary" href="{$rootpath}/product/scidict"> SCIDict</Link>
+        <Link id="all" className="btn btn-secondary active" to="/product"> All</Link>
+        <Link id="featured" className="btn btn-secondary" to="/product/featured"> Featured</Link>
+        <Link id="workbench" className="btn btn-secondary" to="/product/workbench"> Translation Workbench</Link>
+        <Link id="erp" className="btn btn-secondary" to="/product/erp"> ERP System</Link>
+        <Link id="website" className="btn btn-secondary" to="/product/website"> Web Products</Link>
+        <Link id="msword" className="btn btn-secondary" to="/product/msword"> MS Word Development</Link>
+        <Link id="scidict" className="btn btn-secondary" to="/product/scidict"> SCIDict</Link>
       </div>
 
       <div className="demos container-fluid bg-3 text-center works">
@@ -38,7 +38,7 @@ const Product = (props) => {
             <div className="content">
               <p className="title">Translator's Workbench</p>
               <Link href="{$rootpath}/png/workbench1.jpg" title="Translation Workbench - Task List"><p className="demo"><i className="material-icons">image</i></p></Link>
-              <Link id="workbench_trans3" href="{$rootpath}/product/workbench_trans3" title="Translation Workbench - Task List"><img src="{$rootpath}/png/workbench1.jpg" className="img-responsive" alt="Image" /></Link>
+              <Link id="workbench_trans3" to="/product/workbench_trans3" title="Translation Workbench - Task List"><img src="{$rootpath}/png/workbench1.jpg" className="img-responsive" alt="Image" /></Link>
               <div className="tags"></div>
             </div>
           </div>
@@ -46,7 +46,7 @@ const Product = (props) => {
             <div className="content">
               <p className="title">Editor's Workbench</p>
               <Link href="{$rootpath}/png/workbench-edit.jpg" title="Translation Workbench - Task List"><p className="demo"><i className="material-icons">image</i></p></Link>
-              <Link id="workbench_edit3" href="{$rootpath}/product/workbench_edit3" title="Translation Workbench - Task List"><img src="{$rootpath}/png/workbench-edit.jpg" className="img-responsive" alt="Image" /></Link>
+              <Link id="workbench_edit3" to="/product/workbench_edit3" title="Translation Workbench - Task List"><img src="{$rootpath}/png/workbench-edit.jpg" className="img-responsive" alt="Image" /></Link>
               <div className="tags"></div>
             </div>
           </div>
@@ -55,7 +55,7 @@ const Product = (props) => {
             <div className="content">
               <p className="title">Web Order Submission</p>
               <Link href="{$rootpath}/img/orderonline2.jpg" title="ASP.NET Order Submission"><p className="demo"><i className="material-icons">image</i></p></Link>
-              <Link id="ordersubmit" href="{$rootpath}/product/ordersubmit" title="ASP.NET Order Submission"><img src="{$rootpath}/img/orderonline2.jpg" className="img-responsive" alt="Image" /></Link>
+              <Link id="ordersubmit" to="/product/ordersubmit" title="ASP.NET Order Submission"><img src="{$rootpath}/img/orderonline2.jpg" className="img-responsive" alt="Image" /></Link>
               <div className="tags"></div>
             </div>
           </div>
@@ -63,7 +63,7 @@ const Product = (props) => {
             <div className="content">
               <p className="title">Internal Order Submission</p>
               <Link href="{$rootpath}/png/submitorder2.jpg" title="Internal Order Submission"><p className="demo"><i className="material-icons">image</i></p></Link>
-              <Link id="ordersubmit2" href="{$rootpath}/product/ordersubmit2" title="Internal Order Submission"><img src="{$rootpath}/png/submitorder2.jpg" className="img-responsive" alt="Image" /></Link>
+              <Link id="ordersubmit2" to="/product/ordersubmit2" title="Internal Order Submission"><img src="{$rootpath}/png/submitorder2.jpg" className="img-responsive" alt="Image" /></Link>
               <div className="tags"></div>
             </div>
           </div>
@@ -72,7 +72,7 @@ const Product = (props) => {
             <div className="content">
               <p className="title">Order Management System</p>
               <Link href="{$rootpath}/png/ordermanage.jpg" title="C# Order Management System"><p className="demo"><i className="material-icons">image</i></p></Link>
-              <Link id="quote3" href="{$rootpath}/product/quote3" title="C# Order Management System"><img src="{$rootpath}/png/ordermanage.jpg" className="img-responsive" alt="Image" /></Link>
+              <Link id="quote3" to="/product/quote3" title="C# Order Management System"><img src="{$rootpath}/png/ordermanage.jpg" className="img-responsive" alt="Image" /></Link>
               <div className="tags"></div>
             </div>
           </div>
@@ -80,7 +80,7 @@ const Product = (props) => {
             <div className="content">
               <p className="title">Project Management System</p>
               <Link href="{$rootpath}/png/prjmanage2.png" title="C# Project Management System"><p className="demo"><i className="material-icons">image</i></p></Link>
-              <Link id="taskassign_trans2" href="{$rootpath}/product/taskassign_trans2" title="C# Project Management System"><img src="{$rootpath}/png/prjmanage2.png" className="img-responsive" alt="Image" /></Link>
+              <Link id="taskassign_trans2" to="/product/taskassign_trans2" title="C# Project Management System"><img src="{$rootpath}/png/prjmanage2.png" className="img-responsive" alt="Image" /></Link>
               <div className="tags"></div>
             </div>
           </div>
@@ -95,7 +95,7 @@ const Product = (props) => {
           <div className="col-sm-3 erp featured csharp mssql">
             <div className="content">
               <Link href="{$rootpath}/png/invoicesystem.png" title="C# Invoice System"><p className="title">Invoice System</p></Link>
-              <Link id="invoice" href="{$rootpath}/product/invoice" title="C# Invoice System"><img src="{$rootpath}/png/invoicesystem.png" className="img-responsive" alt="Image" /></Link>
+              <Link id="invoice" to="/product/invoice" title="C# Invoice System"><img src="{$rootpath}/png/invoicesystem.png" className="img-responsive" alt="Image" /></Link>
               <div className="tags"></div>
             </div>
           </div>
@@ -103,7 +103,7 @@ const Product = (props) => {
             <div className="content">
               <p className="title">MS Word Document Processing</p>
               <Link href="{$rootpath}/png/docprocess1.jpg" title="MS Word Document Processing"><p className="demo"><i className="material-icons">image</i></p></Link>
-              <Link id="docprocess2" href="{$rootpath}/product/docprocess2" title="MS Word Document Processing"><img src="{$rootpath}/png/docprocess1.jpg" className="img-responsive" alt="Image" /></Link>
+              <Link id="docprocess2" to="/product/docprocess2" title="MS Word Document Processing"><img src="{$rootpath}/png/docprocess1.jpg" className="img-responsive" alt="Image" /></Link>
               <div className="tags"></div>
             </div>
           </div>
@@ -111,7 +111,7 @@ const Product = (props) => {
             <div className="content">
               <p className="title">MS Word Document Generation</p>
               <Link href="{$rootpath}/png/docgeneration.jpg" title="MS Word Document Generation"><p className="demo"><i className="material-icons">image</i></p></Link>
-              <Link id="docgenerate" href="{$rootpath}/product/docgenerate" title="MS Word Document Generation"><img src="{$rootpath}/png/docgeneration.jpg" className="img-responsive" alt="Image" /></Link>
+              <Link id="docgenerate" to="/product/docgenerate" title="MS Word Document Generation"><img src="{$rootpath}/png/docgeneration.jpg" className="img-responsive" alt="Image" /></Link>
               <div className="tags"></div>
             </div>
           </div>
@@ -144,7 +144,7 @@ const Product = (props) => {
             <div className="content">
               <p className="title">Payment API</p>
               <Link href="{$rootpath}/img/yeepay2.jpg" title="Connection to Payment API"><p className="demo"><i className="material-icons">image</i></p></Link>
-              <Link id="paymentAPI" href="{$rootpath}/product/paymentAPI" title="Connection to Payment API"><img src="{$rootpath}/img/yeepay2.jpg" className="img-responsive" alt="Image" /></Link>
+              <Link id="paymentAPI" to="/product/paymentAPI" title="Connection to Payment API"><img src="{$rootpath}/img/yeepay2.jpg" className="img-responsive" alt="Image" /></Link>
               <div className="tags"></div>
             </div>
           </div>

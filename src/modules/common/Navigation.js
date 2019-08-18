@@ -1,22 +1,44 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import * as Paths from 'shared/routePaths';
+import { withRouter } from 'react-router-dom';
 
 const Navigation = (props) => {
-  const { activeTab } = props;
-  console.log('navigator props', props);
+  const { pathname } = props.history.location;
+  function isPathMatched(path) {
+    return pathname.startsWith(path);
+  }
+  function getClassName(path) {
+    return isPathMatched(path) ? "active" : "";
+  }
+
   return (
     <nav className="navbar navbar-lights">
       <div className="container">
         <div className="" id="myNavbar">
           <ul className="nav nav-tabs">
-            <li className={activeTab === "home" ? "active" : ""}><a href="/home">Home</a></li>
-            <li className={activeTab === "experience" ? "active" : ""}><a title="Experience" href="/experience">Experience</a></li>
-            <li className={activeTab === "product" ? "active" : ""}><a title="Product Demo" href="/product">Demo</a></li>
-            <li className={activeTab === "capability" ? "active" : ""}><a title="Capability" href="/capability">Capability</a></li>
-            <li className={activeTab === "solution" ? "active" : ""}><a title="Solution" href="/solution">Tech Solution</a></li>
-            <li className={activeTab === "nlp" ? "active" : ""}><a title="Natural Language Processing" href="/nlp">NLP</a></li>
-            <li className={activeTab === "education" ? "active" : ""}><a href="/education">Education</a></li>
-            <li className={activeTab === "aboutme" ? "active" : ""}><a title="About Me" href="/aboutme">About Me</a></li>
+            <li className={getClassName(Paths.HOME)}><a href={Paths.HOME}>Home</a></li>
+            <li className={getClassName(Paths.EXPERIENCE)}>
+              <a title="Experience" href={Paths.EXPERIENCE}>Experience</a>
+            </li>
+            <li className={getClassName(Paths.PRODUCT)}>
+              <a title="Product Demo" href={Paths.PRODUCT}>Demo</a>
+            </li>
+            <li className={getClassName(Paths.CAPABILITY)}>
+              <a title="Capability" href={Paths.CAPABILITY}>Capability</a>
+            </li>
+            <li className={getClassName(Paths.SOLUTION)}>
+              <a title="Solution" href={Paths.SOLUTION}>Tech Solution</a>
+            </li>
+            <li className={getClassName(Paths.NLP)}>
+              <a title="Natural Language Processing" href={Paths.NLP}>NLP</a>
+            </li>
+            <li className={getClassName(Paths.EDUCATION)}>
+              <a href={Paths.EDUCATION}>Education</a>
+            </li>
+            <li className={getClassName(Paths.ABOUTME)}>
+              <a title="About Me" href={Paths.ABOUTME}>About Me</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -26,10 +48,10 @@ const Navigation = (props) => {
 
 Navigation.displayName = "Navigation";
 Navigation.propTypes = {
-  activeTab: PropTypes.string,
+  history: PropTypes.object,
 };
 Navigation.defaultProps = {
-  activeTab: '',
+  history: {},
 };
 
-export default Navigation;
+export default withRouter(Navigation);

@@ -18,7 +18,7 @@ const Router = () => {
         <Switch>
           <Route exact path='/' component={Home} />
           <Route path='/home' component={Home} />
-          <Route path='/education'
+          <Route path={['/education/:subject', '/education']}
             render={(props) =>
               <Education
                 title="Education"
@@ -26,8 +26,7 @@ const Router = () => {
                 {...props}
               />} />
           <Route path='/experience' component={Experience} />
-          <Route path='/product' component={Product} />
-          <Route path='/product/:activedemo' component={Product} />
+          <Route path={['/product/:activedemo', '/product']} component={Product} />
           <Route path='/capability' component={Capability} />
           <Route path='/solution' component={Solution} />
           <Route path='/nlp' component={Nlp} />
