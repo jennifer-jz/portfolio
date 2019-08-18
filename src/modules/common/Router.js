@@ -1,14 +1,14 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import Navigation from './Navigation';
-import Home from '../Home';
-import Education from '../Education';
-import Experience from '../Experience';
-import Product from '../Product';
-import Capability from '../Capability';
-import Solution from '../Solution';
-import Nlp from '../Nlp';
-import AboutMe from '../AboutMe';
+import Navigation from 'modules/common/Navigation';
+import Home from 'modules/Home';
+import Education from 'modules/Education';
+import Experience from 'modules/Experience';
+import Product from 'modules/Product';
+import Capability from 'modules/Capability';
+import Solution from 'modules/Solution';
+import Nlp from 'modules/Nlp';
+import AboutMe from 'modules/AboutMe';
 
 const Router = () => {
   return (
