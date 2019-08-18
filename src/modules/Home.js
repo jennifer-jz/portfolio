@@ -181,7 +181,7 @@ const Home = () => {
           <div className="content">
             <p className="title">Project Management System</p>
             <Link href="{$rootpath}/png/prjmanage2.png" title="C# Project Management System"><p className="demo"><i className="material-icons">image</i></p></Link>
-            <Link id="taskassign_trans2" href="javascript:;" title="C# Project Management System">
+            <Link id="taskassign_trans2" href="#" title="C# Project Management System">
               <img src="{$rootpath}/png/prjmanage2-min.png" className="img-responsive" alt="Image" />
             </Link>
             <div className="tags"></div>
@@ -191,7 +191,7 @@ const Home = () => {
           <div className="content">
             <p className="title">Payment API</p>
             <Link href="{$rootpath}/img/yeepay2.jpg" title="Connection to Payment API"><p className="demo"><i className="material-icons">image</i></p></Link>
-            <Link id="paymentAPI" href="javascript:;" title="Connection to Payment API">
+            <Link id="paymentAPI" href="#" title="Connection to Payment API">
               <img src="{$rootpath}/img/yeepay2-min.jpg" className="img-responsive" alt="Image" />
             </Link>
             <div className="tags"></div>
@@ -202,7 +202,7 @@ const Home = () => {
           <div className="content">
             <p className="title">Web Order Submission</p>
             <Link href="{$rootpath}/img/orderonline2.jpg" title="ASP.NET Order Submission"><p className="demo"><i className="material-icons">image</i></p></Link>
-            <Link id="ordersubmit" href="javascript:;" title="ASP.NET Order Submission">
+            <Link id="ordersubmit" href="#" title="ASP.NET Order Submission">
               <img src="{$rootpath}/img/orderonline2-min.jpg" className="img-responsive" alt="Image" />
             </Link>
             <div className="tags"></div>
@@ -221,7 +221,7 @@ const Home = () => {
           <div className="content">
             <p className="title">Translator's Workbench</p>
             <Link href="{$rootpath}/png/workbench1.jpg" title="Translation Workbench - Task List"><p className="demo"><i className="material-icons">image</i></p></Link>
-            <Link id="workbench_trans3" href="javascript:;" title="Translation Workbench - Task List">
+            <Link id="workbench_trans3" href="#" title="Translation Workbench - Task List">
               <img src="{$rootpath}/png/workbench1-min.jpg" className="img-responsive" alt="Image" />
             </Link>
             <div className="tags"></div>
@@ -231,7 +231,7 @@ const Home = () => {
           <div className="content">
             <p className="title">MS Word Document Generation</p>
             <Link href="{$rootpath}/png/docgeneration.jpg" title="MS Word Document Generation"><p className="demo"><i className="material-icons">image</i></p></Link>
-            <Link id="docgenerate" href="javascript:;" title="MS Word Document Generation">
+            <Link id="docgenerate" href="#" title="MS Word Document Generation">
               <img src="{$rootpath}/png/docgeneration-min.jpg" className="img-responsive" alt="Image" />
             </Link>
             <div className="tags"></div>

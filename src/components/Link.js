@@ -9,16 +9,28 @@ const Link = (props) => {
     target: "_blank",
     rel: "noopener noreferrer",
   } : {};
+
+  if (to) {
+    return (
+      <RouterLink
+        to={to}
+        className={className}
+        {...otherProps}
+      >
+        {children}
+      </RouterLink>
+    );
+  }
+
   return (
-    <RouterLink
+    <a
       href={href}
-      to={to}
       className={className}
       {...openNewOption}
       {...otherProps}
     >
       {children}
-    </RouterLink>
+    </a>
   );
 };
 
