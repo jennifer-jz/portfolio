@@ -22,7 +22,7 @@ const Navigation = (props) => {
       </div>
     </nav>
   );
-}
+};
 
 Navigation.displayName = "Navigation";
 Navigation.propTypes = {

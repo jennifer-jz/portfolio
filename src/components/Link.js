@@ -4,7 +4,7 @@ import { Link as RouterLink } from 'react-router-dom';
 
 const Link = (props) => {
   const { href, to, openNew, className, children, ...otherProps } = props;
-  const shouldOpenNew = openNew !== undefined || !!href;
+  const shouldOpenNew = openNew !== undefined ? openNew : !!href;
   const openNewOption = shouldOpenNew ? {
     target: "_blank",
     rel: "noopener noreferrer",

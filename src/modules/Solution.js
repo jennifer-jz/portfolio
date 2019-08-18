@@ -9,6 +9,6 @@ const Solution = () => {
   return (
     <div />
   );
-}
+};
 
 export default Solution;
