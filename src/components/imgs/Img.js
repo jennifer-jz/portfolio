@@ -6,7 +6,6 @@ const Img = (props) => {
   // eslint-disable-next-line no-unused-vars
   const { className, src, ...otherProps } = props;
   const obj = require(`../../public${src}`);
-  console.log('public/png/scidict.png', `public${src}`);
   //   const path = `src/public${src}`;
   //   const path = 'public/png/scidict.png';
   //   const obj = require('../../public/png/scidict.png');
@@ -15,7 +14,6 @@ const Img = (props) => {
     <img
       className={`img-responsive ${className}`}
       alt="Image"
-      //   src={objImg}
       src={obj}
       {...otherProps}
     />

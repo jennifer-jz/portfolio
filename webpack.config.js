@@ -41,21 +41,34 @@ module.exports = {
       //     }]
       //   },
       {
-        test: /\.(png|jpe?g|gif|doc|pdf)$/i,
+        test: /\.(png|jpe?g|gif|doc|pdf|swf)$/i,
         use: [
           {
             loader: 'file-loader',
             options: {
               url: true,
-              name: '[path][name].[ext]',
-            //   name: '[contenthash].[ext]',
-            //   name: '[path][name].[ext]',
-            //   name: 'png/[name].[ext]',
-            //   name(file) {
-            //     if (ext === 'png') {
-            //       return 
-            //     }
-            //   }
+              //   name: '[name].[ext]',
+              //   name: '[contenthash].[ext]',
+              //   name: '[path][name].[ext]',
+              //   name: 'png/[name].[ext]',
+              //   name(file) {
+              //     if (ext === 'png') {
+              //       return 
+              //     }
+              //   }
+              name(file) {
+                console.log('file', file);
+                if (file.endsWith('png')) {
+                  return 'png/[name].[ext]'; 
+                } else if (file.endsWith('jpg') || file.endsWith('jpeg')) {
+                  return 'img/[name].[ext]';
+                } else if (file.endsWith('doc') || file.endsWith('pdf')) {
+                  return 'doc/[name].[ext]';
+                } else if (file.endsWith('swf')) {
+                  return 'swf/[name].[ext]';
+                }
+                return '[name].[ext]';
+              }
             },
           },
         ],
