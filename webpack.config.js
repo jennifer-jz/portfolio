@@ -1,6 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -31,6 +31,35 @@ module.exports = {
           'sass-loader', // compiles Sass to CSS, using Node Sass by default
         ],
       },
+      //   {
+      //     test: /\.(png|jp(e*)g|svg)$/i,  
+      //     use: [{
+      //       loader: 'url-loader',
+      //       options: { 
+      //         limit: 1000000, // Convert images < 8kb to base64 strings
+      //       } 
+      //     }]
+      //   },
+      {
+        test: /\.(png|jpe?g|gif|doc|pdf)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              url: true,
+              name: '[path][name].[ext]',
+            //   name: '[contenthash].[ext]',
+            //   name: '[path][name].[ext]',
+            //   name: 'png/[name].[ext]',
+            //   name(file) {
+            //     if (ext === 'png') {
+            //       return 
+            //     }
+            //   }
+            },
+          },
+        ],
+      },
     ]
   },
   resolve: {
@@ -40,6 +69,7 @@ module.exports = {
       modules: path.resolve(__dirname, 'src/modules'),
       components: path.resolve(__dirname, 'src/components'),
       utils: path.resolve(__dirname, 'src/utils'),
+      public: path.resolve(__dirname, 'src/public'),
     },
   },
   output: {
@@ -52,7 +82,7 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: "./src/public/index.html",
       filename: "./index.html"
-    })
+    }),
   ],
   devServer: {
     contentBase: path.join(__dirname, 'dist'),

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import DocumentMeta from 'react-document-meta';
 import { getMetaData } from '../utils';
 import { Link } from '../components';
+import { Img } from 'components/imgs';
 
 const Nlp = (props) => {
   const meta = getMetaData(props);
@@ -52,25 +53,25 @@ const Nlp = (props) => {
                             <p>Text Analysis</p>
                           </Link>
                           <Link title="Text Analysis (NLP)" href="http://www.scidict.org/termtrans/">
-                            <img src="{$rootpath}/img/textanalysis.jpg" className="img-responsive" alt="Image" />
+                            <Img src="/img/textanalysis.jpg" className="img-responsive" alt="Image" />
                           </Link>
                         </div>
                         <div className="col-sm-3"> 
-                          <Link href="{$rootpath}/img/term_pair_check.png"><p>Translation Workbench</p></Link>
-                          <Link title="Translation Workbench" href="{$rootpath}/img/term_pair_check.png">
-                            <img src="{$rootpath}/img/term_pair_check.png" className="img-responsive" alt="Image" />
+                          <Link href="/img/term_pair_check.png"><p>Translation Workbench</p></Link>
+                          <Link title="Translation Workbench" href="/img/term_pair_check.png">
+                            <Img src="/img/term_pair_check.png" className="img-responsive" alt="Image" />
                           </Link>
                         </div>
                         <div className="col-sm-3"> 
-                          <Link href="{$rootpath}/img/related_word.png"><p>Word Suggestion</p></Link>
-                          <Link title="Word Suggestion" href="{$rootpath}/img/related_word.png">
-                            <img src="{$rootpath}/img/related_word.png" className="img-responsive" alt="Image" />
+                          <Link href="/img/related_word.png"><p>Word Suggestion</p></Link>
+                          <Link title="Word Suggestion" href="/img/related_word.png">
+                            <Img src="/img/related_word.png" className="img-responsive" alt="Image" />
                           </Link>
                         </div>
                         <div className="col-sm-3">
-                          <Link href="{$rootpath}/img/find_replace.png"><p>Keyword Highlight in Bilingual Texts</p></Link>
-                          <Link title="Keyword Highlight in Bilingual Texts" href="{$rootpath}/img/find_replace.png">
-                            <img src="{$rootpath}/img/find_replace.png" className="img-responsive" alt="Image" />
+                          <Link href="/img/find_replace.png"><p>Keyword Highlight in Bilingual Texts</p></Link>
+                          <Link title="Keyword Highlight in Bilingual Texts" href="/img/find_replace.png">
+                            <Img src="/img/find_replace.png" className="img-responsive" alt="Image" />
                           </Link>
                         </div>
                       </div>

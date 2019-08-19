@@ -63,6 +63,7 @@ const Router = () => {
               {...metaData.ABOUTME}
               {...props}
             />} />
+          <Route path="*" />
         </Switch>
       </div>
     </>
