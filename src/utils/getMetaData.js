@@ -1,14 +1,18 @@
-import { homeTitle } from '../shared/constants';
+import {
+  homeTitle,
+  homeDescription,
+  homeKeywords,
+} from 'shared/metaData';
 
 function getMetaData (props) {
   const { title, description, keywords } = props;
-  console.log('title', title);
+
   const meta = {
     title: `${title} - ${homeTitle}`,
-    description,
+    description: `${description} - ${homeDescription}`,
     meta: {
       name: {
-        keywords,
+        keywords: `${keywords} ${homeKeywords}`,
       }
     }
   };

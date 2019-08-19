@@ -9,6 +9,8 @@ import Capability from 'modules/Capability';
 import Solution from 'modules/Solution';
 import Nlp from 'modules/Nlp';
 import AboutMe from 'modules/AboutMe';
+import Paths from 'shared/routePaths';
+import metaData from 'shared/metaData';
 
 const Router = () => {
   return (
@@ -16,21 +18,51 @@ const Router = () => {
       <Navigation />
       <div className="mainbody">
         <Switch>
-          <Route exact path='/' component={Home} />
-          <Route path='/home' component={Home} />
-          <Route path={['/education/:subject', '/education']}
-            render={(props) =>
-              <Education
-                title="Education"
-                description="This is Education Page"
-                {...props}
-              />} />
-          <Route path='/experience' component={Experience} />
-          <Route path={['/product/:activedemo', '/product']} component={Product} />
-          <Route path='/capability' component={Capability} />
-          <Route path='/solution' component={Solution} />
-          <Route path='/nlp' component={Nlp} />
-          <Route path='/aboutme' component={AboutMe} />
+          <Route exact path={Paths.ROOT} render={(props) =>
+            <Home
+              {...metaData.ROOT}
+              {...props}
+            />} />
+          <Route path={Paths.HOME} render={(props) =>
+            <Home
+              {...metaData.HOME}
+              {...props}
+            />} />
+          <Route path={[`${Paths.EDUCATION}/:subject`, Paths.EDUCATION]} render={(props) =>
+            <Education
+              {...metaData.EDUCATION}
+              {...props}
+            />} />
+          <Route path={Paths.EXPERIENCE} render={(props) =>
+            <Experience
+              {...metaData.EXPERIENCE}
+              {...props}
+            />} />
+          <Route path={[`${Paths.PRODUCT}/:activedemo`, Paths.PRODUCT]} render={(props) =>
+            <Product
+              {...metaData.PRODUCT}
+              {...props}
+            />} />
+          <Route path={Paths.CAPABILITY} render={(props) =>
+            <Capability
+              {...metaData.CAPABILITY}
+              {...props}
+            />} />
+          <Route path={Paths.SOLUTION} render={(props) =>
+            <Solution
+              {...metaData.SOLUTION}
+              {...props}
+            />} />
+          <Route path={Paths.NLP} render={(props) =>
+            <Nlp
+              {...metaData.NLP}
+              {...props}
+            />} />
+          <Route path={Paths.ABOUTME} render={(props) =>
+            <AboutMe
+              {...metaData.ABOUTME}
+              {...props}
+            />} />
         </Switch>
       </div>
     </>

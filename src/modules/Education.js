@@ -7,7 +7,7 @@ import { Link } from '../components';
 const Education = (props) => {
   const meta = getMetaData(props);
   const { subject } = props;
-  console.log('props in education', props);
+
   return (
     <DocumentMeta {...meta}>
       <div className="container-fluid bg-3 works">

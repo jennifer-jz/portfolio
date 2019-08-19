@@ -19,11 +19,8 @@ const filePath = {
   resumePdfPath: 'doc/resume.pdf',
 };
 
-const homeTitle = "Juanjuan Zhao's Home";
-
 export {
   selfIntroText,
   contactInfo,
   filePath,
-  homeTitle,
 };

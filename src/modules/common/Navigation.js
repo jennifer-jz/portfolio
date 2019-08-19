@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import * as Paths from 'shared/routePaths';
+import Paths from 'shared/routePaths';
 import { withRouter } from 'react-router-dom';
 
 const Navigation = (props) => {

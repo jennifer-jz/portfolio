@@ -7,3 +7,17 @@ export const SOLUTION = '/solution';
 export const NLP = '/nlp';
 export const ABOUTME = '/aboutme';
 export const PRODUCT = '/product';
+
+const Paths = {
+  ROOT,
+  HOME,
+  CAPABILITY,
+  EDUCATION,
+  EXPERIENCE,
+  SOLUTION,
+  NLP,
+  ABOUTME,
+  PRODUCT,
+};
+
+export default Paths;
