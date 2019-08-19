@@ -41,7 +41,7 @@ module.exports = {
       //     }]
       //   },
       {
-        test: /\.(png|jpe?g|gif|doc|pdf|swf)$/i,
+        test: /\.(png|jpe?g|gif|docx?|pdf|swf)$/i,
         use: [
           {
             loader: 'file-loader',
@@ -62,7 +62,7 @@ module.exports = {
                   return 'png/[name].[ext]'; 
                 } else if (file.endsWith('jpg') || file.endsWith('jpeg')) {
                   return 'img/[name].[ext]';
-                } else if (file.endsWith('doc') || file.endsWith('pdf')) {
+                } else if (file.endsWith('doc') || file.endsWith('docx') || file.endsWith('pdf')) {
                   return 'doc/[name].[ext]';
                 } else if (file.endsWith('swf')) {
                   return 'swf/[name].[ext]';
