@@ -10,17 +10,23 @@ import './Product.scss';
 
 const Product = (props) => {
   const meta = getMetaData(props);
+  const { activedemo: subject = 'all' } = props.match.params;
+
+  const getActiveClassName = (key) => {
+    return key === subject ? "active" : "";
+  };
+
   return (
     <DocumentMeta {...meta}>
       <div className="product-view">
         <div id="myBtnContainer">
-          <Link id="all" className="btn btn-secondary active" to="/product"> All</Link>
-          <Link id="featured" className="btn btn-secondary" to="/product/featured"> Featured</Link>
-          <Link id="workbench" className="btn btn-secondary" to="/product/workbench"> Translation Workbench</Link>
-          <Link id="erp" className="btn btn-secondary" to="/product/erp"> ERP System</Link>
-          <Link id="website" className="btn btn-secondary" to="/product/website"> Web Products</Link>
-          <Link id="msword" className="btn btn-secondary" to="/product/msword"> MS Word Development</Link>
-          <Link id="scidict" className="btn btn-secondary" to="/product/scidict"> SCIDict</Link>
+          <Link id="all" className={`btn btn-secondary ${getActiveClassName("all")}`} to="/product"> All</Link>
+          <Link id="featured" className={`btn btn-secondary ${getActiveClassName("featured")}`} to="/product/featured"> Featured</Link>
+          <Link id="workbench" className={`btn btn-secondary ${getActiveClassName("workbench")}`} to="/product/workbench"> Translation Workbench</Link>
+          <Link id="erp" className={`btn btn-secondary ${getActiveClassName("erp")}`} to="/product/erp"> ERP System</Link>
+          <Link id="website" className={`btn btn-secondary ${getActiveClassName("website")}`} to="/product/website"> Web Products</Link>
+          <Link id="msword" className={`btn btn-secondary ${getActiveClassName("msword")}`} to="/product/msword"> MS Word Development</Link>
+          <Link id="scidict" className={`btn btn-secondary ${getActiveClassName("scidict")}`} to="/product/scidict"> SCIDict</Link>
         </div>
 
         <div className="demos container-fluid bg-3 text-center works">
@@ -270,12 +276,14 @@ Product.propTypes = {
   description: PropTypes.string,
   keywords: PropTypes.string,
   subject: PropTypes.string,
+  match: PropTypes.object,
 };
 Product.defaultProps = {
   title: "",
   description: "",
   keywords: "",
   subject: "",
+  match: {},
 };
 
 export default Product;
