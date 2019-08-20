@@ -168,7 +168,7 @@ const Home = (props) => {
                 <p className="link"><i className="material-icons">image</i></p>
               </Link>
               <Link href="http://www.scidict.org">
-                <Img src="/img/scidict2-min.jpg" className="img-responsive" alt="Image" />
+                <Img src="/img/scidict2-min.jpg" />
               </Link>
               <div className="tags"></div>
             </div>
@@ -178,7 +178,7 @@ const Home = (props) => {
               <p className="title">User Center</p>
               <Link title="ASP.NET Web User Center" href="/img/usercenter2.jpg" target="_blank"><p className="link"><i className="material-icons">image</i></p></Link>
               <Link href="http://www.scientrans.com/users/login.aspx?email=c290cmFuc0AxMjYuY29t&pass=MTIz" target="_blank">
-                <Img src="/img/usercenter2-min.jpg" className="img-responsive" alt="Image" />
+                <Img src="/img/usercenter2-min.jpg" />
               </Link>
               <div className="tags"></div>
             </div>
@@ -188,7 +188,7 @@ const Home = (props) => {
               <p className="title">Project Management System</p>
               <Link href="/png/prjmanage2.png" title="C# Project Management System"><p className="demo"><i className="material-icons">image</i></p></Link>
               <Link id="taskassign_trans2" href="#" title="C# Project Management System">
-                <Img src="/png/prjmanage2-min.png" className="img-responsive" alt="Image" />
+                <Img src="/png/prjmanage2-min.png" />
               </Link>
               <div className="tags"></div>
             </div>
@@ -198,7 +198,7 @@ const Home = (props) => {
               <p className="title">Payment API</p>
               <Link href="/img/yeepay2.jpg" title="Connection to Payment API"><p className="demo"><i className="material-icons">image</i></p></Link>
               <Link id="paymentAPI" href="#" title="Connection to Payment API">
-                <Img src="/img/yeepay2-min.jpg" className="img-responsive" alt="Image" />
+                <Img src="/img/yeepay2-min.jpg" />
               </Link>
               <div className="tags"></div>
             </div>
@@ -209,7 +209,7 @@ const Home = (props) => {
               <p className="title">Web Order Submission</p>
               <Link href="/img/orderonline2.jpg" title="ASP.NET Order Submission"><p className="demo"><i className="material-icons">image</i></p></Link>
               <Link id="ordersubmit" href="#" title="ASP.NET Order Submission">
-                <Img src="/img/orderonline2-min.jpg" className="img-responsive" alt="Image" />
+                <Img src="/img/orderonline2-min.jpg" />
               </Link>
               <div className="tags"></div>
             </div>
@@ -218,7 +218,7 @@ const Home = (props) => {
             <div className="content">
               <Link href="/img/seat.jpg" target="_blank"><p className="title">Bootstrap + HTML Canvas</p></Link>
               <Link title="Bootstrap + HTML5 Canvas Seat Selection" href="/img/seat.jpg" target="_blank">
-                <Img src="/img/seat-min.jpg" className="img-responsive" alt="Image" />
+                <Img src="/img/seat-min.jpg" />
               </Link>
               <div className="tags"></div>
             </div>
@@ -228,7 +228,7 @@ const Home = (props) => {
               <p className="title">Translator's Workbench</p>
               <Link href="/png/workbench1.jpg" title="Translation Workbench - Task List"><p className="demo"><i className="material-icons">image</i></p></Link>
               <Link id="workbench_trans3" href="#" title="Translation Workbench - Task List">
-                <Img src="/png/workbench1-min.jpg" className="img-responsive" alt="Image" />
+                <Img src="/png/workbench1-min.jpg" />
               </Link>
               <div className="tags"></div>
             </div>
@@ -238,7 +238,7 @@ const Home = (props) => {
               <p className="title">MS Word Document Generation</p>
               <Link href="/png/docgeneration.jpg" title="MS Word Document Generation"><p className="demo"><i className="material-icons">image</i></p></Link>
               <Link id="docgenerate" href="#" title="MS Word Document Generation">
-                <Img src="/png/docgeneration-min.jpg" className="img-responsive" alt="Image" />
+                <Img src="/png/docgeneration-min.jpg" />
               </Link>
               <div className="tags"></div>
             </div>

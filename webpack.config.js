@@ -60,9 +60,9 @@ module.exports = {
                 console.log('file', file);
                 if (file.endsWith('png')) {
                   return 'png/[name].[ext]'; 
-                } else if (file.endsWith('jpg') || file.endsWith('jpeg')) {
+                } else if (/\.jpe?g$/.test(file)) {
                   return 'img/[name].[ext]';
-                } else if (file.endsWith('doc') || file.endsWith('docx') || file.endsWith('pdf')) {
+                } else if (/\.(docx?|pdf)$/.test(file)) {
                   return 'doc/[name].[ext]';
                 } else if (file.endsWith('swf')) {
                   return 'swf/[name].[ext]';

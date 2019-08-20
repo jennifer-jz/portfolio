@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import { Link as RouterLink } from 'react-router-dom';
+import { LinkIcon } from 'components/icons';
 
-const Link = (props) => {
-  const { href, to, openNew, className, children, ...otherProps } = props;
+const LinkUnstyled = (props) => {
+  const { href, to, icon, openNew, className, children, ...otherProps } = props;
   const shouldOpenNew = openNew !== undefined ? openNew : !!href;
   const openNewOption = shouldOpenNew ? {
     target: "_blank",
@@ -18,6 +20,7 @@ const Link = (props) => {
         {...otherProps}
       >
         {children}
+        {icon && <LinkIcon />}
       </RouterLink>
     );
   }
@@ -30,23 +33,30 @@ const Link = (props) => {
       {...otherProps}
     >
       {children}
+      {icon && <LinkIcon />}
     </a>
   );
 };
 
-Link.displayName = "Link";
-Link.propTypes = {
+LinkUnstyled.displayName = "LinkUnstyled";
+LinkUnstyled.propTypes = {
   href: PropTypes.string,
   to: PropTypes.string,
   openNew: PropTypes.bool,
+  icon: PropTypes.bool,
   className: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.string, PropTypes.arrayOf(PropTypes.node)]),
 };
-Link.defaultProps = {
+LinkUnstyled.defaultProps = {
   href: undefined,
   to: undefined,
   openNew: undefined,
+  icon: false,
   className: '',
 };
+
+const Link = styled(LinkUnstyled)`
+  color: #337ab7;
+`;
 
 export default Link;
