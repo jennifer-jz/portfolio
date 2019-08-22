@@ -1,19 +1,36 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import DocumentMeta from 'react-document-meta';
-import { getMetaData } from '../utils';
+import { getMetaData, getVideoURL } from '../utils';
 import {
   selfIntroText,
   contactInfo,
   filePath,
 } from '../shared/constants';
-import { Link } from '../components';
+import { products } from 'shared/data';
+import { Link, Modal } from '../components';
 import { Img } from 'components/imgs';
 
 const Home = (props) => {
   const meta = getMetaData(props);
   const { linkedIn } = contactInfo;
   const { resumeDocPath, resumePdfPath } = filePath;
+  const { activedemo = '' } = props.match.params;
+  const [modelData, setModelData] = useState(null);
+
+  useEffect(() => {
+    if (activedemo) {
+      const foundProduct = products.find(product => product.id === activedemo);
+      if (foundProduct) {
+        const url = getVideoURL(foundProduct.id) || undefined;
+        const modalData = {url};
+        setModelData(modalData);
+      }
+    }
+  }, [activedemo]);
+  
+  const homeProjects = products.filter(item => item.home);
+
   return (
     <DocumentMeta {...meta}>
       <div className="container-fluid bg-3 works">
@@ -161,90 +178,42 @@ const Home = (props) => {
 
         <div className="headline"><h4 className=" text-left" ><Link to="product">Product Demo</Link></h4></div>
         <div className="row text-center demos">
-          <div className="col-sm-3 website featured scidict aspnet networking ir">
-            <div className="content">
-              <p className="title">Bilingual Dictionary</p>
-              <Link title="ASP.NET Web Bilingual Dictionary" href="/img/scidict2.jpg" target="_blank">
-                <p className="link"><i className="material-icons">image</i></p>
-              </Link>
-              <Link href="http://www.scidict.org">
-                <Img src="/img/scidict2-min.jpg" />
-              </Link>
-              <div className="tags"></div>
-            </div>
-          </div>
-          <div className="col-sm-3 website featured aspnet mssql"> 
-            <div className="content">
-              <p className="title">User Center</p>
-              <Link title="ASP.NET Web User Center" href="/img/usercenter2.jpg" target="_blank"><p className="link"><i className="material-icons">image</i></p></Link>
-              <Link href="http://www.scientrans.com/users/login.aspx?email=c290cmFuc0AxMjYuY29t&pass=MTIz" target="_blank">
-                <Img src="/img/usercenter2-min.jpg" />
-              </Link>
-              <div className="tags"></div>
-            </div>
-          </div>
-          <div className="col-sm-3 erp featured csharp mssql">
-            <div className="content">
-              <p className="title">Project Management System</p>
-              <Link href="/png/prjmanage2.png" title="C# Project Management System"><p className="demo"><i className="material-icons">image</i></p></Link>
-              <Link id="taskassign_trans2" href="#" title="C# Project Management System">
-                <Img src="/png/prjmanage2-min.png" />
-              </Link>
-              <div className="tags"></div>
-            </div>
-          </div>
-          <div className="col-sm-3 website featured aspnet api">
-            <div className="content">
-              <p className="title">Payment API</p>
-              <Link href="/img/yeepay2.jpg" title="Connection to Payment API"><p className="demo"><i className="material-icons">image</i></p></Link>
-              <Link id="paymentAPI" href="#" title="Connection to Payment API">
-                <Img src="/img/yeepay2-min.jpg" />
-              </Link>
-              <div className="tags"></div>
-            </div>
-          </div>
+          {homeProjects.map((item, key) => {
+            const id = item.demo ? item.id : "";
+            const demoLink = item.demo ? `/home/${id}` : undefined;
+            const showDemoIcon = item.demo || !!item.url;
+            const url = item.url || undefined;
+            const caption = item.caption || item.title;
+            const imgUrl = item.img;
+            const imgFullUrl = item.imgFull || item.img;
+            const demoIconUrl = showDemoIcon ? imgFullUrl : undefined;
+            const externalUrl = !item.demo ? url || imgFullUrl : undefined ;
 
-          <div className="col-sm-3 erp website featured aspnet mssql">
-            <div className="content">
-              <p className="title">Web Order Submission</p>
-              <Link href="/img/orderonline2.jpg" title="ASP.NET Order Submission"><p className="demo"><i className="material-icons">image</i></p></Link>
-              <Link id="ordersubmit" href="#" title="ASP.NET Order Submission">
-                <Img src="/img/orderonline2-min.jpg" />
-              </Link>
-              <div className="tags"></div>
-            </div>
-          </div>
-          <div className="col-sm-3 website bootstrap canvas php mysql">
-            <div className="content">
-              <Link href="/img/seat.jpg" target="_blank"><p className="title">Bootstrap + HTML Canvas</p></Link>
-              <Link title="Bootstrap + HTML5 Canvas Seat Selection" href="/img/seat.jpg" target="_blank">
-                <Img src="/img/seat-min.jpg" />
-              </Link>
-              <div className="tags"></div>
-            </div>
-          </div>
-          <div className="col-sm-3 workbench featured csharp mssql networking nlp">
-            <div className="content">
-              <p className="title">Translator's Workbench</p>
-              <Link href="/png/workbench1.jpg" title="Translation Workbench - Task List"><p className="demo"><i className="material-icons">image</i></p></Link>
-              <Link id="workbench_trans3" href="#" title="Translation Workbench - Task List">
-                <Img src="/png/workbench1-min.jpg" />
-              </Link>
-              <div className="tags"></div>
-            </div>
-          </div>
-          <div className="col-sm-3 erp msword featured csharp nlp">
-            <div className="content">
-              <p className="title">MS Word Document Generation</p>
-              <Link href="/png/docgeneration.jpg" title="MS Word Document Generation"><p className="demo"><i className="material-icons">image</i></p></Link>
-              <Link id="docgenerate" href="#" title="MS Word Document Generation">
-                <Img src="/png/docgeneration-min.jpg" />
-              </Link>
-              <div className="tags"></div>
-            </div>
-          </div>
+            return (
+              <div key={key} className={`col-sm-3 ${item.keywords.join(' ')}`}>
+                <div className="content">
+                  {showDemoIcon && <p className="title">{item.title}</p>}
+                  <Link className={id} href={demoIconUrl} title={item.title}>
+                    {showDemoIcon && <p className="demo"><i className="material-icons">image</i></p>}
+                    {!showDemoIcon && <p className="title">{item.title}</p>}
+                  </Link>
+                  {item.demo && <Link id={id} to={demoLink} title={caption}>
+                    <Img src={imgUrl} />
+                  </Link>}
+                  {!item.demo && <Link href={externalUrl} title={caption}>
+                    <Img src={imgUrl} />
+                  </Link>}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
+      {modelData && <Modal
+        visible={!!modelData}
+        onClose={() => setModelData(null)}
+        url={modelData && modelData.url}
+      />}
     </DocumentMeta>
   );
 };
@@ -255,12 +224,14 @@ Home.propTypes = {
   description: PropTypes.string,
   keywords: PropTypes.string,
   subject: PropTypes.string,
+  match: PropTypes.object,
 };
 Home.defaultProps = {
   title: "",
   description: "",
   keywords: "",
   subject: "",
+  match: {},
 };
 
 export default Home;

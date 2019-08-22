@@ -21,6 +21,7 @@ const products = [
     imgFull: "",
     caption: "Translator's Workbench",
     demo: true,
+    home: true,
   },
   {
     id: "workbench_edit3",
@@ -39,6 +40,7 @@ const products = [
     imgFull: "",
     caption: "ASP.NET Order Submission",
     demo: true,
+    home: true,
   },
   {
     id: "ordersubmit2",
@@ -65,6 +67,7 @@ const products = [
     imgFull: "",
     caption: "C# Project Management System",
     demo: true,
+    home: true,
   },
   {
     id: "hrmanage",
@@ -95,6 +98,7 @@ const products = [
     img: "/png/docgeneration.jpg",
     imgFull: "",
     demo: true,
+    home: true,
   },
   {
     id: "",
@@ -103,6 +107,7 @@ const products = [
     img: "/img/seat.jpg",
     imgFull: "",
     caption: "Bootstrap + HTML Canvas",
+    home: true,
   },
   {
     id: "",
@@ -112,6 +117,7 @@ const products = [
     imgFull: "",
     caption: "ASP.NET Web Bilingual Dictionary",
     url: "http://www.scidict.org",
+    home: true,
   },
   {
     id: "",
@@ -121,6 +127,7 @@ const products = [
     imgFull: "",
     caption: "ASP.NET Web User Center",
     url: "http://www.scientrans.com/users/login.aspx?email=c290cmFuc0AxMjYuY29t&pass=MTIz",
+    home: true,
   },
   {
     id: "paymentAPI",
@@ -130,6 +137,7 @@ const products = [
     imgFull: "",
     caption: "Connection to Payment API",
     demo: true,
+    home: true,
   },
   {
     id: "",

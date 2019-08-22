@@ -23,7 +23,7 @@ const Router = () => {
               {...metaData.ROOT}
               {...props}
             />} />
-          <Route path={Paths.HOME} render={(props) =>
+          <Route path={[`${Paths.HOME}/:activedemo`, Paths.HOME]} render={(props) =>
             <Home
               {...metaData.HOME}
               {...props}
