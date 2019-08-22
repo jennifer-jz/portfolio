@@ -47,20 +47,14 @@ module.exports = {
             loader: 'file-loader',
             options: {
               url: true,
-              //   name: '[name].[ext]',
               //   name: '[contenthash].[ext]',
               //   name: '[path][name].[ext]',
               //   name: 'png/[name].[ext]',
-              //   name(file) {
-              //     if (ext === 'png') {
-              //       return 
-              //     }
-              //   }
               name(file) {
                 console.log('file', file);
-                if (file.endsWith('png')) {
+                if (/\/png\//.test(file)) {
                   return 'png/[name].[ext]'; 
-                } else if (/\.jpe?g$/.test(file)) {
+                } else if (/\/img\//.test(file)) {
                   return 'img/[name].[ext]';
                 } else if (/\.(docx?|pdf)$/.test(file)) {
                   return 'doc/[name].[ext]';

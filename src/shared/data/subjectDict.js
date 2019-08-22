@@ -38,6 +38,9 @@ const subjectDict = {
   jquery: {
     name: "jQuery",
   },
+  mssql: {
+    name: "MSSQL",
+  },
   mysql: {
     name: "MySQL",
   },
@@ -64,7 +67,26 @@ const subjectDict = {
   },
   corenlp: {
     name: "Stanford CoreNLP",
-  }
+  },
+  seo: {
+    name: "SEO",
+    longName: "Search Engine Optimization",
+  },
+  csharp: {
+    name: "C#",
+  },
+  aspnet: {
+    name: "ASP.NET",
+  },
+  networking: {
+    name: "Networking",
+  },
+  api: {
+    name: "Rest API",
+  },
+  canvas: {
+    name: "Html Canvas",
+  },
 };
 
 export default subjectDict;
