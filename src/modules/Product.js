@@ -12,15 +12,15 @@ import './Product.scss';
 
 const Product = (props) => {
   const meta = getMetaData(props);
-  const { activedemo = 'all' } = props.match.params;
+  const { subject = 'all', activedemo = '' } = props.match.params;
   const [modelData, setModelData] = useState(null);
 
-  const matchedProducts = activedemo !== 'all' ?
-    products.filter(item => item.keywords.includes(activedemo)) :
+  const matchedProducts = subject !== 'all' ?
+    products.filter(item => item.keywords.includes(subject)) :
     products;
   
   useEffect(() => {
-    if (matchedProducts.length === 0) {
+    if (activedemo) {
       const foundProduct = products.find(product => product.id === activedemo);
       if (foundProduct) {
         const url = getVideoURL(foundProduct.id) || undefined;
@@ -31,7 +31,7 @@ const Product = (props) => {
   }, [activedemo]);
 
   const getActiveClassName = (key) => {
-    return key === activedemo ? "active" : "";
+    return key === subject ? "active" : "";
   };
 
   return (
@@ -65,7 +65,7 @@ const Product = (props) => {
           <div className="row">
             {matchedProducts.map((item, key) => {
               const id = item.demo ? item.id : "";
-              const demoLink = item.demo ? `/product/${id}` : undefined;
+              const demoLink = item.demo ? `/product/${subject}/${id}` : undefined;
               const showDemoIcon = item.demo || !!item.url;
               const url = item.url || undefined;
               const caption = item.caption || item.title;
@@ -90,7 +90,7 @@ const Product = (props) => {
                     </Link>}
                     <div className="tags">
                       {item.keywords.map((keyword, key) =>
-                        <Link key={key} to={`/product/${keyword}`}>
+                        <Link key={key} to={`/product/${subject}/${keyword}`}>
                           <span className="badge">
                             {subjectDict[keyword] && subjectDict[keyword].name}
                           </span>

@@ -38,7 +38,11 @@ const Router = () => {
               {...metaData.EXPERIENCE}
               {...props}
             />} />
-          <Route path={[`${Paths.PRODUCT}/:activedemo`, Paths.PRODUCT]} render={(props) =>
+          <Route path={[
+            `${Paths.PRODUCT}/:subject/:activedemo`,
+            `${Paths.PRODUCT}/:subject`,
+            Paths.PRODUCT
+          ]} render={(props) =>
             <Product
               {...metaData.PRODUCT}
               {...props}
