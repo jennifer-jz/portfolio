@@ -11,12 +11,13 @@ import Nlp from 'modules/Nlp';
 import AboutMe from 'modules/AboutMe';
 import Paths from 'shared/routePaths';
 import metaData from 'shared/metaData';
+import { Body } from 'components';
 
 const Router = () => {
   return (
     <>
       <Navigation />
-      <div className="mainbody">
+      <Body>
         <Switch>
           <Route exact path={Paths.ROOT} render={(props) =>
             <Home
@@ -69,7 +70,7 @@ const Router = () => {
             />} />
           <Route path="*" />
         </Switch>
-      </div>
+      </Body>
     </>
   );
 };

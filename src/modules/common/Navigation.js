@@ -27,9 +27,9 @@ const Navigation = (props) => {
             <li className={getClassName(Paths.CAPABILITY)}>
               <a title="Capability" href={Paths.CAPABILITY}>Capability</a>
             </li>
-            <li className={getClassName(Paths.SOLUTION)}>
+            {/* <li className={getClassName(Paths.SOLUTION)}>
               <a title="Solution" href={Paths.SOLUTION}>Tech Solution</a>
-            </li>
+            </li> */}
             <li className={getClassName(Paths.NLP)}>
               <a title="Natural Language Processing" href={Paths.NLP}>NLP</a>
             </li>

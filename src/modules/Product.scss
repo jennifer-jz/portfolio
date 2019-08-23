@@ -10,29 +10,29 @@
 		margin-right:5px;
 	}
     #myBtnContainer {
-    padding: 0;
-    position: fixed;
-    top: 60px;
-    left: 65px;
-    z-index: 1000;
-    background: #f2f4f4;
+        padding: 0;
+        position: fixed;
+        top: 60px;
+        left: 65px;
+        z-index: 1000;
+        background: #f2f4f4;
     }
     #myBtnContainer .btn {
-    border: none;
-    outline: none;
-    padding: 8px 16px;
-    /*background-color: white;*/
-    cursor: pointer;
-    color: gray;
+        border: none;
+        outline: none;
+        padding: 8px 16px;
+        /*background-color: white;*/
+        cursor: pointer;
+        color: gray;
     }
 
     #myBtnContainer .btn:hover, #myBtnContainer .active {
-    background-color: white;
-    color: gray;
-    box-shadow: none;
-    font-weight: bold;
+        background-color: white;
+        color: gray;
+        box-shadow: none;
+        font-weight: bold;
     }
     .row{
-    margin-top: 10px;
+        margin-top: 10px;
     }
 }

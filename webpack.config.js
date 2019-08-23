@@ -26,20 +26,11 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-          'style-loader', // creates style nodes from JS strings
-          'css-loader', // translates CSS into CommonJS
-          'sass-loader', // compiles Sass to CSS, using Node Sass by default
+          'style-loader',
+          'css-loader',
+          'sass-loader',
         ],
       },
-      //   {
-      //     test: /\.(png|jp(e*)g|svg)$/i,  
-      //     use: [{
-      //       loader: 'url-loader',
-      //       options: { 
-      //         limit: 1000000, // Convert images < 8kb to base64 strings
-      //       } 
-      //     }]
-      //   },
       {
         test: /\.(png|jpe?g|gif|docx?|pdf|swf)$/i,
         use: [
