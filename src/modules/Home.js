@@ -133,17 +133,19 @@ const Home = (props) => {
                 </div>
                 <div>
                   <div className="panel-body">
-                    <Button theme="danger" title="4 years">ERP System Development</Button>
-                    <Button theme="info" title="4 years">MSSQL/MYSQL</Button>
-                    <Button theme="primary" title="4 years">Responsive Website Building</Button>
-                    <Button theme="light" title="3 years">SEO</Button>
-                    <Button theme="success" title="1 year">MVC Pattern</Button>
-                    <Button theme="info" title="3 years">IIS Configuration</Button>
-                    <Button theme="warning" title="2 years">C# Network Programming</Button>
-                    <Button theme="danger" title="2 years">MS Office Programming</Button>
-                    <Button theme="dark" title="2 years">CMS Development</Button>
-                    <Button theme="light" title="1 year">Git Version Control</Button>
-                    <Button theme="info" title="1 year">Unix/Linux</Button>
+                    <ButtonGroup>
+                      <Button theme="danger" title="4 years">ERP System Development</Button>
+                      <Button theme="info" title="4 years">MSSQL/MYSQL</Button>
+                      <Button theme="primary" title="4 years">Responsive Website Building</Button>
+                      <Button theme="light" title="3 years">SEO</Button>
+                      <Button theme="success" title="1 year">MVC Pattern</Button>
+                      <Button theme="info" title="3 years">IIS Configuration</Button>
+                      <Button theme="warning" title="2 years">C# Network Programming</Button>
+                      <Button theme="danger" title="2 years">MS Office Programming</Button>
+                      <Button theme="dark" title="2 years">CMS Development</Button>
+                      <Button theme="light" title="1 year">Git Version Control</Button>
+                      <Button theme="info" title="1 year">Unix/Linux</Button>
+                    </ButtonGroup>
                   </div>
 
                 </div>
