@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import DocumentMeta from 'react-document-meta';
 import { getMetaData } from '../utils';
-import { Link } from '../components';
+import { Button, Link, ButtonGroup } from '../components';
 
 const Capability = (props) => {
   const meta = getMetaData(props);
@@ -141,19 +141,21 @@ const Capability = (props) => {
                 </div>
                 <div>
                   <div className="panel-body">
-                    <button type="button" className="btn" data-toggle="tooltip" title="50,000+ lines">Node.js + Express.js + MySql</button>
-                    <button type="button" className="btn btn-primary" data-toggle="tooltip" title="300,000+ lines">Html 4/5 + CSS 2/3</button>
-                    <button type="button" className="btn btn-secondary" data-toggle="tooltip" title="10,000+ lines">Bootstrap</button>
-                    <button type="button" className="btn btn-success" data-toggle="tooltip" title="500,000+ lines">C# + SQL</button>
-                    <button type="button" className="btn btn-info" data-toggle="tooltip" title="80,000+ lines">Asp.Net Web</button>
-                    <button type="button" className="btn btn-warning" data-toggle="tooltip" title="20,000+ lines">Java</button>
-                    <button type="button" className="btn btn-danger" data-toggle="tooltip" title="5,000+ lines">MySQL + PhP</button>
-                    <button type="button" className="btn btn-dark" data-toggle="tooltip" title="10,000+ lines">json</button>
-                    <button type="button" className="btn btn-light" data-toggle="tooltip" title="1,000+ lines">Angular JS</button>
-                    <button type="button" className="btn btn-link" data-toggle="tooltip" title="1,000+ lines">Mongo DB</button>
-                    <button type="button" className="btn btn-primary" data-toggle="tooltip" title="20,000+ lines">Javascript / jQuery / jQueryUI</button>
-                    <button type="button" className="btn btn-secondary" data-toggle="tooltip" title="5,000+ lines">ajax + XML</button>
-                    <button type="button" className="btn btn-success" data-toggle="tooltip" title="2,000+ lines">REST and SOAP Web Services</button>
+                    <ButtonGroup>
+                      <Button theme="" title="50,000+ lines">Node.js + Express.js + MySql</Button>
+                      <Button theme="primary" title="300,000+ lines">Html 4/5 + CSS 2/3</Button>
+                      <Button theme="dark" title="10,000+ lines">Bootstrap</Button>
+                      <Button theme="success" title="500,000+ lines">C# + SQL</Button>
+                      <Button theme="info" title="80,000+ lines">Asp.Net Web</Button>
+                      <Button theme="warning" title="20,000+ lines">Java</Button>
+                      <Button theme="danger" title="5,000+ lines">MySQL + PhP</Button>
+                      <Button theme="dark" title="10,000+ lines">json</Button>
+                      <Button theme="light" title="1,000+ lines">Angular JS</Button>
+                      <Button theme="link" title="1,000+ lines">Mongo DB</Button>
+                      <Button theme="primary" title="20,000+ lines">Javascript / jQuery / jQueryUI</Button>
+                      <Button theme="dark" title="5,000+ lines">ajax + XML</Button>
+                      <Button theme="success" title="2,000+ lines">REST and SOAP Web Services</Button>
+                    </ButtonGroup>
                   </div>
                 </div>
               </div>
