@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Link as RouterLink } from 'react-router-dom';
 import { LinkIcon } from 'components/icons';
+import { filterNonHtmlProps } from 'utils';
 
 const LinkUnstyled = (props) => {
   const { href, to, icon, openNew, className, children, ...otherProps } = props;
@@ -17,7 +18,7 @@ const LinkUnstyled = (props) => {
       <RouterLink
         to={to}
         className={className}
-        {...otherProps}
+        {...filterNonHtmlProps(otherProps)}
       >
         {children}
         {icon && <LinkIcon />}
@@ -30,7 +31,7 @@ const LinkUnstyled = (props) => {
       href={href}
       className={className}
       {...openNewOption}
-      {...otherProps}
+      {...filterNonHtmlProps(otherProps)}
     >
       {children}
       {icon && <LinkIcon />}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Navigation from 'modules/common/Navigation';
+import Footer from 'modules/common/Footer';
 import Home from 'modules/Home';
 import Education from 'modules/Education';
 import Experience from 'modules/Experience';
@@ -71,6 +72,7 @@ const Router = () => {
           <Route path="*" />
         </Switch>
       </Body>
+      <Footer />
     </>
   );
 };

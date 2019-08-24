@@ -68,6 +68,7 @@ module.exports = {
       components: path.resolve(__dirname, 'src/components'),
       utils: path.resolve(__dirname, 'src/utils'),
       public: path.resolve(__dirname, 'src/public'),
+      root: path.resolve(__dirname),
     },
   },
   output: {
