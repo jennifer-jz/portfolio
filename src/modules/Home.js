@@ -97,7 +97,7 @@ const Home = (props) => {
                       <Button theme="warning" title="10,000+ lines">React + Typescript + PostgreSQL</Button>
                       <Button theme="light" title="10,000+ lines">Less</Button>
                       <Button theme="primary" title="5,000+ lines">Typeorm</Button>
-                      <Button theme="dark" title="50,000+ lines">Node.js + Express.js + MySql</Button>
+                      <Button theme="secondary" title="50,000+ lines">Node.js + Express.js + MySql</Button>
                       <Button theme="primary" title="300,000+ lines">Html 4/5 + CSS 2/3</Button>
                       <Button theme="warning" title="10,000+ lines">Bootstrap</Button>
                       <Button theme="success" title="500,000+ lines">C# + SQL</Button>
@@ -109,7 +109,7 @@ const Home = (props) => {
                       <Button theme="info" title="2,000+ lines">Android</Button>
                       <Button theme="primary" title="20,000+ lines">Javascript ES6</Button>
                       <Button theme="danger" title="20,000+ lines">jQuery / jQueryUI</Button>
-                      <Button theme="dark" title="5,000+ lines">Ajax + XML</Button>
+                      <Button theme="secondary" title="5,000+ lines">Ajax + XML</Button>
                       <Button theme="success" title="2,000+ lines">Restful API</Button>
                       <Button theme="info">Heroku</Button>
                       <Button theme="light" title="2,000+ lines">RabbitMQ</Button>
@@ -134,7 +134,7 @@ const Home = (props) => {
                 <div>
                   <div className="panel-body">
                     <ButtonGroup>
-                      <Button theme="danger" title="4 years">ERP System Development</Button>
+                      <Button theme="secondary" title="4 years">ERP System Development</Button>
                       <Button theme="info" title="4 years">MSSQL/MYSQL</Button>
                       <Button theme="primary" title="4 years">Responsive Website Building</Button>
                       <Button theme="light" title="3 years">SEO</Button>

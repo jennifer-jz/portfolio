@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { filterNonHtmlProps } from 'utils';
 
 const ButtonUnstyled = (props) => {
   const { theme, className, children, ...otherProps } = props;
@@ -9,7 +10,7 @@ const ButtonUnstyled = (props) => {
       type="button"
       className={`btn btn-${theme} ${className}`}
       data-toggle="tooltip"
-      {...otherProps}
+      {...filterNonHtmlProps(otherProps)}
     >
       {children}
     </button>

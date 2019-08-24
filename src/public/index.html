@@ -22,9 +22,12 @@
     </footer>
       
     <script type="text/javascript">
-      var rootpath = "{$rootpath}";
-      var subject = "{$subject}";
+    document.addEventListener("DOMContentLoaded", function(){
+      console.log(document.querySelectorAll('[data-toggle="tooltip"]'));
+      document.querySelectorAll('[data-toggle="tooltip"]').tooltip();
+    });
       $(document).ready(function(){
+        console.log('jquery obj', $('[data-toggle="tooltip"]'));
         $('[data-toggle="tooltip"]').tooltip();   
       });
     </script>
