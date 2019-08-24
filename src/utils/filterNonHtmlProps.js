@@ -1,6 +1,6 @@
 import isReactProp from 'is-react-prop';
 
-const filterNonHtmlProps = (props) => {
+export const filterNonHtmlProps = (props) => {
   const reactProps = {};
   for(const key in props) {
     if (isReactProp(key)) {
@@ -10,5 +10,3 @@ const filterNonHtmlProps = (props) => {
 
   return reactProps;
 };
-
-export default filterNonHtmlProps;
