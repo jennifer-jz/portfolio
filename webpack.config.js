@@ -42,7 +42,6 @@ module.exports = {
               //   name: '[path][name].[ext]',
               //   name: 'png/[name].[ext]',
               name(file) {
-                console.log('file', file);
                 if (/\/png\//.test(file)) {
                   return 'png/[name].[ext]'; 
                 } else if (/\/img\//.test(file)) {

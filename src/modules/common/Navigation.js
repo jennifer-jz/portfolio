@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Paths from 'shared/routePaths';
+import { Logo } from 'components/imgs';
 import { withRouter } from 'react-router-dom';
 
 const Navigation = (props) => {
@@ -12,8 +13,11 @@ const Navigation = (props) => {
     return isPathMatched(path) ? "active" : "";
   }
 
+  const logoSrc = "/img/houzi.jpg";
+
   return (
     <nav className="navbar navbar-lights">
+      <Logo src={logoSrc} />
       <div className="container">
         <div className="" id="myNavbar">
           <ul className="nav nav-tabs">

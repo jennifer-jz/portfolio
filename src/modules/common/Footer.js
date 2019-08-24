@@ -1,8 +1,6 @@
 import React from 'react';
 import { version } from 'root/package.json'; 
 
-console.log('version', version);
-
 const Footer = () => {
   return (
     <footer className="container-fluid text-center">
