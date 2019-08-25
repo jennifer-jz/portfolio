@@ -20,8 +20,6 @@ var global = {
   ...conf['section'],
   common: { ...common, path: __dirname },
   html,
-}
-
-$arr = global;
+};
 
 module.exports = global;

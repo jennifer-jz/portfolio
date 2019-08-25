@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const { rootDirectory } = require('./src/siteConfig.json');
 
 module.exports = {
   entry: './src/index.js',
@@ -67,12 +68,13 @@ module.exports = {
       components: path.resolve(__dirname, 'src/components'),
       utils: path.resolve(__dirname, 'src/utils'),
       public: path.resolve(__dirname, 'src/public'),
+      src: path.resolve(__dirname, 'src'),
       root: path.resolve(__dirname),
     },
   },
   output: {
     path: __dirname + '/dist',
-    publicPath: '/',
+    publicPath: `${rootDirectory}/`,
     filename: 'bundle.js'
   },
   plugins: [
