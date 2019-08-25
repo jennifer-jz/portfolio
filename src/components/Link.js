@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { Link as RouterLink } from 'react-router-dom';
 import { LinkIcon } from 'components/icons';
 import { filterNonHtmlProps } from 'utils';
+import { rootDirectory } from 'src/siteConfig.json';
 
 const LinkUnstyled = (props) => {
   const { href, to, icon, openNew, className, children, ...otherProps } = props;
@@ -12,11 +13,15 @@ const LinkUnstyled = (props) => {
     target: "_blank",
     rel: "noopener noreferrer",
   } : {};
+  let url = href || to;
+  if (rootDirectory && !new RegExp(`^${rootDirectory}`).test(url)) {
+    url = rootDirectory + url;
+  }
 
   if (to) {
     return (
       <RouterLink
-        to={to}
+        to={url}
         className={className}
         {...filterNonHtmlProps(otherProps)}
       >
@@ -28,7 +33,7 @@ const LinkUnstyled = (props) => {
 
   return (
     <a
-      href={href}
+      href={url}
       className={className}
       {...openNewOption}
       {...filterNonHtmlProps(otherProps)}
