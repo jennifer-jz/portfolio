@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Link as RouterLink } from 'react-router-dom';
 import { LinkIcon } from 'components/icons';
-import { filterNonHtmlProps } from 'utils';
-import { rootDirectory } from 'src/siteConfig.json';
+import { filterNonHtmlProps, getRootUrl } from 'utils';
 
 const LinkUnstyled = (props) => {
   const { href, to, icon, openNew, className, children, ...otherProps } = props;
@@ -13,10 +12,7 @@ const LinkUnstyled = (props) => {
     target: "_blank",
     rel: "noopener noreferrer",
   } : {};
-  let url = href || to;
-  if (rootDirectory && !new RegExp(`^${rootDirectory}`).test(url)) {
-    url = rootDirectory + url;
-  }
+  const url = getRootUrl(href || to);
 
   if (to) {
     return (
