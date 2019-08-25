@@ -41,7 +41,7 @@ module.exports = {
         "indent": ["error", 2],
         "semi": ["error", "always"],
         "max-len": ["error", {
-            "code": 120,
+            "code": 130,
             "ignoreUrls": true,
         }],
     }

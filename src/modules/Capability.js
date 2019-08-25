@@ -124,9 +124,24 @@ const Capability = (props) => {
                 </div>
                 <div>
                   <div className="panel-body">
-                    <p>- <span>Proficient both in written and spoken English</span></p>
-                    <p>- <span>Expert in technical writing with more than 5 years of technical translation/editing experience in English</span></p>
-                    <p>- <span>Good literal communication skills: deliver key points with simple words</span></p>
+                    <p>
+                      - 
+                      <span>
+                        Proficient both in written and spoken English
+                      </span>
+                    </p>
+                    <p>
+                      - 
+                      <span>
+                        Expert in technical writing with more than 5 years of technical translation/editing experience in English
+                      </span>
+                    </p>
+                    <p>
+                      - 
+                      <span>
+                        Good literal communication skills: deliver key points with simple words
+                      </span>
+                    </p>
                   </div>
                 </div>
               </div>

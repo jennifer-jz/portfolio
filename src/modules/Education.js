@@ -36,24 +36,38 @@ const Education = (props) => {
           <div>
             <i className="fa fa-caret-right"></i>
             <p>Artificial Intelligence</p>
-            <p className={ getActiveClassName("nlp") }><Link to="/education/nlp">Natural Language Processing</Link></p>
-            <p className={ getActiveClassName("ir") }><Link to="/education/ir">Information Retrieval</Link></p>
-            <p className={ getActiveClassName("ml") }><Link to="/education/ml">Machine Learning</Link></p>
+            <p className={ getActiveClassName("nlp") }>
+              <Link to="/education/nlp">Natural Language Processing</Link>
+            </p>
+            <p className={ getActiveClassName("ir") }>
+              <Link to="/education/ir">Information Retrieval</Link>
+            </p>
+            <p className={ getActiveClassName("ml") }>
+              <Link to="/education/ml">Machine Learning</Link>
+            </p>
             <p>Computer Vision</p>
           </div>
           <div>
             <i className="fa fa-caret-right"></i>
-            <p className={ getActiveClassName("algorithm") }><Link to="/education/algorithm">Algorithm Analysis and Data Structures</Link></p>
+            <p className={ getActiveClassName("algorithm") }>
+              <Link to="/education/algorithm">Algorithm Analysis and Data Structures</Link>
+            </p>
             <p>Database Design</p>
-            <p className={ getActiveClassName("os") }><Link to="/education/os">Operating Systems Concepts</Link></p>
+            <p className={ getActiveClassName("os") }>
+              <Link to="/education/os">Operating Systems Concepts</Link>
+            </p>
             <p>Discrete Structure</p>
             <p>Computer Architecture</p>
           </div>
           <div>
             <i className="fa fa-caret-right"></i>
             <p>Cloud Computing</p>
-            <p className={ getActiveClassName("web") }><Link to="/education/web">Web Programming Languages</Link></p>
-            <p className={ getActiveClassName("hci") }><Link to="/education/hci">Human Computer Interaction</Link></p>
+            <p className={ getActiveClassName("web") }>
+              <Link to="/education/web">Web Programming Languages</Link>
+            </p>
+            <p className={ getActiveClassName("hci") }>
+              <Link to="/education/hci">Human Computer Interaction</Link>
+            </p>
           </div>
         </div>
 

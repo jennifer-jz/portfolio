@@ -64,19 +64,37 @@ const Home = (props) => {
                 <div id="Achievement">
                   <div className="panel-body">
                     <ul className="list-group">
-                      <li className="list-group-item node">Convert a traditional website to Node.js site from scratch </li>
-                      <li className="list-group-item node react es6">Create reusable React component excercising best practices</li>
-                      <li className="list-group-item seo">Website optimization and Google performance score improvement </li>
-                      <li className="list-group-item node mysql security">MySQL connection encryption with API development </li>
-                      <li className="list-group-item node">Node modules customization </li>
+                      <li className="list-group-item node">
+                        Convert a traditional website to Node.js site from scratch 
+                      </li>
+                      <li className="list-group-item node react es6">
+                        Create reusable React component excercising best practices
+                      </li>
+                      <li className="list-group-item seo">
+                        Website optimization and Google performance score improvement 
+                      </li>
+                      <li className="list-group-item node mysql security">
+                        MySQL connection encryption with API development 
+                      </li>
+                      <li className="list-group-item node">
+                        Node modules customization 
+                      </li>
                       <li className="list-group-item aspnet ir">
                         Develop a Bilingual Dictionary&nbsp;
                         <Link href="http://www.scidict.org" title="a web dictionary">SCIdict.org</Link> 
                         &nbsp;using IR technique </li>
-                      <li className="list-group-item csharp mssql networking">Develop a large-scale ERP system for translation industry</li>
-                      <li className="list-group-item csharp mssql networking">Develop a computer-assisted translation workbench</li>
-                      <li className="list-group-item csharp office">Text extraction from and generation to MS Office document</li>
-                      <li className="list-group-item csharp nlp">Text processing: sentence splitting, terminology identification and spell check </li>
+                      <li className="list-group-item csharp mssql networking">
+                        Develop a large-scale ERP system for translation industry
+                      </li>
+                      <li className="list-group-item csharp mssql networking">
+                        Develop a computer-assisted translation workbench
+                      </li>
+                      <li className="list-group-item csharp office">
+                        Text extraction from and generation to MS Office document
+                      </li>
+                      <li className="list-group-item csharp nlp">
+                        Text processing: sentence splitting, terminology identification and spell check 
+                      </li>
                     </ul>
 
                   </div>

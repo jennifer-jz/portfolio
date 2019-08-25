@@ -22,17 +22,59 @@ const Nlp = (props) => {
                 <div id="Responsibilities">
                   <div className="panel-body courseprj">
                     <p className="ir java">
-                    2017.03 – 2017.04 
-                      <span>Building Uncompressed/Compressed Stemmatized/Lemmatized Indexes for a Statistical Retrieval System</span>
+                      2017.03 – 2017.04 
+                      <span>
+                        Building Uncompressed/Compressed Stemmatized/Lemmatized Indexes for a Statistical Retrieval System
+                      </span>
                     </p>
-                    <p className="ir java">2017.03 – 2017.04 <span>Implementation of A Statistical Relevance Model for Retrieval System Based on Vector Relevance Model</span></p>
-                    <p className="ir java">2017.02 – 2017.03 <span>Query Expansion using Rocchio Algorithm and Local Clustering</span></p>
-                    <p className="ir java javascript">2017.02 – 2017.04 <span>A Web Search Engine of Computer Algorithm</span></p>
-                    <p className="nlp java corenlp">2017.02 – 2017.04 <span>A Coarse Logic Representation of News Articles</span></p>
-                    <p className="ml java classification">2018.02 – 2018.04 <span>Implementation of Naïve Bayes Tree, Logistic Regression, and Perceptron for Text Classification</span></p>
-                    <p className="ml java classification">2018.02 – 2018.04 <span>Implementation of Mixture of Tree Bayesian Networks using Expectation Maximization</span></p>
-                    <p className="ir java">2017.02 – 2017.04 <span>Inverted Index Building and Compression for Search Engine</span></p>
-                    <p className="ir java">2017.02 – 2017.04 <span>Tokenization of the Cranfield Collection</span></p>
+                    <p className="ir java">
+                      2017.03 – 2017.04 
+                      <span>
+                        Implementation of A Statistical Relevance Model for Retrieval System Based on Vector Relevance Model
+                      </span>
+                    </p>
+                    <p className="ir java">
+                      2017.02 – 2017.03 
+                      <span>
+                        Query Expansion using Rocchio Algorithm and Local Clustering
+                      </span>
+                    </p>
+                    <p className="ir java javascript">
+                      2017.02 – 2017.04 
+                      <span>
+                        A Web Search Engine of Computer Algorithm
+                      </span>
+                    </p>
+                    <p className="nlp java corenlp">
+                      2017.02 – 2017.04 
+                      <span>
+                        A Coarse Logic Representation of News Articles
+                      </span>
+                    </p>
+                    <p className="ml java classification">
+                      2018.02 – 2018.04 
+                      <span>
+                        Implementation of Naïve Bayes Tree, Logistic Regression, and Perceptron for Text Classification
+                      </span>
+                    </p>
+                    <p className="ml java classification">
+                      2018.02 – 2018.04 
+                      <span>
+                        Implementation of Mixture of Tree Bayesian Networks using Expectation Maximization
+                      </span>
+                    </p>
+                    <p className="ir java">
+                      2017.02 – 2017.04 
+                      <span>
+                        Inverted Index Building and Compression for Search Engine
+                      </span>
+                    </p>
+                    <p className="ir java">
+                      2017.02 – 2017.04 
+                      <span>
+                        Tokenization of the Cranfield Collection
+                      </span>
+                    </p>
                   </div>
                 </div>
               </div>
