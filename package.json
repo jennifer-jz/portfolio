@@ -8,7 +8,7 @@
     "index": "node ./src/index.js",
     "build": "webpack --mode production",
     "dev": "webpack-dev-server --open --mode development",
-    "lint": "eslint src/**/*.js"
+    "lint": "eslint ./src/**/*.js"
   },
   "dependencies": {
     "body-parser": "~1.18.2",

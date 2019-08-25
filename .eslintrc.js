@@ -24,6 +24,19 @@ module.exports = {
     "plugins": [
         "react"
     ],
+    "settings": {
+        "react": {
+            "createClass": 'createReactClass',
+            "pragma": 'React',
+            "version": 'detect',
+            "flowVersion": '0.53',
+            'import/resolver': {
+                "node": {
+                    "moduleDirectory": ['node_modules', 'src'],
+                },
+            },
+        }
+    },
     "rules": {
         "indent": ["error", 2],
         "semi": ["error", "always"],
