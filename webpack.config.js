@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 const { rootDirectory } = require('./src/siteConfig.json');
 
 module.exports = {
@@ -83,6 +84,9 @@ module.exports = {
       template: "./src/public/index.html",
       filename: "./index.html"
     }),
+    new CopyPlugin([
+      { from: './web.config', to: './web.config' },
+    ]),
   ],
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
