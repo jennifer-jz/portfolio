@@ -12,6 +12,7 @@ const contactInfo = {
   location: 'Mountain View, CA',
   futureLocation: 'Austin, TX or The Southern Bay Area',
   linkedIn: 'https://www.linkedin.com/in/jennifer-zhao-ca',
+  gitHub: 'https://github.com/jennifer-jz',
 };
 
 const filePath = {

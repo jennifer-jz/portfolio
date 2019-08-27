@@ -11,18 +11,21 @@ import { Link } from '../components';
 
 const AboutMe = (props) => {
   const meta = getMetaData(props);
-  const { email, linkedIn, phone, futureLocation, location } = contactInfo;
+  const { email, linkedIn, phone, futureLocation, location, gitHub } = contactInfo;
   const { resumeDocPath, resumePdfPath } = filePath;
   return (
     <DocumentMeta {...meta}>
       <div className="container-fluid bg-3 works">
         <div className="row intro">
           <h4>About Me</h4>
-          <Link href={resumePdfPath}>
+          <Link href={resumePdfPath} title="Resume">
             <i className="fa fa-file-pdf-o"></i>
           </Link>
-          <Link href={resumeDocPath}>
+          <Link href={resumeDocPath} title="Resume">
             <i className="fa fa-file-word-o"></i>
+          </Link>
+          <Link href={gitHub} title="GitHub">
+            <i className="fa fab fa-github" style={{fontSize: "26px"}}></i>
           </Link>
         </div>
 

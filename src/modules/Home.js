@@ -13,7 +13,7 @@ import { Img } from 'components/imgs';
 
 const Home = (props) => {
   const meta = getMetaData(props);
-  const { linkedIn } = contactInfo;
+  const { linkedIn, gitHub } = contactInfo;
   const { resumeDocPath, resumePdfPath } = filePath;
   const { activedemo = '' } = props.match.params;
   const [modelData, setModelData] = useState(null);
@@ -36,14 +36,17 @@ const Home = (props) => {
       <div className="container-fluid bg-3 works">
         <div className="intro">
           <div className="name"><h4>Juanjuan Zhao (also Jennifer)</h4>
-            <Link href={resumePdfPath}>
+            <Link href={resumePdfPath} title="Resume">
               <i className="fa fa-file-pdf-o"></i>
             </Link>
-            <Link href={resumeDocPath}>
+            <Link href={resumeDocPath} title="Resume">
               <i className="fa fa-file-word-o"></i>
             </Link>
-            <Link href={linkedIn}>
+            <Link href={linkedIn} title="LinkedIn">
               <i className="fa fa-linkedin-square" style={{fontSize: "26px"}}></i>
+            </Link>
+            <Link href={gitHub} title="GitHub">
+              <i className="fa fab fa-github" style={{fontSize: "26px"}}></i>
             </Link>
           </div>
           <p>
