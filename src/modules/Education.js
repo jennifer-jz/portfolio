@@ -1,9 +1,12 @@
 import React from 'react';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import DocumentMeta from 'react-document-meta';
+import { courseProjects, subjectDict } from 'shared/data';
 import { getMetaData } from '../utils';
 import { Link } from '../components';
-import { courseProjects, subjectDict } from 'shared/data';
+import styles from './Education.styles';
+
 
 const Education = (props) => {
   const meta = getMetaData(props);
@@ -18,7 +21,7 @@ const Education = (props) => {
 
   return (
     <DocumentMeta {...meta}>
-      <div className="container-fluid bg-3 works">
+      <div className={`container-fluid bg-3 works ${props.className}`}>
         <div className="list">
           <div className="subtitle">Education</div>
           <p>2016.08 - 2018.12 
@@ -118,6 +121,7 @@ Education.propTypes = {
   description: PropTypes.string,
   keywords: PropTypes.string,
   subject: PropTypes.string,
+  className: PropTypes.string,
   match: PropTypes.object,
 };
 Education.defaultProps = {
@@ -125,7 +129,8 @@ Education.defaultProps = {
   description: "",
   keywords: "",
   subject: "",
+  className: "",
   match: {},
 };
 
-export default Education;
+export default styled(Education)`${styles}`;
