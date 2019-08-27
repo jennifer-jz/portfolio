@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import DocumentMeta from 'react-document-meta';
 import { courseProjects, subjectDict } from 'shared/data';
 import { getMetaData } from '../utils';
-import { Link } from '../components';
+import { Link, Panel } from '../components';
 import styles from './Education.styles';
 
 
@@ -76,38 +76,31 @@ const Education = (props) => {
 
         <div className="row">
           <div className="col-md-12">
-            <div className="panel-group">
-              <div className="panel panel-info">
-                <div className="panel-heading">
-                  <h4 className="panel-title">
-                    <Link to="/education">Course Projects</Link>
-                  </h4>
-                </div>
-                <div id="courseprj">
-                  <div className="panel-body courseprj">
-                    {matchedCourseProjects.map((item, key) =>
-                      <p
-                        key={key}
-                        className={item.keywords.join(' ')}
-                      >
-                        {item.period}
-                        <span>
-                          {item.title}
-                          {item.url && <Link href={item.url} icon />}
-                          {item.keywords && item.keywords.map((keyword, i) =>
-                            <Link key={i} to={`/education/${keyword}`}>
-                              <span className="badge">
-                                {subjectDict[keyword] && subjectDict[keyword].name}
-                              </span>
-                            </Link>
-                          )}
+            <Panel
+              theme="info"
+              title="Course Projects"
+              titleUrl="/education"
+            >
+              {matchedCourseProjects.map((item, key) =>
+                <p
+                  key={key}
+                  className={item.keywords.join(' ')}
+                >
+                  {item.period}
+                  <span>
+                    {item.title}
+                    {item.url && <Link href={item.url} icon />}
+                    {item.keywords && item.keywords.map((keyword, i) =>
+                      <Link key={i} to={`/education/${keyword}`}>
+                        <span className="badge">
+                          {subjectDict[keyword] && subjectDict[keyword].name}
                         </span>
-                      </p>
+                      </Link>
                     )}
-                  </div>
-                </div>
-              </div>
-            </div>
+                  </span>
+                </p>
+              )}
+            </Panel>
           </div>
         </div>
       </div>
