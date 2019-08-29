@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import DocumentMeta from 'react-document-meta';
-import { courseProjects, subjectDict } from 'shared/data';
+import { courseProjects } from 'shared/data';
 import { getMetaData } from '../utils';
-import { Link, Panel } from '../components';
+import { Link, Panel, Badge } from '../components';
 import styles from './Education.styles';
 
 
@@ -91,11 +91,7 @@ const Education = (props) => {
                     {item.title}
                     {item.url && <Link href={item.url} icon />}
                     {item.keywords && item.keywords.map((keyword, i) =>
-                      <Link key={i} to={`/education/${keyword}`}>
-                        <span className="badge">
-                          {subjectDict[keyword] && subjectDict[keyword].name}
-                        </span>
-                      </Link>
+                      <Badge key={i} to={`/education/${keyword}`} keyword={keyword} />
                     )}
                   </span>
                 </p>

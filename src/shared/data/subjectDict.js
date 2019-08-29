@@ -87,6 +87,21 @@ const subjectDict = {
   canvas: {
     name: "Html Canvas",
   },
+  node: {
+    name: "Node",
+  },
+  react: {
+    name: "React",
+  },
+  es6: {
+    name: "ES6",
+  },
+  security: {
+    name: "Security",
+  },
+  office: {
+    name: "Office Programming",
+  },
 };
 
 export default subjectDict;

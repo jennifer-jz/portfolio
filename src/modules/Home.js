@@ -7,8 +7,14 @@ import {
   contactInfo,
   filePath,
 } from '../shared/constants';
-import { products } from 'shared/data';
-import { Button, ButtonGroup, Link, Modal, Panel } from '../components';
+import {
+  products,
+  achievements,
+  techLangs,
+  coreExperiences,
+  coreAbilities,
+} from 'shared/data';
+import { Button, ButtonGroup, Link, Modal, Panel, Badge } from '../components';
 import { Img } from 'components/imgs';
 
 const Home = (props) => {
@@ -64,37 +70,15 @@ const Home = (props) => {
               titleUrl="capability"
             >
               <ul className="list-group">
-                <li className="list-group-item node">
-                        Convert a traditional website to Node.js site from scratch 
-                </li>
-                <li className="list-group-item node react es6">
-                        Create reusable React component excercising best practices
-                </li>
-                <li className="list-group-item seo">
-                        Website optimization and Google performance score improvement 
-                </li>
-                <li className="list-group-item node mysql security">
-                        MySQL connection encryption with API development 
-                </li>
-                <li className="list-group-item node">
-                        Node modules customization 
-                </li>
-                <li className="list-group-item aspnet ir">
-                        Develop a Bilingual Dictionary&nbsp;
-                  <Link href="http://www.scidict.org" title="a web dictionary">SCIdict.org</Link> 
-                        &nbsp;using IR technique </li>
-                <li className="list-group-item csharp mssql networking">
-                        Develop a large-scale ERP system for translation industry
-                </li>
-                <li className="list-group-item csharp mssql networking">
-                        Develop a computer-assisted translation workbench
-                </li>
-                <li className="list-group-item csharp office">
-                        Text extraction from and generation to MS Office document
-                </li>
-                <li className="list-group-item csharp nlp">
-                        Text processing: sentence splitting, terminology identification and spell check 
-                </li>
+                {achievements.map((item, index) => (
+                  <li key={index} className="list-group-item">
+                    {item.title}
+                    {item.keywords && item.keywords.reverse().map((keyword, i) =>
+                      <Badge key={i} keyword={keyword} />
+                    )}
+                    {item.ref}
+                  </li>
+                ))}
               </ul>
             </Panel>
             
@@ -104,28 +88,9 @@ const Home = (props) => {
               titleUrl="capability"
             >
               <ButtonGroup>
-                <Button theme="warning" title="10,000+ lines">React + Typescript + PostgreSQL</Button>
-                <Button theme="light" title="10,000+ lines">Less</Button>
-                <Button theme="primary" title="5,000+ lines">Typeorm</Button>
-                <Button theme="secondary" title="50,000+ lines">Node.js + Express.js + MySql</Button>
-                <Button theme="primary" title="300,000+ lines">Html 4/5 + CSS 2/3</Button>
-                <Button theme="warning" title="10,000+ lines">Bootstrap</Button>
-                <Button theme="success" title="500,000+ lines">C# + SQL</Button>
-                <Button theme="info" title="80,000+ lines">Asp.Net Web</Button>
-                <Button theme="warning" title="20,000+ lines">Java</Button>
-                <Button theme="danger" title="5,000+ lines">MySQL + PhP</Button>
-                <Button theme="dark" title="10,000+ lines">Json</Button>
-                <Button theme="light" title="1,000+ lines">Angular JS</Button>
-                <Button theme="info" title="2,000+ lines">Android</Button>
-                <Button theme="primary" title="20,000+ lines">Javascript ES6</Button>
-                <Button theme="danger" title="20,000+ lines">jQuery / jQueryUI</Button>
-                <Button theme="secondary" title="5,000+ lines">Ajax + XML</Button>
-                <Button theme="success" title="2,000+ lines">Restful API</Button>
-                <Button theme="info">Heroku</Button>
-                <Button theme="light" title="2,000+ lines">RabbitMQ</Button>
-                <Button theme="warning">Docker</Button>
-                <Button theme="dark">Gira</Button>
-                <Button theme="danger" title="3,000+ lines">Stanford CoreNLP</Button>
+                {techLangs.map((item, index) => (
+                  <Button key={index} theme={item.theme} title={item.strength}>{item.content}</Button>
+                ))}
               </ButtonGroup>
             </Panel>
           </div>
@@ -136,17 +101,11 @@ const Home = (props) => {
               titleUrl="experience"
             >
               <ButtonGroup>
-                <Button theme="secondary" title="4 years">ERP System Development</Button>
-                <Button theme="info" title="4 years">MSSQL/MYSQL</Button>
-                <Button theme="primary" title="4 years">Responsive Website Building</Button>
-                <Button theme="light" title="3 years">SEO</Button>
-                <Button theme="success" title="1 year">MVC Pattern</Button>
-                <Button theme="info" title="3 years">IIS Configuration</Button>
-                <Button theme="warning" title="2 years">C# Network Programming</Button>
-                <Button theme="danger" title="2 years">MS Office Programming</Button>
-                <Button theme="dark" title="2 years">CMS Development</Button>
-                <Button theme="light" title="1 year">Git Version Control</Button>
-                <Button theme="info" title="1 year">Unix/Linux</Button>
+                {coreExperiences && coreExperiences.map((item, index) => (
+                  <Button key={index} theme={item.theme} title={item.strength}>
+                    {item.content}
+                  </Button>
+                ))}
               </ButtonGroup>
             </Panel>
 
@@ -156,14 +115,9 @@ const Home = (props) => {
               titleUrl="capability"
             >
               <ul className="list-group">
-                <li className="list-group-item">Sharp eyes on root cause of technical issues</li>
-                <li className="list-group-item">Good communication skills with maximized information sharing</li>
-                <li className="list-group-item">Well understanding on needs from customers, managers and developers</li>
-                <li className="list-group-item">Able to implement requirement in detail</li>
-                <li className="list-group-item">Make things happen by actively asking correct questions</li>
-                <li className="list-group-item">Able to interview and train new developers</li>
-                <li className="list-group-item">Willing to take challenges and higher responsibilities</li>
-                <li className="list-group-item">Able to provide comprehensive technical consultation & solution</li>
+                {coreAbilities && coreAbilities.map((item, index) => (
+                  <li key={index} className="list-group-item">{item.content}</li>
+                ))}
               </ul>
             </Panel>
           </div>

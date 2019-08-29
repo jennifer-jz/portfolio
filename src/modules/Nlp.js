@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import DocumentMeta from 'react-document-meta';
 import { getMetaData } from '../utils';
-import { Link, Panel } from '../components';
+import { Link, Panel, Badge } from '../components';
 import { Img } from 'components/imgs';
+import { nlpProjects } from 'shared/data';
 
 const Nlp = (props) => {
   const meta = getMetaData(props);
@@ -16,60 +17,17 @@ const Nlp = (props) => {
               theme="info"
               title="Natural Language Processing (NLP) Projects"
             >
-              <p className="ir java">
-                      2017.03 – 2017.04 
-                <span>
-                        Building Uncompressed/Compressed Stemmatized/Lemmatized Indexes for a Statistical Retrieval System
-                </span>
-              </p>
-              <p className="ir java">
-                      2017.03 – 2017.04 
-                <span>
-                        Implementation of A Statistical Relevance Model for Retrieval System Based on Vector Relevance Model
-                </span>
-              </p>
-              <p className="ir java">
-                      2017.02 – 2017.03 
-                <span>
-                        Query Expansion using Rocchio Algorithm and Local Clustering
-                </span>
-              </p>
-              <p className="ir java javascript">
-                      2017.02 – 2017.04 
-                <span>
-                        A Web Search Engine of Computer Algorithm
-                </span>
-              </p>
-              <p className="nlp java corenlp">
-                      2017.02 – 2017.04 
-                <span>
-                        A Coarse Logic Representation of News Articles
-                </span>
-              </p>
-              <p className="ml java classification">
-                      2018.02 – 2018.04 
-                <span>
-                        Implementation of Naïve Bayes Tree, Logistic Regression, and Perceptron for Text Classification
-                </span>
-              </p>
-              <p className="ml java classification">
-                      2018.02 – 2018.04 
-                <span>
-                        Implementation of Mixture of Tree Bayesian Networks using Expectation Maximization
-                </span>
-              </p>
-              <p className="ir java">
-                      2017.02 – 2017.04 
-                <span>
-                        Inverted Index Building and Compression for Search Engine
-                </span>
-              </p>
-              <p className="ir java">
-                      2017.02 – 2017.04 
-                <span>
-                        Tokenization of the Cranfield Collection
-                </span>
-              </p>
+              {nlpProjects.map((item, index) => (
+                <p key={index} className={item.keywords.join(' ')}>
+                  {item.period}
+                  <span>
+                    {item.title}
+                    {item.keywords && item.keywords.map((keyword, i) =>
+                      <Badge key={i} keyword={keyword} />
+                    )}
+                  </span>
+                </p>
+              ))}
             </Panel>
             <Panel
               theme="info"
@@ -91,7 +49,7 @@ const Nlp = (props) => {
                       <Img src="/img/term_pair_check.png" />
                     </Link>
                   </div>
-                  <div className="col-sm-3"> 
+                  <div className="col-sm-3">
                     <Link href="/img/related_word.png"><p>Word Suggestion</p></Link>
                     <Link title="Word Suggestion" href="/img/related_word.png">
                       <Img src="/img/related_word.png" />
