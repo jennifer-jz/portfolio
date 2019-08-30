@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import DocumentMeta from 'react-document-meta';
 import { courseProjects } from 'shared/data';
+import { educationNavs } from 'shared/navigation';
 import { getMetaData } from '../utils';
 import { Link, Panel, Badge } from '../components';
 import styles from './Education.styles';
@@ -17,6 +18,19 @@ const Education = (props) => {
     courseProjects;
   const getActiveClassName = (key) => {
     return key === subject ? "active" : "";
+  };
+
+  const educationNavsGroup = educationNavs.reduce((accu, curr) => {
+    if (curr.line > accu.length) {
+      accu.push([curr]);
+    } else {
+      accu[curr.line - 1].push(curr);
+    }
+    return accu;
+  }, []);
+
+  const isNavigable = (keyword) => {
+    return !!educationNavs.find(item => item.name === keyword);
   };
 
   return (
@@ -36,42 +50,21 @@ const Education = (props) => {
         
         <div className="inlinelist courses">
           <div className="subtitle">Courses</div>
-          <div>
-            <i className="fa fa-caret-right"></i>
-            <p>Artificial Intelligence</p>
-            <p className={ getActiveClassName("nlp") }>
-              <Link to="/education/nlp">Natural Language Processing</Link>
-            </p>
-            <p className={ getActiveClassName("ir") }>
-              <Link to="/education/ir">Information Retrieval</Link>
-            </p>
-            <p className={ getActiveClassName("ml") }>
-              <Link to="/education/ml">Machine Learning</Link>
-            </p>
-            <p>Computer Vision</p>
-          </div>
-          <div>
-            <i className="fa fa-caret-right"></i>
-            <p className={ getActiveClassName("algorithm") }>
-              <Link to="/education/algorithm">Algorithm Analysis and Data Structures</Link>
-            </p>
-            <p>Database Design</p>
-            <p className={ getActiveClassName("os") }>
-              <Link to="/education/os">Operating Systems Concepts</Link>
-            </p>
-            <p>Discrete Structure</p>
-            <p>Computer Architecture</p>
-          </div>
-          <div>
-            <i className="fa fa-caret-right"></i>
-            <p>Cloud Computing</p>
-            <p className={ getActiveClassName("web") }>
-              <Link to="/education/web">Web Programming Languages</Link>
-            </p>
-            <p className={ getActiveClassName("hci") }>
-              <Link to="/education/hci">Human Computer Interaction</Link>
-            </p>
-          </div>
+          {educationNavsGroup.map((group, groupIndex) => (
+            <div key={groupIndex}>
+              <i className="fa fa-caret-right"></i>
+              {educationNavs.filter(item => item.line === groupIndex + 1).map((item, index) => {
+                if (!item.name) {
+                  return (<p key={index}>{item.title}</p>);
+                }
+                return (
+                  <p key={index} className={ getActiveClassName(item.name) }>
+                    <Link to={`/education/${item.name}`}>{item.title}</Link>
+                  </p>
+                );
+              })}
+            </div>
+          ))}
         </div>
 
         <div className="row">
@@ -91,7 +84,11 @@ const Education = (props) => {
                     {item.title}
                     {item.url && <Link href={item.url} icon />}
                     {item.keywords && item.keywords.map((keyword, i) =>
-                      <Badge key={i} to={`/education/${keyword}`} keyword={keyword} />
+                      <Badge
+                        key={i}
+                        to={isNavigable(keyword) ? `/education/${keyword}` : undefined}
+                        keyword={keyword}
+                      />
                     )}
                   </span>
                 </p>
