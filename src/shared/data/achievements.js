@@ -26,7 +26,10 @@ const achievements = [
     title: "Develop a Bilingual Dictionary using IR technique",
     keywords: ["aspnet", "ir"],
     // ref: <Link href="http://www.scidict.org" title="a web dictionary">SCIdict.org</Link>,
-    ref: "SCIdict.org"
+    ref: {
+      title: "SCIdict.org",
+      url: "http://www.scidict.org",
+    }
   },
   {
     title: "Develop a large-scale ERP system for translation industry",

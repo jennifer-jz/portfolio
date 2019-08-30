@@ -75,7 +75,7 @@ const Home = (props) => {
                     {item.keywords && item.keywords.reverse().map((keyword, i) =>
                       <Badge key={i} keyword={keyword} />
                     )}
-                    {item.ref && <Badge keyword={item.ref} href={item.ref} />}
+                    {item.ref && <Badge keyword={item.ref.title} href={item.ref.url} />}
                   </li>
                 ))}
               </ul>

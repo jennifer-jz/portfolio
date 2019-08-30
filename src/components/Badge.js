@@ -24,7 +24,7 @@ const BadgeUnstyled = (props) => {
   }
 
   return (
-    <Link to={url} openNew={openNew} {...filterNonHtmlProps(otherProps)}>
+    <Link href={url} openNew={openNew} {...filterNonHtmlProps(otherProps)}>
       <BadgeSpan />
     </Link>
   );

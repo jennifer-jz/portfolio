@@ -10,6 +10,7 @@ import {
 } from '../components';
 import { Img } from 'components/imgs';
 import { products } from 'shared/data';
+import { productNavs } from 'shared/navigation';
 import styles from './Product.styles';
 
 const Product = (props) => {
@@ -36,31 +37,23 @@ const Product = (props) => {
     return key === subject ? "active" : "";
   };
 
+  const isNavigable = (keyword) => {
+    return !!productNavs.find(item => item.name === keyword);
+  };
+
   return (
     <DocumentMeta {...meta}>
       <div className={`product-view ${props.className}`}>
         <div id="myBtnContainer">
-          <Link id="all"
-            className={`btn btn-secondary ${getActiveClassName("all")}`}
-            to="/product"> All</Link>
-          <Link id="featured"
-            className={`btn btn-secondary ${getActiveClassName("featured")}`}
-            to="/product/featured"> Featured</Link>
-          <Link id="workbench"
-            className={`btn btn-secondary ${getActiveClassName("workbench")}`}
-            to="/product/workbench"> Translation Workbench</Link>
-          <Link id="erp"
-            className={`btn btn-secondary ${getActiveClassName("erp")}`}
-            to="/product/erp"> ERP System</Link>
-          <Link id="website"
-            className={`btn btn-secondary ${getActiveClassName("website")}`}
-            to="/product/website"> Web Products</Link>
-          <Link id="msword"
-            className={`btn btn-secondary ${getActiveClassName("msword")}`}
-            to="/product/msword"> MS Word Development</Link>
-          <Link id="scidict"
-            className={`btn btn-secondary ${getActiveClassName("scidict")}`}
-            to="/product/scidict"> SCIDict</Link>
+          {productNavs.map((item, index) => (
+            <Link
+              key={index}
+              className={`btn btn-secondary ${getActiveClassName(item.name)}`}
+              to={`/product/${item.name}`}
+            >
+              {item.title}
+            </Link>
+          ))}
         </div>
 
         <div className="demos container-fluid bg-3 text-center works">
@@ -95,7 +88,7 @@ const Product = (props) => {
                         <Badge
                           key={key}
                           keyword={keyword}
-                          to={`/product/${keyword}`}
+                          to={isNavigable(keyword) ? `/product/${keyword}` : undefined}
                         ></Badge>
                       )}
                     </div>
