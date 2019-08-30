@@ -1,4 +1,4 @@
-.product-view {
+export default `
     .demos {
         margin-top: 30px;
         
@@ -10,7 +10,7 @@
                 margin-right:5px;
             }
         }
-	}
+    }
 
     #myBtnContainer {
         padding: 0;
@@ -42,4 +42,4 @@
     .row{
         margin-top: 10px;
     }
-}
+`;

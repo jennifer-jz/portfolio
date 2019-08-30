@@ -62,7 +62,6 @@ const Home = (props) => {
 
         <div className="row">
           <div className="col-md-7">
-
             <Panel
               id="Achievement"
               theme="info"
@@ -76,7 +75,7 @@ const Home = (props) => {
                     {item.keywords && item.keywords.reverse().map((keyword, i) =>
                       <Badge key={i} keyword={keyword} />
                     )}
-                    {item.ref}
+                    {item.ref && <Badge keyword={item.ref} href={item.ref} />}
                   </li>
                 ))}
               </ul>

@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { Link as RouterLink } from 'react-router-dom';
 import { LinkIcon } from 'components/icons';
 import { filterNonHtmlProps, getRootUrl } from 'utils';
+import { LINK_COLOR } from 'shared/styles';
 
 const LinkUnstyled = (props) => {
   const { href, to, icon, openNew, className, children, ...otherProps } = props;
@@ -58,7 +59,7 @@ LinkUnstyled.defaultProps = {
 };
 
 const Link = styled(LinkUnstyled)`
-  color: #337ab7;
+  color: ${LINK_COLOR};
 `;
 
 export default Link;

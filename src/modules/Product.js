@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import DocumentMeta from 'react-document-meta';
 import { getMetaData, getVideoURL } from '../utils';
 import {
+  Badge,
   Link,
   Modal,
 } from '../components';
 import { Img } from 'components/imgs';
-import { products, subjectDict } from 'shared/data';
-import './Product.scss';
+import { products } from 'shared/data';
+import styles from './Product.styles';
 
 const Product = (props) => {
   const meta = getMetaData(props);
@@ -36,7 +38,7 @@ const Product = (props) => {
 
   return (
     <DocumentMeta {...meta}>
-      <div className="product-view">
+      <div className={`product-view ${props.className}`}>
         <div id="myBtnContainer">
           <Link id="all"
             className={`btn btn-secondary ${getActiveClassName("all")}`}
@@ -90,11 +92,12 @@ const Product = (props) => {
                     </Link>}
                     <div className="tags">
                       {item.keywords.map((keyword, key) =>
-                        <Link key={key} to={`/product/${subject}/${keyword}`}>
-                          <span className="badge">
-                            {subjectDict[keyword] && subjectDict[keyword].name}
-                          </span>
-                        </Link>)}
+                        <Badge
+                          key={key}
+                          keyword={keyword}
+                          to={`/product/${keyword}`}
+                        ></Badge>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -139,6 +142,7 @@ Product.propTypes = {
   keywords: PropTypes.string,
   subject: PropTypes.string,
   match: PropTypes.object,
+  className: PropTypes.string,
 };
 Product.defaultProps = {
   title: "",
@@ -146,6 +150,7 @@ Product.defaultProps = {
   keywords: "",
   subject: "",
   match: {},
+  className: "",
 };
 
-export default Product;
+export default styled(Product)`${styles}`;

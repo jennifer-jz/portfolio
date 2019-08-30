@@ -65,9 +65,6 @@
 	{
 		content:"]";
 	}
-	span.badge:hover {
-		background:#337ab7;
-	}
 	.courses p::after {
 		content: "; ";
 	}

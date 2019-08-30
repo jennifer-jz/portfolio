@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Link from './Link';
 import { filterNonHtmlProps, getRootUrl } from 'utils';
 import { subjectDict } from 'shared/data';
+import { LINK_COLOR, DARK_GRAY } from 'shared/styles';
 
 const BadgeUnstyled = (props) => {
   const { href, to, className, keyword, ...otherProps } = props;
@@ -13,7 +14,7 @@ const BadgeUnstyled = (props) => {
   const BadgeSpan = ({...otherProps}) => {
     return (
       <span className={`badge ${className}`} {...otherProps}  >
-        {subjectDict[keyword] && subjectDict[keyword].name}
+        {subjectDict[keyword] ? subjectDict[keyword].name : keyword}
       </span>
     );
   };
@@ -24,9 +25,7 @@ const BadgeUnstyled = (props) => {
 
   return (
     <Link to={url} openNew={openNew} {...filterNonHtmlProps(otherProps)}>
-      <span className="badge">
-        {subjectDict[keyword] && subjectDict[keyword].name}
-      </span>
+      <BadgeSpan />
     </Link>
   );
 };
@@ -47,6 +46,19 @@ BadgeUnstyled.defaultProps = {
 };
 
 const Badge = styled(BadgeUnstyled)`
+  ${props => props.href || props.to ? `
+    background: ${LINK_COLOR};
+    &:hover {
+      cursor: pointer;
+      box-shadow: 3px 3px 6px ${LINK_COLOR};
+    }
+  ` : `
+    background: ${DARK_GRAY};
+    &:hover {
+      cursor: default;
+      background: ${DARK_GRAY};
+    }
+  `}
 `;
 
 export default Badge;
