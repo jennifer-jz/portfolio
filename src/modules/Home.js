@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import DocumentMeta from 'react-document-meta';
+import ReactTooltip from 'react-tooltip';
 import { getMetaData, getVideoURL } from '../utils';
 import {
   selfIntroText,
@@ -39,6 +40,7 @@ const Home = (props) => {
 
   return (
     <DocumentMeta {...meta}>
+      <ReactTooltip place="top" />
       <div className="container-fluid bg-3 works">
         <div className="intro">
           <div className="name"><h4>Juanjuan Zhao (also Jennifer)</h4>
@@ -83,12 +85,12 @@ const Home = (props) => {
             
             <Panel
               theme="danger"
-              title="Programming Languages & Tool"
+              title="Programming Languages & Tools"
               titleUrl="capability"
             >
               <ButtonGroup>
                 {techLangs.map((item, index) => (
-                  <Button key={index} theme={item.theme} title={item.strength}>{item.content}</Button>
+                  <Button key={index} theme={item.theme} data-tip={item.strength}>{item.content}</Button>
                 ))}
               </ButtonGroup>
             </Panel>
@@ -101,7 +103,7 @@ const Home = (props) => {
             >
               <ButtonGroup>
                 {coreExperiences && coreExperiences.map((item, index) => (
-                  <Button key={index} theme={item.theme} title={item.strength}>
+                  <Button key={index} data-tip={item.strength} theme={item.theme}>
                     {item.content}
                   </Button>
                 ))}

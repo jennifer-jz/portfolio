@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import DocumentMeta from 'react-document-meta';
+import ReactTooltip from 'react-tooltip';
 import { getMetaData } from '../utils';
 import { Button, Link, ButtonGroup, Panel } from '../components';
 
@@ -8,6 +9,7 @@ const Capability = (props) => {
   const meta = getMetaData(props);
   return (
     <DocumentMeta {...meta}>
+      <ReactTooltip place="top" />
       <div className="container-fluid bg-3 works">
 
         <div className="row">
@@ -128,19 +130,19 @@ const Capability = (props) => {
               title="Programming Language"
             >
               <ButtonGroup>
-                <Button theme="" title="50,000+ lines">Node.js + Express.js + MySql</Button>
-                <Button theme="primary" title="300,000+ lines">Html 4/5 + CSS 2/3</Button>
-                <Button theme="dark" title="10,000+ lines">Bootstrap</Button>
-                <Button theme="success" title="500,000+ lines">C# + SQL</Button>
-                <Button theme="info" title="80,000+ lines">Asp.Net Web</Button>
-                <Button theme="warning" title="20,000+ lines">Java</Button>
-                <Button theme="danger" title="5,000+ lines">MySQL + PhP</Button>
-                <Button theme="dark" title="10,000+ lines">json</Button>
-                <Button theme="light" title="1,000+ lines">Angular JS</Button>
-                <Button theme="link" title="1,000+ lines">Mongo DB</Button>
-                <Button theme="primary" title="20,000+ lines">Javascript / jQuery / jQueryUI</Button>
-                <Button theme="dark" title="5,000+ lines">ajax + XML</Button>
-                <Button theme="success" title="2,000+ lines">REST and SOAP Web Services</Button>
+                <Button theme="" data-tip="50,000+ lines">Node.js + Express.js + MySql</Button>
+                <Button theme="primary" data-tip="300,000+ lines">Html 4/5 + CSS 2/3</Button>
+                <Button theme="dark" data-tip="10,000+ lines">Bootstrap</Button>
+                <Button theme="success" data-tip="500,000+ lines">C# + SQL</Button>
+                <Button theme="info" data-tip="80,000+ lines">Asp.Net Web</Button>
+                <Button theme="warning" data-tip="20,000+ lines">Java</Button>
+                <Button theme="danger" data-tip="5,000+ lines">MySQL + PhP</Button>
+                <Button theme="dark" data-tip="10,000+ lines">json</Button>
+                <Button theme="light" data-tip="1,000+ lines">Angular JS</Button>
+                <Button theme="link" data-tip="1,000+ lines">Mongo DB</Button>
+                <Button theme="primary" data-tip="20,000+ lines">Javascript / jQuery / jQueryUI</Button>
+                <Button theme="dark" data-tip="5,000+ lines">ajax + XML</Button>
+                <Button theme="success" data-tip="2,000+ lines">REST and SOAP Web Services</Button>
               </ButtonGroup>
             </Panel>
 
