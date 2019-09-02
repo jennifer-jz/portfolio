@@ -1,4 +1,6 @@
 export default `
+  border: none;
+
   .logo {
     position: absolute;
     top: 9px;
@@ -7,5 +9,6 @@ export default `
 
   .MuiTab-wrapper {
     font-size: 13px;
+    font-weight: bold;
   }
 `;
