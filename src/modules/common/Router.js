@@ -7,7 +7,6 @@ import Education from 'modules/Education';
 import Experience from 'modules/Experience';
 import Product from 'modules/Product';
 import Capability from 'modules/Capability';
-import Solution from 'modules/Solution';
 import Nlp from 'modules/Nlp';
 import AboutMe from 'modules/AboutMe';
 import Paths from 'shared/routePaths';
@@ -52,11 +51,6 @@ const Router = () => {
           <Route path={Paths.CAPABILITY} render={(props) =>
             <Capability
               {...metaData.CAPABILITY}
-              {...props}
-            />} />
-          <Route path={Paths.SOLUTION} render={(props) =>
-            <Solution
-              {...metaData.SOLUTION}
               {...props}
             />} />
           <Route path={Paths.NLP} render={(props) =>

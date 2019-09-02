@@ -22,10 +22,6 @@ LogoUnstyled.defautProps = {
 };
 
 const Logo = styled(LogoUnstyled)`
-  position: absolute;
-  top: 6px;
-  left: 20px;
-  
   img {
     width: 35px;
     height: 35px;

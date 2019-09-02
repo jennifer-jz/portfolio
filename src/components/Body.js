@@ -24,7 +24,7 @@ BodyUnstyled.defaultProps = {
 };
 
 const Body = styled(BodyUnstyled)`
-  padding: 70px 30px 20px 30px;
+  padding: 80px 30px 20px 30px;
 `;
 
 export default Body;

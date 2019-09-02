@@ -5,7 +5,6 @@ export const HOME = getRootUrl('/home');
 export const CAPABILITY = getRootUrl('/capability');
 export const EDUCATION = getRootUrl('/education');
 export const EXPERIENCE = getRootUrl('/experience');
-export const SOLUTION = getRootUrl('/solution');
 export const NLP = getRootUrl('/nlp');
 export const ABOUTME = getRootUrl('/aboutme');
 export const PRODUCT = getRootUrl('/product');
@@ -13,13 +12,14 @@ export const PRODUCT = getRootUrl('/product');
 const Paths = {
   ROOT,
   HOME,
+  EXPERIENCE,
+  PRODUCT,
   CAPABILITY,
   EDUCATION,
-  EXPERIENCE,
-  SOLUTION,
   NLP,
   ABOUTME,
-  PRODUCT,
 };
+
+export const navPathArr = Object.entries(Paths).slice(1);
 
 export default Paths;

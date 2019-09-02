@@ -1,61 +1,63 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Paths from 'shared/routePaths';
+import styled from 'styled-components';
+import Paper from '@material-ui/core/Paper';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
+import { navPathArr } from 'shared/routePaths';
 import { Logo } from 'components/imgs';
 import { withRouter } from 'react-router-dom';
+import styles from './Navigation.styles';
 
 const Navigation = (props) => {
-  const { pathname } = props.history.location;
-  function isPathMatched(path) {
-    return pathname.startsWith(path);
+  function getMatchedPathId () {
+    const { pathname } = props.history.location;
+    for (let i = 0; i < navPathArr.length; i++) {
+      if (pathname.startsWith(navPathArr[i][1])) {
+        return i;
+      }
+    }
+    return 0;
   }
-  function getClassName(path) {
-    return isPathMatched(path) ? "active" : "";
+
+  function getMatchedPath (id) {
+    return navPathArr[id][1];
+  }
+  
+  function handleChange (e, tabId) {
+    window.location.href = getMatchedPath(tabId);
   }
 
   const logoSrc = "/img/houzi.jpg";
 
+  const tabId = getMatchedPathId();
+
+  const { className } = props;
+
   return (
-    <nav className="navbar navbar-lights">
+    <Paper className={`navbar ${className}`}>
       <Logo src={logoSrc} />
-      <div className="container">
-        <div className="" id="myNavbar">
-          <ul className="nav nav-tabs">
-            <li className={getClassName(Paths.HOME)}><a href={Paths.HOME}>Home</a></li>
-            <li className={getClassName(Paths.EXPERIENCE)}>
-              <a title="Experience" href={Paths.EXPERIENCE}>Experience</a>
-            </li>
-            <li className={getClassName(Paths.PRODUCT)}>
-              <a title="Product Demo" href={Paths.PRODUCT}>Demo</a>
-            </li>
-            <li className={getClassName(Paths.CAPABILITY)}>
-              <a title="Capability" href={Paths.CAPABILITY}>Capability</a>
-            </li>
-            {/* <li className={getClassName(Paths.SOLUTION)}>
-              <a title="Solution" href={Paths.SOLUTION}>Tech Solution</a>
-            </li> */}
-            <li className={getClassName(Paths.NLP)}>
-              <a title="Natural Language Processing" href={Paths.NLP}>NLP</a>
-            </li>
-            <li className={getClassName(Paths.EDUCATION)}>
-              <a href={Paths.EDUCATION}>Education</a>
-            </li>
-            <li className={getClassName(Paths.ABOUTME)}>
-              <a title="About Me" href={Paths.ABOUTME}>About Me</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+      <Tabs
+        value={tabId}
+        onChange={handleChange}
+        indicatorColor="primary"
+        textColor="primary"
+        centered
+      >
+        {navPathArr.map((item, key) => <Tab key={key} label={item[0]} />)}
+      </Tabs>
+    </Paper>
   );
 };
 
 Navigation.displayName = "Navigation";
 Navigation.propTypes = {
   history: PropTypes.object,
+  className: PropTypes.string,
 };
 Navigation.defaultProps = {
   history: {},
+  className: "",
 };
 
-export default withRouter(Navigation);
+export default styled(withRouter(Navigation))`${styles}`;
