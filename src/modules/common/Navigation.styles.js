@@ -1,4 +1,7 @@
 export default `
+  *:focus {
+    outline: none;
+  }
   border: none;
 
   .logo {
