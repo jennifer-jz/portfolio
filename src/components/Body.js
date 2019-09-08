@@ -25,6 +25,11 @@ BodyUnstyled.defaultProps = {
 
 const Body = styled(BodyUnstyled)`
   padding: 80px 60px 20px 60px;
+
+  .row {
+      margin-left: 0;
+      margin-right: 0;
+  }
 `;
 
 export default Body;

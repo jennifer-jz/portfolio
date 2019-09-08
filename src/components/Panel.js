@@ -1,7 +1,8 @@
+/* eslint-disable indent */
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { BOLD_FONT_COLOR } from 'shared/styles';
+import { BOLD_FONT_COLOR, THEME_INFO, THEME_DANGER } from 'shared/styles';
 import Link from './Link';
 
 const PanelUnstyled = (props) => {
@@ -41,23 +42,49 @@ PanelUnstyled.defaultProps = {
 };
 
 const Panel = styled(PanelUnstyled)`
+  margin-bottom: 20px;
   .panel {
+    margin-bottom: 0;
+    border-radius: 4px;
     border: none;
     box-shadow: 0 2px 6px 0 rgba(0,0,0,0.35);
-  }
-
-  .panel-title a {
-    text-decoration: underline;
   }
 
   .panel-heading {
     padding: 3px 10px;
     background-color:#F2F3F4 !important;
+    border-bottom: 0;
+
+    ${props => {
+      let color = '';
+      switch (props.theme) {
+        case "info":
+          color = THEME_INFO;
+          break;
+        case "danger":
+          color = THEME_DANGER;
+          break;
+        default:
+          break;
+      }
+      return `color: ${color};`;
+    }};
   }
 
-  .panel-body ul.list-group {
-		margin-bottom:0;
-	}
+  .panel-title {
+    font-size: 16px;
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  .panel-body {
+    padding: 15px;
+
+    ul.list-group {
+      margin-bottom:0;
+    }
+  }
 
   p > span {
     font-weight: bold;

@@ -1,14 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import { filterNonHtmlProps } from 'utils';
 
-const Img = (props) => {
+const ImgUnstyled = (props) => {
   const { className, src, ...otherProps } = props;
   const obj = require(`../../public${src}`);
 
   return (
     <img
-      className={`img-responsive ${className}`}
+      className={className}
       alt="Image"
       src={obj}
       {...filterNonHtmlProps(otherProps)}
@@ -16,13 +17,19 @@ const Img = (props) => {
   );
 };
 
-Img.displayName = "Img";
-Img.propTypes = {
+ImgUnstyled.displayName = "ImgUnstyled";
+ImgUnstyled.propTypes = {
   className: PropTypes.string,
   src: PropTypes.any,
 };
-Img.defaultProps = {
+ImgUnstyled.defaultProps = {
   className: '',
 };
+
+const Img = styled(ImgUnstyled)`
+  display: block;
+  max-width: 100%;
+  height: auto;
+`;
 
 export default Img;
