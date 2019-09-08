@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { BOLD_FONT_COLOR } from 'shared/styles';
 import Link from './Link';
 
 const PanelUnstyled = (props) => {
@@ -40,6 +41,11 @@ PanelUnstyled.defaultProps = {
 };
 
 const Panel = styled(PanelUnstyled)`
+  .panel {
+    border: none;
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.35);
+  }
+
   .panel-title a {
     text-decoration: underline;
   }
@@ -49,9 +55,14 @@ const Panel = styled(PanelUnstyled)`
     background-color:#F2F3F4 !important;
   }
 
+  .panel-body ul.list-group {
+		margin-bottom:0;
+	}
+
   p > span {
     font-weight: bold;
     padding: 20px;
+    color: ${BOLD_FONT_COLOR};
   }
 
   p span.badge {

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import DocumentMeta from 'react-document-meta';
 import { getMetaData } from '../utils';
 import {
@@ -8,6 +9,8 @@ import {
   filePath,
 } from '../shared/constants';
 import { Link } from '../components';
+import { Icon } from 'components/icons';
+import styles from './AboutMe.styles';
 
 const AboutMe = (props) => {
   const meta = getMetaData(props);
@@ -15,17 +18,17 @@ const AboutMe = (props) => {
   const { resumeDocPath, resumePdfPath } = filePath;
   return (
     <DocumentMeta {...meta}>
-      <div className="container-fluid bg-3 works">
+      <div className={`container-fluid bg-3 works ${props.className}`}>
         <div className="row intro">
           <h4>About Me</h4>
           <Link href={resumePdfPath} title="Resume">
-            <i className="fa fa-file-pdf-o"></i>
+            <Icon id="fa-file-pdf-o" />
           </Link>
           <Link href={resumeDocPath} title="Resume">
-            <i className="fa fa-file-word-o"></i>
+            <Icon id="fa-file-word-o" />
           </Link>
           <Link href={gitHub} title="GitHub">
-            <i className="fa fab fa-github" style={{fontSize: "26px"}}></i>
+            <Icon id="fab fa-github" />
           </Link>
         </div>
 
@@ -96,12 +99,14 @@ AboutMe.propTypes = {
   description: PropTypes.string,
   keywords: PropTypes.string,
   subject: PropTypes.string,
+  className: PropTypes.string,
 };
 AboutMe.defaultProps = {
   title: "",
   description: "",
   keywords: "",
   subject: "",
+  className: "",
 };
 
-export default AboutMe;
+export default styled(AboutMe)`${styles}`;

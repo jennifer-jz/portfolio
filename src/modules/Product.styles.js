@@ -1,15 +1,6 @@
 export default `
     .demos {
         margin-top: 30px;
-        
-        .tags {
-            margin-top:5px;
-            text-align: left;
-
-            .badge {
-                margin-right:5px;
-            }
-        }
     }
 
     #myBtnContainer {

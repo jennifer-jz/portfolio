@@ -36,7 +36,7 @@ const Education = (props) => {
   return (
     <DocumentMeta {...meta}>
       <div className={`container-fluid bg-3 works ${props.className}`}>
-        <div className="list">
+        <div className="education-history">
           <div className="subtitle">Education</div>
           <p>2016.08 - 2018.12 
             <span>MS in Computer Science</span>
@@ -48,7 +48,7 @@ const Education = (props) => {
           </p>
         </div>
         
-        <div className="inlinelist courses">
+        <div className="courses">
           <div className="subtitle">Courses</div>
           {educationNavsGroup.map((group, groupIndex) => (
             <div key={groupIndex}>

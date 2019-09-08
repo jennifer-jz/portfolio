@@ -1,14 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import DocumentMeta from 'react-document-meta';
 import { getMetaData } from '../utils';
 import { Link } from '../components';
+import styles from './Experience.styles';
 
 const Experience = (props) => {
   const meta = getMetaData(props);
   return (
     <DocumentMeta {...meta}>
-      <div className="container-fluid bg-3 works">
+      <div className={`container-fluid bg-3 works ${props.className}`}>
         <p>2019.02 –Present <span>Senior Software Engineer</span>Shape Security, Mountain View, CA</p>
 
         <table>
@@ -131,7 +133,7 @@ const Experience = (props) => {
 					Develop an enterprise management system for translation automation, including subsystems of order 
 					management, client management, HR management, translation project management, translation and 
 					editing quality monitoring system, and bilingual corpus management. Implement text extraction 
-					and generation from/to MS Office Word using Microsoft 
+					and generation from/to MS Office Word using Microsoft&nbsp;
                   <Link to="/product/msword">Office Programming</Link>. 
 					Develop fully owned NLP algorithms for sentence splitting, Chinese word segmentation, 
                     and phrase chunking, tailored for bilingual text.
@@ -202,12 +204,14 @@ Experience.propTypes = {
   description: PropTypes.string,
   keywords: PropTypes.string,
   subject: PropTypes.string,
+  className: PropTypes.string,
 };
 Experience.defaultProps = {
   title: "",
   description: "",
   keywords: "",
   subject: "",
+  className: "",
 };
 
-export default Experience;
+export default styled(Experience)`${styles}`;

@@ -4,13 +4,12 @@ import styled from 'styled-components';
 import DocumentMeta from 'react-document-meta';
 import { getMetaData, getVideoURL } from '../utils';
 import {
-  Badge,
   Link,
   Modal,
-} from '../components';
-import { Img } from 'components/imgs';
+} from 'components';
 import { products } from 'shared/data';
 import { productNavs } from 'shared/navigation';
+import DemoItem from './common/DemoItem';
 import styles from './Product.styles';
 
 const Product = (props) => {
@@ -37,10 +36,6 @@ const Product = (props) => {
     return key === subject ? "active" : "";
   };
 
-  const isNavigable = (keyword) => {
-    return !!productNavs.find(item => item.name === keyword);
-  };
-
   return (
     <DocumentMeta {...meta}>
       <div className={`product-view ${props.className}`}>
@@ -58,50 +53,19 @@ const Product = (props) => {
 
         <div className="demos container-fluid bg-3 text-center works">
           <div className="row">
-            {matchedProducts.map((item, key) => {
-              const id = item.demo ? item.id : "";
-              const demoLink = item.demo ? `/product/${subject}/${id}` : undefined;
-              const showDemoIcon = item.demo || !!item.url;
-              const url = item.url || undefined;
-              const caption = item.caption || item.title;
-              const imgUrl = item.img;
-              const imgFullUrl = item.imgFull || item.img;
-              const demoIconUrl = showDemoIcon ? imgFullUrl : undefined;
-              const externalUrl = !item.demo ? url || imgFullUrl : undefined ;
-
-              return (
-                <div key={key} className={`col-sm-3 ${item.keywords.join(' ')}`}>
-                  <div className="content">
-                    {showDemoIcon && <p className="title">{item.title}</p>}
-                    <Link className={id} href={demoIconUrl} title={item.title}>
-                      {showDemoIcon && <p className="demo"><i className="material-icons">image</i></p>}
-                      {!showDemoIcon && <p className="title">{item.title}</p>}
-                    </Link>
-                    {item.demo && <Link id={id} to={demoLink} title={caption}>
-                      <Img src={imgUrl} />
-                    </Link>}
-                    {!item.demo && <Link href={externalUrl} title={caption}>
-                      <Img src={imgUrl} />
-                    </Link>}
-                    <div className="tags">
-                      {item.keywords.map((keyword, key) =>
-                        <Badge
-                          key={key}
-                          keyword={keyword}
-                          to={isNavigable(keyword) ? `/product/${keyword}` : undefined}
-                        ></Badge>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
+            {matchedProducts.map((item, key) =>(
+              <DemoItem
+                key={key}
+                data={item}
+                large
+                urlHead={`/product/${subject}`}
+              />))}
           </div>
         </div>
 
         <div className="container-fluid bg-3 works">
           <h4>Functional Modules</h4>
-          <div className="inlinelist">
+          <div>
             <ul>
               <li>Email Notifications</li>
               <li>Pricing System</li>

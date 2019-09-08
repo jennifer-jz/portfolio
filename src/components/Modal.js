@@ -62,7 +62,16 @@ const ModalStyled = styled(ModalUnstyled)`
   .modal, modal-backdrop {
     display: ${props => props.visible ? 'block' : 'none'};
   }
-  
+
+  .modal-dialog {
+    width: 690px;
+    max-width: 690px;
+  }
+
+  .modal-content iframe {
+    margin: 0 auto;
+    display: block;
+  }
 `;
 
 const Modal = (props) => {

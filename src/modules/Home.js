@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import DocumentMeta from 'react-document-meta';
 import ReactTooltip from 'react-tooltip';
 import { getMetaData, getVideoURL } from '../utils';
@@ -15,8 +16,10 @@ import {
   coreExperiences,
   coreAbilities,
 } from 'shared/data';
+import DemoItem from './common/DemoItem';
 import { Button, ButtonGroup, Link, Modal, Panel, Badge } from '../components';
-import { Img } from 'components/imgs';
+import { Icon } from 'components/icons';
+import styles from './Home.styles';
 
 const Home = (props) => {
   const meta = getMetaData(props);
@@ -41,23 +44,23 @@ const Home = (props) => {
   return (
     <DocumentMeta {...meta}>
       <ReactTooltip place="top" />
-      <div className="container-fluid bg-3 works">
+      <div className={`container-fluid bg-3 works ${props.className}`}>
         <div className="intro">
           <div className="name"><h4>Juanjuan Zhao (also Jennifer)</h4>
             <Link href={resumePdfPath} title="Resume">
-              <i className="fa fa-file-pdf-o"></i>
+              <Icon id="fa-file-pdf-o" />
             </Link>
             <Link href={resumeDocPath} title="Resume">
-              <i className="fa fa-file-word-o"></i>
+              <Icon id="fa-file-word-o" />
             </Link>
             <Link href={linkedIn} title="LinkedIn">
-              <i className="fa fa-linkedin-square" style={{fontSize: "26px"}}></i>
+              <Icon id="fa-linkedin-square" />
             </Link>
             <Link href={gitHub} title="GitHub">
-              <i className="fa fab fa-github" style={{fontSize: "26px"}}></i>
+              <Icon id="fab fa-github" />
             </Link>
           </div>
-          <p>
+          <p className="description">
             {selfIntroText}
           </p>
         </div>
@@ -124,37 +127,15 @@ const Home = (props) => {
           </div>
         </div>
 
-        <div className="headline"><h4 className=" text-left" ><Link to="product">Product Demo</Link></h4></div>
+        <div><h4 className=" text-left" ><Link to="product">Product Demo</Link></h4></div>
         <div className="row text-center demos">
-          {homeProjects.map((item, key) => {
-            const id = item.demo ? item.id : "";
-            const demoLink = item.demo ? `/home/${id}` : undefined;
-            const showDemoIcon = item.demo || !!item.url;
-            const url = item.url || undefined;
-            const caption = item.caption || item.title;
-            const imgUrl = item.img;
-            const imgFullUrl = item.imgFull || item.img;
-            const demoIconUrl = showDemoIcon ? imgFullUrl : undefined;
-            const externalUrl = !item.demo ? url || imgFullUrl : undefined ;
-
-            return (
-              <div key={key} className={`col-sm-3 ${item.keywords.join(' ')}`}>
-                <div className="content">
-                  {showDemoIcon && <p className="title">{item.title}</p>}
-                  <Link className={id} href={demoIconUrl} title={item.title}>
-                    {showDemoIcon && <p className="demo"><i className="material-icons">image</i></p>}
-                    {!showDemoIcon && <p className="title">{item.title}</p>}
-                  </Link>
-                  {item.demo && <Link id={id} to={demoLink} title={caption}>
-                    <Img src={imgUrl} />
-                  </Link>}
-                  {!item.demo && <Link href={externalUrl} title={caption}>
-                    <Img src={imgUrl} />
-                  </Link>}
-                </div>
-              </div>
-            );
-          })}
+          {homeProjects.map((item, key) => (
+            <DemoItem
+              key={key}
+              data={item}
+              urlHead="/home"
+            />
+          ))}
         </div>
       </div>
       {modelData && <Modal
@@ -172,6 +153,7 @@ Home.propTypes = {
   description: PropTypes.string,
   keywords: PropTypes.string,
   subject: PropTypes.string,
+  className: PropTypes.string,
   match: PropTypes.object,
 };
 Home.defaultProps = {
@@ -179,7 +161,8 @@ Home.defaultProps = {
   description: "",
   keywords: "",
   subject: "",
+  className: "",
   match: {},
 };
 
-export default Home;
+export default styled(Home)`${styles}`;
