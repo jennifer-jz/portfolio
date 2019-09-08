@@ -20,6 +20,14 @@ export default `
     left: 20px;
   }
 
+  .MuiTabs-root {
+      max-width: calc(100% - 180px);
+  }
+
+  .MuiSvgIcon-root {
+      font-size: 18px;
+  }
+
   .MuiTab-wrapper {
     font-size: 13px;
     font-weight: bold;

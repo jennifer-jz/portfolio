@@ -42,7 +42,7 @@ const Navigation = (props) => {
         onChange={handleChange}
         indicatorColor="primary"
         textColor="primary"
-        centered
+        variant="scrollable"
       >
         {navPathArr.map((item, key) => <Tab key={key} label={item[0]} />)}
       </Tabs>

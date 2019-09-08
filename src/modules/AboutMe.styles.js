@@ -13,7 +13,7 @@ export default `
   }
 
   .about {
-    width:60%;
+    max-width:800px;
     padding:10px 0 20px 0;
 
     p {
