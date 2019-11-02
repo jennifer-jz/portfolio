@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const { rootDirectory } = require('./src/siteConfig.json');
@@ -88,6 +89,7 @@ module.exports = {
         removeScriptTypeAttributes: true,
       },
     }),
+    new FaviconsWebpackPlugin('./dist/favicon.png'),
     new CopyPlugin([
       { from: './web.config', to: './web.config' },
       { from: './src/public/favicon.png', to: './favicon.png' },
