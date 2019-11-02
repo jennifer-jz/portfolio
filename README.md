@@ -13,6 +13,8 @@ This repo shows an example of how to revamp a site and how refactoring can impro
 # Visible Benefits of Refactoring
 1. Time to load the main page is reduced to less than 1 sec after removing jQuery script and Bootstrap jQuery library.
 2. Technical debts are resolved. Duplicated code chunks are replaced by reusable components and utilities. 
+3. Better html organization and style reusability thanks to Styled Components
 
 # Other Highlights
-Integration of SEO using react-document-meta 
+1. Integration of SEO using react-document-meta
+2. Semantic version control
