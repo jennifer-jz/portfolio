@@ -90,6 +90,7 @@ module.exports = {
     }),
     new CopyPlugin([
       { from: './web.config', to: './web.config' },
+      { from: './src/public/favicon.png', to: './favicon.png' },
     ]),
     new ImageminPlugin({
       test: /\.(jpe?g|png|gif|svg)$/i,
