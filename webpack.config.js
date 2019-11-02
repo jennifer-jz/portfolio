@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const { rootDirectory } = require('./src/siteConfig.json');
 
 module.exports = {
@@ -90,6 +91,12 @@ module.exports = {
     new CopyPlugin([
       { from: './web.config', to: './web.config' },
     ]),
+    new ImageminPlugin({
+      test: /\.(jpe?g|png|gif|svg)$/i,
+      optipng: {
+        optimizationLevel: 3,
+      },
+    }),
   ],
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
