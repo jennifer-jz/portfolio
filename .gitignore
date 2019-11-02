@@ -17,4 +17,5 @@ bin/
 # Local files
 .DS_Store
 package-lock.json
+portfolio.code-workspace
 
