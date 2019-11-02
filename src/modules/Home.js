@@ -39,7 +39,11 @@ const Home = (props) => {
     }
   }, [activedemo]);
   
-  const homeProjects = products.filter(item => item.home);
+  const homeProjects = products.filter(item => item.home).map(item => {
+    const index = item.img.lastIndexOf('.');
+    const minImg = `${item.img.substring(0, index)}-min${item.img.substring(index)}`;
+    return { ...item, img: minImg };
+  });
 
   return (
     <DocumentMeta {...meta}>
