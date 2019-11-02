@@ -214,4 +214,6 @@ Experience.defaultProps = {
   className: "",
 };
 
-export default styled(Experience)`${styles}`;
+const ExperienceStyled = styled(Experience)`${styles}`;
+
+export default ExperienceStyled;

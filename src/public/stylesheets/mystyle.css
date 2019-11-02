@@ -1,7 +1,6 @@
 .row::before {
 	content: none !important;
 }
-
 .red {
 	color:red;
 }

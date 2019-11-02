@@ -82,7 +82,10 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebPackPlugin({
       template: "./src/public/index.html",
-      filename: "./index.html"
+      filename: "./index.html",
+      minify: {
+        removeScriptTypeAttributes: true,
+      },
     }),
     new CopyPlugin([
       { from: './web.config', to: './web.config' },

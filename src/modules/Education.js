@@ -119,4 +119,6 @@ Education.defaultProps = {
   match: {},
 };
 
-export default styled(Education)`${styles}`;
+const EducationStyled = styled(Education)`${styles}`;
+
+export default EducationStyled;

@@ -110,4 +110,6 @@ Product.defaultProps = {
   className: "",
 };
 
-export default styled(Product)`${styles}`;
+const ProductStyled = styled(Product)`${styles}`;
+
+export default ProductStyled;

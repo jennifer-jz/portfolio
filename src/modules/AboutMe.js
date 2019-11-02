@@ -109,4 +109,6 @@ AboutMe.defaultProps = {
   className: "",
 };
 
-export default styled(AboutMe)`${styles}`;
+const AboutMeStyled = styled(AboutMe)`${styles}`;
+
+export default AboutMeStyled;

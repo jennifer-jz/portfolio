@@ -60,4 +60,6 @@ Navigation.defaultProps = {
   className: "",
 };
 
-export default styled(withRouter(Navigation))`${styles}`;
+const NavigationStyled = styled(Navigation)`${styles}`;
+
+export default withRouter(NavigationStyled);

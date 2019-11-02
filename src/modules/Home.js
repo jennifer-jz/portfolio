@@ -165,4 +165,6 @@ Home.defaultProps = {
   match: {},
 };
 
-export default styled(Home)`${styles}`;
+const HomeStyled = styled(Home)`${styles}`;
+
+export default HomeStyled;
