@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import DocumentMeta from 'react-document-meta';
-import ReactTooltip from 'react-tooltip';
 import { getMetaData, getVideoURL } from '../utils';
 import {
   selfIntroText,
@@ -47,7 +46,6 @@ const Home = (props) => {
 
   return (
     <DocumentMeta {...meta}>
-      <ReactTooltip place="top" />
       <div className={`container-fluid bg-3 works ${props.className}`}>
         <div className="intro">
           <div className="name"><h4>Juanjuan Zhao (also Jennifer)</h4>

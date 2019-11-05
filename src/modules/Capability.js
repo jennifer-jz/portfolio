@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import DocumentMeta from 'react-document-meta';
-import ReactTooltip from 'react-tooltip';
 import { getMetaData } from '../utils';
 import { Button, Link, ButtonGroup, Panel } from '../components';
 
@@ -9,7 +8,6 @@ const Capability = (props) => {
   const meta = getMetaData(props);
   return (
     <DocumentMeta {...meta}>
-      <ReactTooltip place="top" />
       <div className="container-fluid bg-3 works">
 
         <div className="row">
