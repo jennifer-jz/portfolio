@@ -15,6 +15,7 @@
     "body-parser": "~1.18.2",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
+    "react-favicon": "0.0.17",
     "serve-favicon": "~2.4.5"
   },
   "devDependencies": {
