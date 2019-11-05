@@ -35,6 +35,7 @@ const Button = styled(ButtonUnstyled)`
       ${props.random ? `background: ${getControlledColor()};`: ''}
       opacity: 0.8;
       color: white;
+      font-size: 14px;
     `;
     if (!props['data-tip']) return commonStyle;
     return `

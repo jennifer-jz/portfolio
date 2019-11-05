@@ -46,17 +46,28 @@ BadgeUnstyled.defaultProps = {
 };
 
 const Badge = styled(BadgeUnstyled)`
+  display: inline-block;
+  min-width: 10px;
+  padding: 3px 7px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border-radius: 10px;
   ${props => props.href || props.to ? `
-    background: ${LINK_COLOR};
+    background-color: ${LINK_COLOR};
     &:hover {
       cursor: pointer;
-      box-shadow: 3px 3px 6px ${LINK_COLOR};
+      box-shadow: 2px 2px 8px ${LINK_COLOR};
     }
   ` : `
-    background: ${DARK_GRAY};
+    background-color: ${DARK_GRAY};
     &:hover {
       cursor: default;
-      background: ${DARK_GRAY};
+      background-color: ${DARK_GRAY};
     }
   `}
 `;

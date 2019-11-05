@@ -16,12 +16,13 @@ export default `
 
   .logo {
     position: absolute;
-    top: 9px;
+    top: 11px;
     left: 20px;
   }
 
   .MuiTabs-root {
       max-width: calc(100% - 180px);
+      margin: 0 auto;
   }
 
   .MuiSvgIcon-root {

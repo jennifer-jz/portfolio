@@ -75,9 +75,9 @@ const AboutMe = (props) => {
         <div className="contactme">
           <p>
             <i className="fa fa-envelope-square"></i>
-            <a href={`mailto:${email}?Subject=Work Info`} target="_top">
+            <Link href={`mailto:${email}?Subject=Work Info`} target="_top">
               {email}
-            </a>
+            </Link>
           </p>
           <p>
             <i className="fa fa-linkedin-square"></i>
