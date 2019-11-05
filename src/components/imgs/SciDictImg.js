@@ -4,7 +4,7 @@ import MyImg from 'public/png/scidict.png';
 
 const SciDictImg = () => {
   return (
-    <Img src={MyImg} />
+    <Img title="SciDict" src={MyImg} />
   );
 };
 

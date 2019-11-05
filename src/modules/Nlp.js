@@ -40,25 +40,25 @@ const Nlp = (props) => {
                       <p>Text Analysis</p>
                     </Link>
                     <Link title="Text Analysis (NLP)" href="http://www.scidict.org/termtrans/">
-                      <Img src="/img/textanalysis.jpg" />
+                      <Img title="Text Analysis (NLP)" src="/img/textanalysis.jpg" />
                     </Link>
                   </div>
                   <div className="col-sm-3"> 
                     <Link href="/img/term_pair_check.png"><p>Translation Workbench</p></Link>
                     <Link title="Translation Workbench" href="/img/term_pair_check.png">
-                      <Img src="/img/term_pair_check.png" />
+                      <Img title="Translation Workbench" src="/img/term_pair_check.png" />
                     </Link>
                   </div>
                   <div className="col-sm-3">
                     <Link href="/img/related_word.png"><p>Word Suggestion</p></Link>
                     <Link title="Word Suggestion" href="/img/related_word.png">
-                      <Img src="/img/related_word.png" />
+                      <Img title="Word Suggestion" src="/img/related_word.png" />
                     </Link>
                   </div>
                   <div className="col-sm-3">
                     <Link href="/img/find_replace.png"><p>Keyword Highlight in Bilingual Texts</p></Link>
                     <Link title="Keyword Highlight in Bilingual Texts" href="/img/find_replace.png">
-                      <Img src="/img/find_replace.png" />
+                      <Img title="Keyword Highlight in Bilingual Texts" src="/img/find_replace.png" />
                     </Link>
                   </div>
                 </div>

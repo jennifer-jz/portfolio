@@ -8,7 +8,7 @@ const LogoUnstyled = (props) => {
   const { className } = props;
   return (
     <div className={`logo ${className}`}>
-      <img src={LogoImg} />
+      <img alt='logo' src={LogoImg} />
       <span>{version}</span>
     </div>
   );

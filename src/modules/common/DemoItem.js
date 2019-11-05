@@ -39,10 +39,10 @@ const DemoItemUnstyled = (props) => {
         {/* <p className="title">{item.title}</p> */}
         {/* </Link> */}
         {item.demo && <Link id={id} to={demoLink} title={caption}>
-          <Img src={imgUrl} />
+          <Img title={caption} src={imgUrl} />
         </Link>}
         {!item.demo && <Link href={externalUrl} title={caption}>
-          <Img src={imgUrl} />
+          <Img title={caption} src={imgUrl} />
         </Link>}
         <div className="tags">
           {item.keywords.map((keyword, key) =>
