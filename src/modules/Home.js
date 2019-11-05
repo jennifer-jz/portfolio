@@ -95,7 +95,7 @@ const Home = (props) => {
             >
               <ButtonGroup>
                 {techLangs.map((item, index) => (
-                  <Button key={index} theme={item.theme} data-tip={item.strength}>{item.content}</Button>
+                  <Button key={index} random data-tip={item.strength}>{item.content}</Button>
                 ))}
               </ButtonGroup>
             </Panel>
@@ -108,7 +108,7 @@ const Home = (props) => {
             >
               <ButtonGroup>
                 {coreExperiences && coreExperiences.map((item, index) => (
-                  <Button key={index} data-tip={item.strength} theme={item.theme}>
+                  <Button key={index} random data-tip={item.strength}>
                     {item.content}
                   </Button>
                 ))}

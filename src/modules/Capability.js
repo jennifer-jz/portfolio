@@ -128,19 +128,19 @@ const Capability = (props) => {
               title="Programming Language"
             >
               <ButtonGroup>
-                <Button theme="" data-tip="50,000+ lines">Node.js + Express.js + MySql</Button>
-                <Button theme="primary" data-tip="300,000+ lines">Html 4/5 + CSS 2/3</Button>
-                <Button theme="dark" data-tip="10,000+ lines">Bootstrap</Button>
-                <Button theme="success" data-tip="500,000+ lines">C# + SQL</Button>
-                <Button theme="info" data-tip="80,000+ lines">Asp.Net Web</Button>
-                <Button theme="warning" data-tip="20,000+ lines">Java</Button>
-                <Button theme="danger" data-tip="5,000+ lines">MySQL + PhP</Button>
-                <Button theme="dark" data-tip="10,000+ lines">json</Button>
-                <Button theme="light" data-tip="1,000+ lines">Angular JS</Button>
-                <Button theme="link" data-tip="1,000+ lines">Mongo DB</Button>
-                <Button theme="primary" data-tip="20,000+ lines">Javascript / jQuery / jQueryUI</Button>
-                <Button theme="dark" data-tip="5,000+ lines">ajax + XML</Button>
-                <Button theme="success" data-tip="2,000+ lines">REST and SOAP Web Services</Button>
+                <Button random data-tip="50,000+ lines">Node.js + Express.js + MySql</Button>
+                <Button random data-tip="300,000+ lines">Html 4/5 + CSS 2/3</Button>
+                <Button random data-tip="10,000+ lines">Bootstrap</Button>
+                <Button random data-tip="500,000+ lines">C# + SQL</Button>
+                <Button random data-tip="80,000+ lines">Asp.Net Web</Button>
+                <Button random data-tip="20,000+ lines">Java</Button>
+                <Button random data-tip="5,000+ lines">MySQL + PhP</Button>
+                <Button random data-tip="10,000+ lines">json</Button>
+                <Button random data-tip="1,000+ lines">Angular JS</Button>
+                <Button random data-tip="1,000+ lines">Mongo DB</Button>
+                <Button random data-tip="20,000+ lines">Javascript / jQuery / jQueryUI</Button>
+                <Button random data-tip="5,000+ lines">ajax + XML</Button>
+                <Button random data-tip="2,000+ lines">REST and SOAP Web Services</Button>
               </ButtonGroup>
             </Panel>
 
