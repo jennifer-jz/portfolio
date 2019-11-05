@@ -9,7 +9,6 @@ const ButtonUnstyled = (props) => {
     <button
       type="button"
       className={`btn btn-${theme} ${className}`}
-      data-toggle="tooltip"
       {...filterNonHtmlProps(otherProps)}
     >
       {children}
@@ -28,7 +27,27 @@ ButtonUnstyled.defaultProps = {
 };
 
 const Button = styled(ButtonUnstyled)`
-  
+  position: relative;
+
+  ::before {
+    content: attr(data-tip);
+    visibility: hidden;
+    position: absolute;
+    top: -70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: dimgray;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  :hover::before {
+    visibility: visible;
+    opacity: 1;
+  }
 `;
 
 export default Button;

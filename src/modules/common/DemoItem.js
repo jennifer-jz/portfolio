@@ -18,12 +18,10 @@ const DemoItemUnstyled = (props) => {
 
   const id = item.demo ? item.id : "";
   const demoLink = item.demo ? `${urlHead}/${id}` : undefined;
-  // const showDemoIcon = item.demo || !!item.url;
   const url = item.url || undefined;
   const caption = item.caption || item.title;
   const imgUrl = item.img;
   const imgFullUrl = item.imgFull || item.img;
-  // const demoIconUrl = showDemoIcon ? imgFullUrl : undefined;
   const externalUrl = !item.demo ? url || imgFullUrl : undefined ;
 
   return (
@@ -33,11 +31,6 @@ const DemoItemUnstyled = (props) => {
     >
       <div className="content">
         {<p className="title">{item.title}</p>}
-        {/* <Link className={id} href={demoIconUrl} title={item.title}> */}
-        {/* {showDemoIcon && <p className="demo"><i className="material-icons">image</i></p>}
-          {!showDemoIcon && <p className="title">{item.title}</p>} */}
-        {/* <p className="title">{item.title}</p> */}
-        {/* </Link> */}
         {item.demo && <Link id={id} to={demoLink} title={caption}>
           <Img title={caption} src={imgUrl} />
         </Link>}
