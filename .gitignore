@@ -11,6 +11,9 @@ dist/
 # Dependency directories
 node_modules/
 
+# Document
+src/public/doc/
+
 # Windows compilation files
 bin/
 

@@ -139,24 +139,24 @@ const products = [
     demo: true,
     home: true,
   },
-  {
-    id: "",
-    title: "Corporate Website",
-    keywords: "website featured seo".split(' '),
-    img: "/img/scientrans2.jpg",
-    imgFull: "",
-    caption: "HTML Corporate Website with SEO",
-    url: "http://www.scientrans.com",
-  },
-  {
-    id: "",
-    title: "CMS website",
-    keywords: "website seo".split(' '),
-    img: "/img/samplecenter2.jpg",
-    imgFull: "",
-    caption: "CMS website: Translation Samples Center",
-    url: "http://fanyiyangli.scientrans.com",
-  },
+  // {
+  //   id: "",
+  //   title: "Corporate Website",
+  //   keywords: "website featured seo".split(' '),
+  //   img: "/img/scientrans2.jpg",
+  //   imgFull: "",
+  //   caption: "HTML Corporate Website with SEO",
+  //   url: "http://www.scientrans.com",
+  // },
+  // {
+  //   id: "",
+  //   title: "CMS website",
+  //   keywords: "website seo".split(' '),
+  //   img: "/img/samplecenter2.jpg",
+  //   imgFull: "",
+  //   caption: "CMS website: Translation Samples Center",
+  //   url: "http://fanyiyangli.scientrans.com",
+  // },
 ];
 
 export default products;
