@@ -36,6 +36,7 @@ const Button = styled(ButtonUnstyled)`
       opacity: 0.8;
       color: white;
       font-size: 14px;
+      border-radius: 0;
     `;
     if (!props['data-tip']) return commonStyle;
     return `

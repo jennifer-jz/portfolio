@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { DARK_GRAY } from 'shared/styles';
 import { version } from 'root/package.json'; 
 
 const FooterUnstyled = (props) => {
@@ -22,7 +23,9 @@ FooterUnstyled.defaultProps = {
 };
 
 const Footer = styled(FooterUnstyled)`
-  background-color: #FAFAFA;
+  border-top: 1px solid ${DARK_GRAY};
+  width: calc(100% - 180px);
+  margin: 0 auto;
   padding: 15px;
   padding-top:30px;
   text-align: center;

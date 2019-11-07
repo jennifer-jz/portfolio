@@ -4,7 +4,7 @@ import styled from 'styled-components';
 // import { productNavs } from 'shared/navigation';
 import { Img } from 'components/imgs';
 import {
-  // Badge,
+  Badge,
   Link,
 } from 'components';
 import { filterNonHtmlProps } from 'utils';
@@ -37,6 +37,13 @@ const DemoItemUnstyled = (props) => {
         {!item.demo && <Link href={externalUrl} title={caption}>
           <Img title={caption} src={imgUrl} />
         </Link>}
+        {item.demo && <Badge
+          large
+          keyword="View Demo"
+          to={demoLink}
+        >
+          
+        </Badge>}
         {/* <div className="tags">
           {item.keywords.map((keyword, key) =>
             <Badge
@@ -80,6 +87,11 @@ const DemoItem = styled(DemoItemUnstyled)`
       transform: translate(0, -10px);
       opacity: 1;
 
+      .badge {
+        display: block;
+        z-index: 10;
+      }
+
       &::after {
         content: '';
         position: absolute;
@@ -91,6 +103,14 @@ const DemoItem = styled(DemoItemUnstyled)`
         opacity: 0.3;
         z-index: 0;
       }
+    }
+
+    .badge {
+      display: none;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
     }
 
     .title {

@@ -48,20 +48,29 @@ BadgeUnstyled.defaultProps = {
 const Badge = styled(BadgeUnstyled)`
   display: inline-block;
   min-width: 10px;
-  padding: 3px 7px;
-  font-size: 12px;
+  ${props => props.large ? `
+    padding: 0.5rem 1.0rem;
+    font-size: 14px;
+  ` : `
+    padding: 0.25rem 0.6rem;
+    font-size: 12px;
+  `}
+
   font-weight: 700;
   line-height: 1;
   color: #fff;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
-  border-radius: 10px;
+  border-radius: 1rem;
+  opacity: 0.85;
   ${props => props.href || props.to ? `
     background-color: ${BLUE};
+    transition: all 0.3s ease-in-out;
+
     &:hover {
       cursor: pointer;
-      box-shadow: 2px 2px 8px ${BLUE};
+      opacity: 1;
     }
   ` : `
     background-color: ${DARK_GRAY};
