@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Paper from '@material-ui/core/Paper';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
+import { Paper } from '@material-ui/core';
 import { navPathArr } from 'shared/routePaths';
+import { Tabs, Tab } from 'components';
 import { Logo } from 'components/imgs';
 import { withRouter } from 'react-router-dom';
 import styles from './Navigation.styles';
@@ -40,8 +39,6 @@ const Navigation = (props) => {
       <Tabs
         value={tabId}
         onChange={handleChange}
-        indicatorColor="primary"
-        textColor="primary"
         variant="scrollable"
       >
         {navPathArr.map((item, key) => <Tab key={key} label={item[0]} />)}

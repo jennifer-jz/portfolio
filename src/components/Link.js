@@ -60,6 +60,14 @@ LinkUnstyled.defaultProps = {
 
 const Link = styled(LinkUnstyled)`
   color: ${LINK_COLOR};
+  text-decoration: none;
+  transition: border-bottom 0.3s;
+
+  &:hover {
+    color: ${LINK_COLOR};
+    text-decoration: none;
+    ${props => typeof props.children === 'string' ? `border-bottom: 1px solid ${LINK_COLOR};` : ''}
+  }
 `;
 
 export default Link;

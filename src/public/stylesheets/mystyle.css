@@ -4,11 +4,9 @@ body, button, input, label, select, td, textarea {
     line-height: 1.42857143;
     color: #333;
 }
-
 h4 {
 	font-size: 18px;
 }
-
 .row::before {
 	content: none !important;
 }
@@ -61,5 +59,8 @@ em::after {
 }
 .btn-dark:hover {
 	color: gray;
+}
+.MuiTab-textColorPrimary.Mui-selected {
+	color: #337ab7;
 }
 	

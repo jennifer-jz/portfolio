@@ -1,6 +1,3 @@
-import React from 'react';
-import { Link } from 'components';
-
 const achievements = [
   {
     title: "Convert a traditional website to Node.js site from scratch",

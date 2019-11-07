@@ -45,9 +45,7 @@ const Panel = styled(PanelUnstyled)`
   margin-bottom: 20px;
   .panel {
     margin-bottom: 0;
-    border-radius: 4px;
     border: none;
-    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.35);
   }
 
   .panel-heading {
@@ -73,9 +71,6 @@ const Panel = styled(PanelUnstyled)`
 
   .panel-title {
     font-size: 16px;
-    a {
-      text-decoration: underline;
-    }
   }
 
   .panel-body {

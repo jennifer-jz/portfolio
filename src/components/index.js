@@ -5,6 +5,8 @@ import Modal from './Modal';
 import Body from './Body';
 import Panel from './Panel';
 import Badge from './Badge';
+import Tabs from './Tabs';
+import Tab from './Tab';
 
 export {
   Button,
@@ -14,4 +16,6 @@ export {
   Body,
   Panel,
   Badge,
+  Tabs,
+  Tab,
 };

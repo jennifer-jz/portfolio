@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Link from './Link';
 import { filterNonHtmlProps, getRootUrl } from 'utils';
 import { subjectDict } from 'shared/data';
-import { LINK_COLOR, DARK_GRAY } from 'shared/styles';
+import { BLUE, DARK_GRAY } from 'shared/styles';
 
 const BadgeUnstyled = (props) => {
   const { href, to, className, keyword, ...otherProps } = props;
@@ -58,10 +58,10 @@ const Badge = styled(BadgeUnstyled)`
   vertical-align: middle;
   border-radius: 10px;
   ${props => props.href || props.to ? `
-    background-color: ${LINK_COLOR};
+    background-color: ${BLUE};
     &:hover {
       cursor: pointer;
-      box-shadow: 2px 2px 8px ${LINK_COLOR};
+      box-shadow: 2px 2px 8px ${BLUE};
     }
   ` : `
     background-color: ${DARK_GRAY};

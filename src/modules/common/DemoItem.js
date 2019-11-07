@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { productNavs } from 'shared/navigation';
+// import { productNavs } from 'shared/navigation';
 import { Img } from 'components/imgs';
 import {
-  Badge,
+  // Badge,
   Link,
 } from 'components';
 import { filterNonHtmlProps } from 'utils';
@@ -12,9 +12,9 @@ import { filterNonHtmlProps } from 'utils';
 const DemoItemUnstyled = (props) => {
   const { className, urlHead, data: item, large, ...otherProps } = props;
 
-  const isNavigable = (keyword) => {
-    return !!productNavs.find(item => item.name === keyword);
-  };
+  // const isNavigable = (keyword) => {
+  //   return !!productNavs.find(item => item.name === keyword);
+  // };
 
   const id = item.demo ? item.id : "";
   const demoLink = item.demo ? `${urlHead}/${id}` : undefined;
@@ -37,7 +37,7 @@ const DemoItemUnstyled = (props) => {
         {!item.demo && <Link href={externalUrl} title={caption}>
           <Img title={caption} src={imgUrl} />
         </Link>}
-        <div className="tags">
+        {/* <div className="tags">
           {item.keywords.map((keyword, key) =>
             <Badge
               key={key}
@@ -45,7 +45,7 @@ const DemoItemUnstyled = (props) => {
               to={isNavigable(keyword) ? `/product/${keyword}` : undefined}
             ></Badge>
           )}
-        </div>
+        </div> */}
       </div>
     </div>
   );
@@ -73,9 +73,24 @@ const DemoItem = styled(DemoItemUnstyled)`
     background-color: #f2f4f4;
     padding: 10px;
     position: relative;
+    transition: all 0.3s ease-in-out;
 
     &:hover {
       box-shadow: 0 2px 12px 0 rgba(0,0,0,0.35);
+      transform: translate(0, -10px);
+      opacity: 1;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: #202121;
+        opacity: 0.3;
+        z-index: 0;
+      }
     }
 
     .title {
