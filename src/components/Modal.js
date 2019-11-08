@@ -1,10 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import './Modal.scss';
 
 const ModalUnstyled = (props) => {
   const { url, title, className, visible, onClose } = props;
-  const visibleClass = visible ? "in" : "";
+  const visibleClass = visible ? "in" : "fade";
   const modalContentRef = useRef();
 
   useEffect(() => {
@@ -13,8 +14,8 @@ const ModalUnstyled = (props) => {
 
   return (
     <div className={className}>
-      <div className={`modal-backdrop fade ${visibleClass}`}></div>
-      <div className={`modal fade ${visibleClass}`} id="myModal" onClick={onClose}>
+      <div className={`modal-backdrop ${visibleClass}`}></div>
+      <div className={`modal ${visibleClass}`} id="myModal" onClick={onClose}>
         <div className="modal-dialog">
           <div
             className="modal-content"

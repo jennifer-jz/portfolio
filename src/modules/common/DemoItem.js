@@ -38,12 +38,16 @@ const DemoItemUnstyled = (props) => {
           <Img title={caption} src={imgUrl} />
         </Link>}
         {item.demo && <Badge
+          id={id}
           large
           keyword="View Demo"
           to={demoLink}
-        >
-          
-        </Badge>}
+        />}
+        {!item.demo && <Badge
+          large
+          keyword="View Link"
+          href={externalUrl}
+        />}
         {/* <div className="tags">
           {item.keywords.map((keyword, key) =>
             <Badge
