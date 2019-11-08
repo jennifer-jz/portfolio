@@ -2,6 +2,7 @@ const productNavs = [
   {
     name: "all",
     title: "All",
+    icon: "fa fa-home",
   },
   {
     name: "featured",

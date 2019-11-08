@@ -34,7 +34,7 @@ const products = [
   },
   {
     id: "ordersubmit",
-    title: "Web Order Submission",
+    title: "Order Submission: ASP.NET Web",
     keywords: "erp website featured aspnet mssql".split(' '),
     img: "/img/orderonline2.jpg",
     imgFull: "",
@@ -44,7 +44,7 @@ const products = [
   },
   {
     id: "ordersubmit2",
-    title: "Internal Order Submission",
+    title: "Order Submission: C# Winform",
     keywords: "erp csharp mssql".split(' '),
     img: "/png/submitorder2.jpg",
     imgFull: "",
@@ -131,11 +131,11 @@ const products = [
   },
   {
     id: "paymentAPI",
-    title: "Payment API",
+    title: "YeePay API Integration",
     keywords: "website featured aspnet api".split(' '),
     img: "/img/yeepay2.jpg",
     imgFull: "",
-    caption: "Connection to Payment API",
+    caption: "Integration with a third-party payment API",
     demo: true,
     home: true,
   },

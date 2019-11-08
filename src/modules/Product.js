@@ -39,17 +39,23 @@ const Product = (props) => {
   return (
     <DocumentMeta {...meta}>
       <div className={`product-view ${props.className}`}>
-        <div id="myBtnContainer">
-          {productNavs.map((item, index) => (
-            <Link
-              key={index}
-              className={`btn btn-secondary ${getActiveClassName(item.name)}`}
-              to={`/product/${item.name}`}
-            >
-              {item.title}
-            </Link>
-          ))}
-        </div>
+        <ul id="myBtnContainer">
+          {productNavs.map((item, index) => {
+            const className = getActiveClassName(item.name);
+            const isDull = className !== "active";
+            return (
+              <li key={index} className={className}>
+                {!isDull && <i className="fa fa-thumb-tack"></i>}
+                <Link
+                  to={`/product/${item.name}`}
+                  dull={isDull}
+                >
+                  {item.title}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
 
         <div className="demos container-fluid bg-3 text-center works">
           <div className="row">
@@ -63,7 +69,7 @@ const Product = (props) => {
           </div>
         </div>
 
-        <div className="container-fluid bg-3 works">
+        {/* <div className="container-fluid bg-3 works">
           <h4>Functional Modules</h4>
           <div>
             <ul>
@@ -81,7 +87,7 @@ const Product = (props) => {
               <li>Text Clustering</li>
             </ul>
           </div>
-        </div>
+        </div> */}
       </div>
       {modelData && <Modal
         visible={!!modelData}

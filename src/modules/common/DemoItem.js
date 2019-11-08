@@ -20,7 +20,7 @@ const DemoItemUnstyled = (props) => {
 
   return (
     <div
-      className={`${large ? 'col-sm-6' : 'col-sm-3'} ${className}`}
+      className={`${large ? 'col-sm-8' : 'col-sm-3'} ${className}`}
       { ...filterNonHtmlProps(otherProps) }
     >
       <div className="content">
@@ -62,7 +62,7 @@ DemoItemUnstyled.defaultProps = {
 };
 
 const DemoItem = styled(DemoItemUnstyled)`
-  margin: 15px 0;
+  margin: 15px auto;
   border-radius: 2px;
 
   .content {
@@ -71,10 +71,19 @@ const DemoItem = styled(DemoItemUnstyled)`
     position: relative;
     transition: all 0.3s ease-in-out;
 
+    > a > img {
+      ${props => props.large ? 'height: auto;' : 'height: 150px;'}
+      margin: 0 auto;
+    }
+
     &:hover {
       box-shadow: 0 2px 12px 0 rgba(0,0,0,0.35);
       transform: translate(0, -10px);
       opacity: 1;
+
+      p.title {
+        font-size: 1rem;
+      }
 
       .badge {
         display: block;
@@ -108,6 +117,7 @@ const DemoItem = styled(DemoItemUnstyled)`
       color: black;
       padding: 2px 5px;
       opacity: 0.7;
+      transition: font-size 0.5s ease-in-out;
     }
   
     .tags {
