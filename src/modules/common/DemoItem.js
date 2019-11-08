@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-// import { productNavs } from 'shared/navigation';
 import { Img } from 'components/imgs';
 import {
   Badge,
@@ -11,11 +10,6 @@ import { filterNonHtmlProps } from 'utils';
 
 const DemoItemUnstyled = (props) => {
   const { className, urlHead, data: item, large, ...otherProps } = props;
-
-  // const isNavigable = (keyword) => {
-  //   return !!productNavs.find(item => item.name === keyword);
-  // };
-
   const id = item.demo ? item.id : "";
   const demoLink = item.demo ? `${urlHead}/${id}` : undefined;
   const url = item.url || undefined;
@@ -48,15 +42,6 @@ const DemoItemUnstyled = (props) => {
           keyword="View Link"
           href={externalUrl}
         />}
-        {/* <div className="tags">
-          {item.keywords.map((keyword, key) =>
-            <Badge
-              key={key}
-              keyword={keyword}
-              to={isNavigable(keyword) ? `/product/${keyword}` : undefined}
-            ></Badge>
-          )}
-        </div> */}
       </div>
     </div>
   );

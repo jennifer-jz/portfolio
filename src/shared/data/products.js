@@ -102,7 +102,7 @@ const products = [
   },
   {
     id: "",
-    title: "Bootstrap + HTML5 Canvas Seat Selection",
+    title: "HTML5 Canvas Seat Selection",
     keywords: "website bootstrap canvas php mysql".split(' '),
     img: "/img/seat.jpg",
     imgFull: "/img/seat.jpg",
