@@ -1,4 +1,4 @@
-export const BLUE = '#337ab7';
+export const BLUE = '#31708f';
 export const DARK_GRAY = '#777';
 
 export const BOLD_FONT_COLOR = '#555';

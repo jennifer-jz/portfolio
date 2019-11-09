@@ -12,9 +12,9 @@ const Nlp = (props) => {
   const meta = getMetaData(props);
   return (
     <DocumentMeta {...meta}>
-      <div className="container-fluid bg-3 works">
+      <div className={`container-fluid bg-3 works ${props.className}`}>
         <div className="row">
-          <div className="col-md-8">
+          <div className="col-md-9">
             <Panel
               className="projects"
               theme="info"
@@ -26,9 +26,11 @@ const Nlp = (props) => {
                   <span className="title">
                     {item.title}
                   </span>
-                  {item.keywords && item.keywords.map((keyword, i) =>
-                    <Badge key={i} keyword={keyword} />
-                  )}
+                  <div className="keywords">
+                    {item.keywords && item.keywords.map((keyword, i) =>
+                      <Badge key={i} keyword={keyword} />
+                    )}
+                  </div>
                 </p>
               ))}
             </Panel>
@@ -68,7 +70,7 @@ const Nlp = (props) => {
               </div>
             </Panel>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-3">
             <Panel
               theme="info"
               title="NLP Skill Set"
