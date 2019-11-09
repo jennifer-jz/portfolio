@@ -1,10 +1,12 @@
 import React from 'react';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import DocumentMeta from 'react-document-meta';
 import { getMetaData } from '../utils';
 import { Link, Panel, Badge } from '../components';
 import { Img } from 'components/imgs';
 import { nlpProjects } from 'shared/data';
+import styles from './Nlp.styles';
 
 const Nlp = (props) => {
   const meta = getMetaData(props);
@@ -14,18 +16,19 @@ const Nlp = (props) => {
         <div className="row">
           <div className="col-md-8">
             <Panel
+              className="projects"
               theme="info"
               title="Natural Language Processing (NLP) Projects"
             >
               {nlpProjects.map((item, index) => (
                 <p key={index} className={item.keywords.join(' ')}>
                   {item.period}
-                  <span>
+                  <span className="title">
                     {item.title}
-                    {item.keywords && item.keywords.map((keyword, i) =>
-                      <Badge key={i} keyword={keyword} />
-                    )}
                   </span>
+                  {item.keywords && item.keywords.map((keyword, i) =>
+                    <Badge key={i} keyword={keyword} />
+                  )}
                 </p>
               ))}
             </Panel>
@@ -116,12 +119,16 @@ Nlp.propTypes = {
   description: PropTypes.string,
   keywords: PropTypes.string,
   subject: PropTypes.string,
+  className: PropTypes.string,
 };
 Nlp.defaultProps = {
   title: "",
   description: "",
   keywords: "",
   subject: "",
+  className: "",
 };
 
-export default Nlp;
+const NlpStyled = styled(Nlp)`${styles}`;
+
+export default NlpStyled;

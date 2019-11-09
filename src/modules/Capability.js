@@ -92,7 +92,7 @@ const Capability = (props) => {
               <ul>
                 <li>Pagination</li>
                 <li>Mysql</li>
-                <li className="red">Forever</li>
+                <li>Forever</li>
               </ul>
             </Panel>
 
@@ -155,7 +155,7 @@ const Capability = (props) => {
                 <li>Security Group</li>
                 <li>Monitoring</li>
                 <li>RDS</li>
-                <li className="red">Autoscaling</li>
+                <li>Autoscaling</li>
               </ul>
               <p>- <span>Version Control</span></p>
               <ul>

@@ -37,7 +37,7 @@ const Education = (props) => {
     <DocumentMeta {...meta}>
       <div className={`container-fluid bg-3 works ${props.className}`}>
         <div className="education-history">
-          <div className="subtitle">Education</div>
+          <h5 className="headline">Education</h5>
           <p>2016.08 - 2018.12 
             <span>MS in Computer Science</span>
             The University of Texas at Dallas, Richardson, Texas
@@ -49,18 +49,20 @@ const Education = (props) => {
         </div>
         
         <div className="courses">
-          <div className="subtitle">Courses</div>
+          <h5 className="headline">Courses</h5>
           {educationNavsGroup.map((group, groupIndex) => (
             <div key={groupIndex}>
-              <i className="fa fa-caret-right"></i>
+              {/* <i className="fa fa-caret-right"></i>
+              <i className="fa fa-caret-right"></i> */}
+              <i>&gt;&gt;&gt;&gt;</i>
               {educationNavs.filter(item => item.line === groupIndex + 1).map((item, index) => {
                 if (!item.name) {
-                  return (<p key={index}>{item.title}</p>);
+                  return (<span key={index}>{item.title}</span>);
                 }
                 return (
-                  <p key={index} className={ getActiveClassName(item.name) }>
+                  <span key={index} className={ getActiveClassName(item.name) }>
                     <Link to={`/education/${item.name}`}>{item.title}</Link>
-                  </p>
+                  </span>
                 );
               })}
             </div>

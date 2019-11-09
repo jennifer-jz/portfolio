@@ -34,7 +34,7 @@ const products = [
   },
   {
     id: "ordersubmit",
-    title: "Order Submission: ASP.NET Web",
+    title: "Order Submission: Web",
     keywords: "erp website featured aspnet mssql".split(' '),
     img: "/img/orderonline2.jpg",
     imgFull: "",

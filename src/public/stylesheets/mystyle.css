@@ -4,14 +4,8 @@ body, button, input, label, select, td, textarea {
     line-height: 1.42857143;
     color: #333;
 }
-h4 {
-	font-size: 18px;
-}
 .row::before {
 	content: none !important;
-}
-.red {
-	color:red;
 }
 p span {
 	font-weight: bold;
@@ -31,25 +25,30 @@ em::before {
 em::after {
 	content:"]";
 }
-.works h4 {
+/* .works h4 {
 	margin-top:5px;
 	margin-bottom:10px;
 	padding-left:10px;
 	font-weight:bold;
-}
-.works h5 {
+} */
+/* .works h5 {
 	font-size:16px;
 	font-weight:bold;
 	line-height:24px;
 	padding-top:5px;
+} */
+h4 {
+	font-size: 18px;
+	font-weight: bold;
 }
-.works .subtitle {
+h5 {
 	font-size:16px;
 	font-weight:bold;
-	line-height:24px;
-	padding-top:5px;
-	margin-top:0;
-	margin-bottom:5px;
+	margin: 0.3rem 0;
+    line-height: 1rem;
+}
+h5.headline {
+	margin: 10px 0;
 }
 .glyphicon {
 	padding:5px 10px;

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import DocumentMeta from 'react-document-meta';
@@ -26,6 +26,7 @@ const Home = (props) => {
   const { resumeDocPath, resumePdfPath } = filePath;
   const { activedemo = '' } = props.match.params;
   const [modelData, setModelData] = useState(null);
+  const demoRef = useRef();
 
   useEffect(() => {
     if (activedemo) {
@@ -34,6 +35,7 @@ const Home = (props) => {
         const url = getVideoURL(foundProduct.id) || undefined;
         const modalData = {url};
         setModelData(modalData);
+        scrollToRef(demoRef);
       }
     }
   }, [activedemo]);
@@ -43,6 +45,8 @@ const Home = (props) => {
     const minImg = `${item.img.substring(0, index)}-min${item.img.substring(index)}`;
     return { ...item, img: minImg };
   });
+
+  const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
 
   return (
     <DocumentMeta {...meta}>
@@ -129,18 +133,28 @@ const Home = (props) => {
           </div>
         </div>
 
-        <div><h4 className=" text-left" ><Link to="product">Product Demo</Link></h4></div>
-        <div className="row text-center demos">
-          {homeProjects.map((item, key) => (
-            <DemoItem
-              key={key}
-              data={item}
-              urlHead="/home"
-            />
-          ))}
+        <div ref={demoRef} className="row">
+          <div className="col-md-12">
+            <Panel
+              theme="danger"
+              title="Product Demo"
+              titleUrl="product"
+              className="product-demo"
+            >
+              <div className="demos">
+                {homeProjects.map((item, key) => (
+                  <DemoItem
+                    key={key}
+                    data={item}
+                    urlHead="/home"
+                  />
+                ))}
+              </div>
+            </Panel>
+          </div>
         </div>
       </div>
-      {modelData && <Modal
+      {<Modal
         visible={!!modelData}
         onClose={() => setModelData(null)}
         url={modelData && modelData.url}

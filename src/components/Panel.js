@@ -11,10 +11,10 @@ const PanelUnstyled = (props) => {
     <div id={id} className={`panel-group ${className}`}>
       <div className={`panel panel-${theme}`}>
         <div className="panel-heading">
-          <h4 className="panel-title">
+          <h5 className="panel-title">
             {titleUrl && <Link to={titleUrl}>{title}</Link>}
             {!titleUrl && title}
-          </h4>
+          </h5>
         </div>
         <div>
           <div className={`panel-body`}>
@@ -49,7 +49,7 @@ const Panel = styled(PanelUnstyled)`
   }
 
   .panel-heading {
-    padding: 3px 10px;
+    padding: 3px 15px;
     background-color:#F2F3F4 !important;
     border-bottom: 0;
 
@@ -81,7 +81,7 @@ const Panel = styled(PanelUnstyled)`
     }
   }
 
-  p > span {
+  p > span.title {
     font-weight: bold;
     padding: 20px;
     color: ${BOLD_FONT_COLOR};
