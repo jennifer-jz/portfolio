@@ -154,7 +154,7 @@ const Home = (props) => {
           </div>
         </div>
       </div>
-      {<Modal
+      {modelData && <Modal
         visible={!!modelData}
         onClose={() => setModelData(null)}
         url={modelData && modelData.url}
