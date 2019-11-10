@@ -12,7 +12,7 @@ const Nlp = (props) => {
   const meta = getMetaData(props);
   return (
     <DocumentMeta {...meta}>
-      <div className={`container-fluid bg-3 works ${props.className}`}>
+      <div className={`container-fluid ${props.className}`}>
         <div className="row">
           <div className="col-md-9">
             <Panel
@@ -38,7 +38,7 @@ const Nlp = (props) => {
               theme="info"
               title="Products Demonstration"
             >
-              <div className="bg-3 text-center works">    
+              <div className="text-center">    
                 <div className="row">
                   <div className="col-sm-3"> 
                     <Link href="http://www.scidict.org/termtrans/">

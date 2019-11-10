@@ -1,3 +1,12 @@
+@media (max-width: 576px) {
+	.col-sm-12 {
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+}
+
+
 body, button, input, label, select, td, textarea {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 14px;
@@ -25,18 +34,6 @@ em::before {
 em::after {
 	content:"]";
 }
-/* .works h4 {
-	margin-top:5px;
-	margin-bottom:10px;
-	padding-left:10px;
-	font-weight:bold;
-} */
-/* .works h5 {
-	font-size:16px;
-	font-weight:bold;
-	line-height:24px;
-	padding-top:5px;
-} */
 h4 {
 	font-size: 18px;
 	font-weight: bold;

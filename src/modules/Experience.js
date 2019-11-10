@@ -10,7 +10,7 @@ const Experience = (props) => {
   const meta = getMetaData(props);
   return (
     <DocumentMeta {...meta}>
-      <div className={`container-fluid bg-3 works ${props.className}`}>
+      <div className={`container-fluid ${props.className}`}>
         <p>2019.02 –Present <span>Senior Software Engineer</span>Shape Security, Mountain View, CA</p>
 
         <table>

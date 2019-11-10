@@ -46,6 +46,7 @@ export default `
 
     .demos {
       display: flex;
+      flex-wrap: nowrap;
   
       > div {
         margin-top: 0;

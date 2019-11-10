@@ -8,7 +8,7 @@ const Capability = (props) => {
   const meta = getMetaData(props);
   return (
     <DocumentMeta {...meta}>
-      <div className="container-fluid bg-3 works">
+      <div className="container-fluid">
 
         <div className="row">
           <div className="col-md-6">

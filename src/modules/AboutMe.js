@@ -18,7 +18,7 @@ const AboutMe = (props) => {
   const { resumeDocPath, resumePdfPath } = filePath;
   return (
     <DocumentMeta {...meta}>
-      <div className={`container-fluid bg-3 works ${props.className}`}>
+      <div className={`container-fluid ${props.className}`}>
         <div className="row intro">
           <h4>About Me</h4>
           <Link href={resumePdfPath} title="Resume">

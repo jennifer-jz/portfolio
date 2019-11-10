@@ -50,7 +50,7 @@ const Home = (props) => {
 
   return (
     <DocumentMeta {...meta}>
-      <div className={`container-fluid bg-3 works ${props.className}`}>
+      <div className={`container-fluid ${props.className}`}>
         <div className="intro">
           <div className="name"><h4>Juanjuan Zhao (also Jennifer)</h4>
             <Link href={resumePdfPath} title="Resume">
@@ -133,26 +133,28 @@ const Home = (props) => {
           </div>
         </div>
 
-        <div ref={demoRef} className="row">
-          <div className="col-md-12">
-            <Panel
-              theme="danger"
-              title="Product Demo"
-              titleUrl="product"
-              className="product-demo"
-            >
-              <div className="demos">
-                {homeProjects.map((item, key) => (
-                  <DemoItem
-                    key={key}
-                    data={item}
-                    urlHead="/home"
-                  />
-                ))}
-              </div>
-            </Panel>
+        {/* <div ref={demoRef} className="row">
+          <div className="col-md-12"> */}
+        <Panel
+          theme="danger"
+          title="Product Demo"
+          titleUrl="product"
+          className="product-demo"
+          ref={demoRef}
+        >
+          <div className="container-fluid row demos">
+            {homeProjects.map((item, key) => (
+              <DemoItem
+                key={key}
+                data={item}
+                urlHead="/home"
+                className="col-lg-3 col-md-6 col-sm-12"
+              />
+            ))}
           </div>
-        </div>
+        </Panel>
+        {/* </div>
+        </div> */}
       </div>
       {modelData && <Modal
         visible={!!modelData}

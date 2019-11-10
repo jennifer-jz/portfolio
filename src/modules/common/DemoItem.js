@@ -66,7 +66,7 @@ const DemoItemUnstyled = (props) => {
 
   return (
     <div
-      className={`${large ? 'col-sm-8' : 'col-sm-3'} ${className}`}
+      className={`${large ? 'col-lg-12' : ''} ${className}`}
       { ...filterNonHtmlProps(otherProps) }
     >
       <div className="content">
@@ -104,7 +104,7 @@ const DemoItem = styled(DemoItemUnstyled)`
     transition: all 0.3s ease-in-out;
 
     > a > img {
-      ${props => props.large ? 'height: auto;' : 'height: 150px;'}
+      ${props => props.large ? 'height: auto;' : 'height: 150px; width: 280px;'}
       margin: 0 auto;
     }
 

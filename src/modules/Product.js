@@ -39,37 +39,42 @@ const Product = (props) => {
   return (
     <DocumentMeta {...meta}>
       <div className={`product-view ${props.className}`}>
-        <ul id="myBtnContainer">
-          {productNavs.map((item, index) => {
-            const className = getActiveClassName(item.name);
-            const isDull = className !== "active";
-            return (
-              <li key={index} className={className}>
-                {!isDull && <i className="fa fa-thumb-tack"></i>}
-                <Link
-                  to={`/product/${item.name}`}
-                  dull={isDull}
-                >
-                  {item.title}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-
-        <div className="demos container-fluid bg-3 text-center works">
-          <div className="row">
-            {matchedProducts.map((item, key) =>(
-              <DemoItem
-                key={key}
-                data={item}
-                large
-                urlHead={`/product/${subject}`}
-              />))}
+        <div className="row">
+          <div>
+            <ul id="myBtnContainer">
+              {productNavs.map((item, index) => {
+                const className = getActiveClassName(item.name);
+                const isDull = className !== "active";
+                return (
+                  <li key={index} className={className}>
+                    {!isDull && <i className="fa fa-thumb-tack"></i>}
+                    <Link
+                      to={`/product/${item.name}`}
+                      dull={isDull}
+                    >
+                      {item.title}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+          <div className="col-md-9">
+            <div className="demos container-fluid">
+              <div className="row">
+                {matchedProducts.map((item, key) =>(
+                  <DemoItem
+                    key={key}
+                    data={item}
+                    large
+                    urlHead={`/product/${subject}`}
+                  />))}
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* <div className="container-fluid bg-3 works">
+        {/* <div className="container-fluid">
           <h4>Functional Modules</h4>
           <div>
             <ul>

@@ -35,7 +35,7 @@ const Education = (props) => {
 
   return (
     <DocumentMeta {...meta}>
-      <div className={`container-fluid bg-3 works ${props.className}`}>
+      <div className={`container-fluid ${props.className}`}>
         <div className="education-history">
           <h5 className="headline">Education</h5>
           <p>2016.08 - 2018.12 

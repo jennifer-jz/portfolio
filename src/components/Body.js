@@ -24,7 +24,11 @@ BodyUnstyled.defaultProps = {
 };
 
 const Body = styled(BodyUnstyled)`
-  padding: 80px 60px 20px 60px;
+  padding: 80px 60px 20px;
+
+  @media (max-width: 768px) {
+    padding: 80px 30px 20px;
+  }
 
   .row {
       margin-left: 0;

@@ -9,9 +9,10 @@ export default `
 
     ul#myBtnContainer {
         padding: 0;
-        position: fixed;
+        position: sticky;
         top: 100px;
-        left: 50px;
+        left: 0;
+        width: 100%;
         z-index: 10;
         list-style-type: none;
 
@@ -20,6 +21,7 @@ export default `
             outline: none;
             padding: 8px 16px;
             cursor: pointer;
+            text-align: end;
             color: ${DARK_GRAY};
             > i {
                 font-size: 1.2rem;
