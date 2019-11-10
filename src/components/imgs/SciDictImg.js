@@ -1,6 +1,6 @@
 import React from 'react';
 import Img from './Img';
-import MyImg from 'public/png/scidict.png';
+import MyImg from 'public/img/scidict.png';
 
 const SciDictImg = () => {
   return (
