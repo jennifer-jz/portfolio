@@ -13,6 +13,7 @@ node_modules/
 
 # Document
 src/public/doc/
+src/public/rawimg/
 
 # Windows compilation files
 bin/
