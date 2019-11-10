@@ -35,4 +35,18 @@ export default `
             font-weight: bold;
         }
     }
+
+    @media (max-width: 860px) {
+        ul#myBtnContainer {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 30px;
+        }
+        
+        .col-md-9 {
+            -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
 `;

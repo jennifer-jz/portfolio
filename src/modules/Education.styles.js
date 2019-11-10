@@ -1,19 +1,17 @@
 export default `
+  .panel-group {
+    max-width: 830px;
+  }
   .education-history {
     margin-left:15px;
-		margin-bottom: 10px;
+		margin-bottom: 30px;
   }
-  .courses {
-    margin-left:15px;
-    margin-bottom: 10px;
-
+  .courses .panel-body {
     > div {
       margin-bottom: 10px;
 
       i {
         margin-right: 10px;
-        font-size: 1.2rem;
-        transform: translate(0, 0.1rem);
       }
 
       a {

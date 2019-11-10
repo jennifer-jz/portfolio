@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import DocumentMeta from 'react-document-meta';
 import { courseProjects } from 'shared/data';
 import { educationNavs } from 'shared/navigation';
-import { getMetaData } from '../utils';
+import { getMetaData, getRandomColor } from '../utils';
 import { Link, Panel, Badge } from '../components';
 import styles from './Education.styles';
 
@@ -47,30 +47,35 @@ const Education = (props) => {
             Peking University, Beijing, China
           </p>
         </div>
-        
-        <div className="courses">
-          <h5 className="headline">Courses</h5>
-          {educationNavsGroup.map((group, groupIndex) => (
-            <div key={groupIndex}>
-              {/* <i className="fa fa-caret-right"></i>
-              <i className="fa fa-caret-right"></i> */}
-              <i>&gt;&gt;&gt;&gt;</i>
-              {educationNavs.filter(item => item.line === groupIndex + 1).map((item, index) => {
-                if (!item.name) {
-                  return (<span key={index}>{item.title}</span>);
-                }
-                return (
-                  <span key={index} className={ getActiveClassName(item.name) }>
-                    <Link to={`/education/${item.name}`}>{item.title}</Link>
-                  </span>
-                );
-              })}
-            </div>
-          ))}
+
+        <div className="row">
+          <div className="col-lg-12 col-md-12 col-sm-12">
+            <Panel
+              theme="info"
+              title="Course"
+              className="courses"
+            >
+              {educationNavsGroup.map((group, groupIndex) => (
+                <div key={groupIndex}>
+                  <i className="fa fa-circle" style={{ color: getRandomColor()}}></i>
+                  {educationNavs.filter(item => item.line === groupIndex + 1).map((item, index) => {
+                    if (!item.name) {
+                      return (<span key={index}>{item.title}</span>);
+                    }
+                    return (
+                      <span key={index} className={ getActiveClassName(item.name) }>
+                        <Link to={`/education/${item.name}`}>{item.title}</Link>
+                      </span>
+                    );
+                  })}
+                </div>
+              ))}
+            </Panel>
+          </div>
         </div>
 
         <div className="row">
-          <div className="col-md-12">
+          <div className="col-lg-12 col-md-12 col-sm-12">
             <Panel
               theme="info"
               title="Course Projects"
