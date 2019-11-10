@@ -9,7 +9,7 @@ import {
   filePath,
 } from '../shared/constants';
 import {
-  products,
+  homeProducts,
   achievements,
   techLangs,
   coreExperiences,
@@ -30,7 +30,7 @@ const Home = (props) => {
 
   useEffect(() => {
     if (activedemo) {
-      const foundProduct = products.find(product => product.id === activedemo);
+      const foundProduct = homeProducts.find(product => product.id === activedemo);
       if (foundProduct) {
         const url = getVideoURL(foundProduct.id) || undefined;
         const modalData = {url};
@@ -39,12 +39,6 @@ const Home = (props) => {
       }
     }
   }, [activedemo]);
-  
-  const homeProjects = products.filter(item => item.home).map(item => {
-    const index = item.img.lastIndexOf('.');
-    const minImg = `${item.img.substring(0, index)}-min${item.img.substring(index)}`;
-    return { ...item, img: minImg };
-  });
 
   const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
 
@@ -140,7 +134,7 @@ const Home = (props) => {
             className="product-demo"
           >
             <div className="container-fluid row demos">
-              {homeProjects.map((item, key) => (
+              {homeProducts.map((item, key) => (
                 <DemoItem
                   key={key}
                   data={item}

@@ -167,6 +167,54 @@ const products = [
   //   caption: "CMS website: Translation Samples Center",
   //   url: "http://fanyiyangli.scientrans.com",
   // },
+  {
+    id: "text_analysis",
+    title: "Bilingual Full Text Analysis - Web Tool",
+    keywords: "website nlp text".split(' '),
+    img: "/img/textanalysis.jpg",
+    imgFull: "/img/textanalysis.jpg",
+    caption: "Bilingual Full Text Analysis",
+    url: "http://www.scidict.org/termtrans",
+    nlp: true,
+  },
+  {
+    id: "terminology_translation_match",
+    title: "Terminology Translation Match",
+    keywords: "terminology translation nlp".split(' '),
+    img: "/img/term_pair_check.jpg",
+    imgFull: "/img/term_pair_check.jpg",
+    caption: "Terminology Translation Match",
+    nlp: true,
+  },
+  {
+    id: "word_suggestion",
+    title: "Word/Phrase/Term Suggestion",
+    keywords: "word_suggestion nlp".split(' '),
+    img: "/img/related_word.png",
+    imgFull: "/img/related_word.png",
+    caption: "Word/Phrase/Term Suggestion",
+    nlp: true,
+  },
+  {
+    id: "find_replace_bilingual",
+    title: "Keyword Highlight in Bilingual Text",
+    keywords: "keyword bilingual nlp".split(' '),
+    img: "/img/find_replace.jpg",
+    imgFull: "/img/find_replace.jpg",
+    caption: "Keyword Highlight in Bilingual Text",
+    nlp: true,
+  },
 ];
+
+function addMinImg(item) {
+  const index = item.img.lastIndexOf('.');
+  const minImg = `${item.img.substring(0, index)}-min${item.img.substring(index)}`;
+  return { ...item, img: minImg };
+}
+
+const homeProducts = products.filter(item => item.home).map(addMinImg);
+const nlpProducts = products.filter(item => item.nlp).map(addMinImg);
+
+export { homeProducts, nlpProducts };
 
 export default products;

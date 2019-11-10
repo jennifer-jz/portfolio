@@ -18,4 +18,24 @@ export default `
       }
     }
   }
+
+  .nlp-product-demo {
+    .panel-body {
+        padding: 15px 0;
+    }
+    .demos {
+        > div {
+            margin-top: 0;
+            padding: 0 7.5px;
+  
+            &:first-child {
+                padding-left: 15px;
+            }
+            &:last-child {
+                padding-right: 15px;
+            }
+        }
+    }
+  }
+
 `;
