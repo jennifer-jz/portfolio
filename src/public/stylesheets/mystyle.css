@@ -6,23 +6,30 @@
 	}
 }
 
-
 body, button, input, label, select, td, textarea {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 14px;
     line-height: 1.42857143;
     color: #333;
 }
+
+ul {
+	padding-inline-start: 20px;
+}
+
 .row::before {
 	content: none !important;
 }
+
 p span {
 	font-weight: bold;
 	padding: 20px;
 }
+
 a {
 	font-weight:bold;
 }
+
 em {
 	padding-left:6px;
 	padding-right:35px;
@@ -34,6 +41,7 @@ em::before {
 em::after {
 	content:"]";
 }
+
 h4 {
 	font-size: 18px;
 	font-weight: bold;
@@ -47,15 +55,11 @@ h5 {
 h5.headline {
 	margin: 10px 0;
 }
-.glyphicon {
-	padding:5px 10px;
-}
+
 .btn {
 	margin-bottom: 5px;
 }
-.btn-dark:hover {
-	color: gray;
-}
+
 .MuiTab-textColorPrimary.Mui-selected {
 	color: #337ab7;
 }

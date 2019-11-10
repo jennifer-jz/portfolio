@@ -34,14 +34,13 @@ export default `
 
       .badge {
         float: right;
-        margin-left:5px;
-        margin-right:0 !important;
+        margin: 2px 3px;
       }
     }
   }
 
   .product-demo .panel .panel-body {
-    overflow-x: scroll;
+    overflow-x: auto;
     padding: 15px 0;
 
     .demos {

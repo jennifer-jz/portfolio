@@ -1,6 +1,6 @@
 export default `
   table {
-    width:700px;
+    max-width:700px;
     margin-left:60px;
 
     td {

@@ -11,7 +11,7 @@ const Experience = (props) => {
   return (
     <DocumentMeta {...meta}>
       <div className={`container-fluid ${props.className}`}>
-        <p>2019.02 –Present <span>Senior Software Engineer</span>Shape Security, Mountain View, CA</p>
+        <p>2019.02 – Present <span>Senior Software Engineer</span>Shape Security, Mountain View, CA</p>
 
         <table>
           <tbody>
@@ -60,7 +60,7 @@ const Experience = (props) => {
           </tbody>
         </table>
 
-        <p>2018.01 –2018.07 <span>Full-Stack Developer</span>VoidRay (now Vega), Richardson, Texas</p>
+        <p>2018.01 – 2018.07 <span>Full-Stack Developer</span>VoidRay (now Vega), Richardson, Texas</p>
 
         <table>
           <tbody>
@@ -90,7 +90,7 @@ const Experience = (props) => {
           </tbody>
         </table>
 
-        <p>2017.08 –2017.12 <span>Node.JS Developer & Development Lead</span>DevelopScripts, Richardson, Texas</p>
+        <p>2017.08 – 2017.12 <span>Node.JS Developer & Development Lead</span>DevelopScripts, Richardson, Texas</p>
 
         <table>
           <tbody>
