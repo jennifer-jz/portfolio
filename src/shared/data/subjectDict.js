@@ -102,6 +102,12 @@ const subjectDict = {
   office: {
     name: "Office Programming",
   },
+  styled_components: {
+    name: "Styled Components",
+  },
+  webpack: {
+    name: "Webpack",
+  },
 };
 
 export default subjectDict;

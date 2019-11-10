@@ -14,6 +14,16 @@ const products = [
     imgFull: "",
   },
   {
+    id: "portfolio",
+    title: "Portfolio Website",
+    keywords: ["react", "featured", "es6", "javascript", "styled_components", "webpack"],
+    img: "/img/portfolio.jpg",
+    imgFull: "/img/portfolio.jpg",
+    caption: "Portfolio Website",
+    url: "http://zhao.scientrans.com/2019",
+    home: true,
+  },
+  {
     id: "workbench_trans3",
     title: "Translator's Workbench",
     keywords: ["workbench", "featured", "csharp", "mssql", "networking", "nlp"],

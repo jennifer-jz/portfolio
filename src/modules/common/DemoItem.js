@@ -18,6 +18,52 @@ const DemoItemUnstyled = (props) => {
   const imgFullUrl = item.imgFull || item.img;
   const externalUrl = !item.demo ? url || imgFullUrl : undefined ;
 
+  const renderDemoVideo = () => {
+    return (
+      <>
+        <Link id={id} to={demoLink} title={caption}>
+          <Img title={caption} src={imgUrl} />
+        </Link>
+        <Badge
+          id={id}
+          large
+          keyword="Demo Video"
+          to={demoLink}
+        />
+      </>
+    );
+  };
+
+  const renderScreenshot = () => {
+    return (
+      <>
+        <Link href={externalUrl} title={caption}>
+          <Img title={caption} src={imgUrl} />
+        </Link>
+        <Badge
+          large
+          keyword="View Screenshot"
+          href={externalUrl}
+        />
+      </>
+    );
+  };
+
+  const renderLiveDemo = () => {
+    return (
+      <>
+        <Link href={externalUrl} title={caption}>
+          <Img title={caption} src={imgUrl} />
+        </Link>
+        <Badge
+          large
+          keyword="Live Demo"
+          href={externalUrl}
+        />
+      </>
+    );
+  };
+
   return (
     <div
       className={`${large ? 'col-sm-8' : 'col-sm-3'} ${className}`}
@@ -25,23 +71,9 @@ const DemoItemUnstyled = (props) => {
     >
       <div className="content">
         {<p className="title">{item.title}</p>}
-        {item.demo && <Link id={id} to={demoLink} title={caption}>
-          <Img title={caption} src={imgUrl} />
-        </Link>}
-        {!item.demo && <Link href={externalUrl} title={caption}>
-          <Img title={caption} src={imgUrl} />
-        </Link>}
-        {item.demo && <Badge
-          id={id}
-          large
-          keyword="View Demo"
-          to={demoLink}
-        />}
-        {!item.demo && <Badge
-          large
-          keyword="View Link"
-          href={externalUrl}
-        />}
+        {item.demo && renderDemoVideo()}
+        {!item.demo && item.url && renderLiveDemo()}
+        {!item.demo && !item.url && renderScreenshot()}
       </div>
     </div>
   );

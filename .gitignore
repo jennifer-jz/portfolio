@@ -21,4 +21,5 @@ bin/
 .DS_Store
 package-lock.json
 portfolio.code-workspace
+memo.txt
 
