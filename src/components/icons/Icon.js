@@ -19,5 +19,5 @@ IconUnstyled.defaultProps = {
 };
 
 export default styled(IconUnstyled)`
-  font-size: 26px;
+  font-size: 26px !important;
 `;

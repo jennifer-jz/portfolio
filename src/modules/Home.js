@@ -132,29 +132,25 @@ const Home = (props) => {
             </Panel>
           </div>
         </div>
-
-        {/* <div ref={demoRef} className="row">
-          <div className="col-md-12"> */}
-        <Panel
-          theme="danger"
-          title="Product Demo"
-          titleUrl="product"
-          className="product-demo"
-          ref={demoRef}
-        >
-          <div className="container-fluid row demos">
-            {homeProjects.map((item, key) => (
-              <DemoItem
-                key={key}
-                data={item}
-                urlHead="/home"
-                className="col-lg-3 col-md-6 col-sm-12"
-              />
-            ))}
-          </div>
-        </Panel>
-        {/* </div>
-        </div> */}
+        <div ref={demoRef}>
+          <Panel
+            theme="danger"
+            title="Product Demo"
+            titleUrl="product"
+            className="product-demo"
+          >
+            <div className="container-fluid row demos">
+              {homeProjects.map((item, key) => (
+                <DemoItem
+                  key={key}
+                  data={item}
+                  urlHead="/home"
+                  className="col-lg-3 col-md-6 col-sm-12"
+                />
+              ))}
+            </div>
+          </Panel>
+        </div>
       </div>
       {modelData && <Modal
         visible={!!modelData}
