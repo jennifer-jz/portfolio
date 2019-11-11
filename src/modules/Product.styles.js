@@ -13,6 +13,7 @@ export default `
         top: 100px;
         left: 0;
         width: 100%;
+        min-width: 210px;
         z-index: 10;
         list-style-type: none;
 
@@ -36,7 +37,7 @@ export default `
         }
     }
 
-    @media (max-width: 860px) {
+    @media (max-width: 960px) {
         ul#myBtnContainer {
             display: flex;
             flex-wrap: wrap;

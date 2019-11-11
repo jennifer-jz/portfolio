@@ -66,5 +66,12 @@ const educationNavs = [
   },
 ];
 
+const getCourseNameByKey = (key) => {
+  const matched = educationNavs.find(item => item.name === key) || {};
+  return matched.title || "";
+};
+
+export { getCourseNameByKey }; 
+
 export default educationNavs;
   

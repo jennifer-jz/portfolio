@@ -7,6 +7,11 @@ import Panel from './Panel';
 import Badge from './Badge';
 import Tabs from './Tabs';
 import Tab from './Tab';
+import {
+  Icon,
+  LinkIcon,
+  ThumbtackIcon,
+} from './icons';
 
 export {
   Button,
@@ -18,4 +23,7 @@ export {
   Badge,
   Tabs,
   Tab,
+  Icon,
+  LinkIcon,
+  ThumbtackIcon,
 };

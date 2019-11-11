@@ -6,6 +6,7 @@ import { getMetaData, getVideoURL } from '../utils';
 import {
   Link,
   Modal,
+  ThumbtackIcon,
 } from 'components';
 import { products } from 'shared/data';
 import { productNavs } from 'shared/navigation';
@@ -47,7 +48,7 @@ const Product = (props) => {
                 const isDull = className !== "active";
                 return (
                   <li key={index} className={className}>
-                    {!isDull && <i className="fa fa-thumb-tack"></i>}
+                    {!isDull && <ThumbtackIcon />}
                     <Link
                       to={`/product/${item.name}`}
                       dull={isDull}

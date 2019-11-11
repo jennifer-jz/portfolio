@@ -2,8 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import DocumentMeta from 'react-document-meta';
+import { Breadcrumbs } from '@material-ui/core';
 import { courseProjects } from 'shared/data';
-import { educationNavs } from 'shared/navigation';
+import { educationNavs, getCourseNameByKey } from 'shared/navigation';
 import { getMetaData, getRandomColor } from '../utils';
 import { Link, Panel, Badge } from '../components';
 import styles from './Education.styles';
@@ -33,6 +34,10 @@ const Education = (props) => {
     return !!educationNavs.find(item => item.name === keyword);
   };
 
+  // const handleDeleteChip = (e) => {
+  //   console.log('delete chip', e);
+  // };
+
   return (
     <DocumentMeta {...meta}>
       <div className={`container-fluid ${props.className}`}>
@@ -52,7 +57,7 @@ const Education = (props) => {
           <div className="col-lg-12 col-md-12 col-sm-12">
             <Panel
               theme="info"
-              title="Course"
+              title="Courses"
               className="courses"
             >
               {educationNavsGroup.map((group, groupIndex) => (
@@ -78,9 +83,21 @@ const Education = (props) => {
           <div className="col-lg-12 col-md-12 col-sm-12">
             <Panel
               theme="info"
-              title="Course Projects"
-              titleUrl="/education"
+              titleComponent={(
+                <Breadcrumbs
+                  separator={<i className="fa fa-angle-right" aria-hidden="true"></i>}
+                  aria-label="breadcrumb"
+                >
+                  <Link color="inherit" to="/education">
+                  Course Projects
+                  </Link>
+                  <Link color="inherit" to={`/education/${subject}"`}>
+                    {getCourseNameByKey(subject)}
+                  </Link>
+                </Breadcrumbs>
+              )}
             >
+              {/* <Chip label="Deletable primary" onDelete={handleDeleteChip} color="primary" variant="outlined" /> */}
               {matchedCourseProjects.map((item, key) =>
                 <p
                   key={key}
@@ -93,7 +110,7 @@ const Education = (props) => {
                     {item.keywords && item.keywords.map((keyword, i) =>
                       <Badge
                         key={i}
-                        to={isNavigable(keyword) ? `/education/${keyword}` : undefined}
+                        visible={!isNavigable(keyword)}
                         keyword={keyword}
                       />
                     )}

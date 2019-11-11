@@ -6,7 +6,7 @@ import { BOLD_FONT_COLOR, THEME_INFO, THEME_DANGER } from 'shared/styles';
 import Link from './Link';
 
 const PanelUnstyled = (props) => {
-  const { id, theme, className, title, titleUrl, children } = props;
+  const { id, theme, className, title, titleUrl, titleComponent, children } = props;
   return (
     <div id={id} className={`panel-group ${className}`}>
       <div className={`panel panel-${theme}`}>
@@ -14,6 +14,7 @@ const PanelUnstyled = (props) => {
           <h5 className="panel-title">
             {titleUrl && <Link to={titleUrl}>{title}</Link>}
             {!titleUrl && title}
+            {titleComponent}
           </h5>
         </div>
         <div>
@@ -32,12 +33,14 @@ PanelUnstyled.propTypes = {
   className: PropTypes.string,
   title: PropTypes.string,
   titleUrl: PropTypes.string,
+  titleComponent: PropTypes.oneOfType([PropTypes.node, PropTypes.string, PropTypes.arrayOf(PropTypes.node)]),
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.string, PropTypes.arrayOf(PropTypes.node)]),
 };
 PanelUnstyled.defaultProps = {
   theme: '',
   title: '',
   titleUrl: '',
+  titleComponent: null,
   className: '',
 };
 

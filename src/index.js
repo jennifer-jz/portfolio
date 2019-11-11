@@ -1,15 +1,14 @@
 import './public/stylesheets/bootstrap.min.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router } from 'react-router-dom';
-import { createBrowserHistory } from 'history';
+import { BrowserRouter as Router } from 'react-router-dom';
 import Favicon from 'react-favicon';
 import { rootDirectory } from './siteConfig.json';
 import RouterComponent from './modules/common/Router';
 import './public/stylesheets/mystyle.css';
 
 ReactDOM.render(
-  <Router history={createBrowserHistory()}>
+  <Router>
     <Favicon
       url={`${rootDirectory}/favicon.png`}
     />

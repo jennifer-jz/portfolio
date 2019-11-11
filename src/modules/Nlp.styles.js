@@ -5,6 +5,7 @@ export default `
   }
   .projects {
     p .keywords {
+      display: block;
       position: absolute;
       top: -20px;
       left: 125px;
