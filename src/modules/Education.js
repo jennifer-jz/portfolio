@@ -6,7 +6,7 @@ import { Breadcrumbs } from '@material-ui/core';
 import { courseProjects } from 'shared/data';
 import { educationNavs, getCourseNameByKey } from 'shared/navigation';
 import { getMetaData, getRandomColor } from '../utils';
-import { Link, Panel, Badge } from '../components';
+import { Link, Panel, Badge, InlineTitle } from '../components';
 import styles from './Education.styles';
 
 
@@ -34,21 +34,17 @@ const Education = (props) => {
     return !!educationNavs.find(item => item.name === keyword);
   };
 
-  // const handleDeleteChip = (e) => {
-  //   console.log('delete chip', e);
-  // };
-
   return (
     <DocumentMeta {...meta}>
       <div className={`container-fluid ${props.className}`}>
         <div className="education-history">
           <h5 className="headline">Education</h5>
           <p>2016.08 - 2018.12 
-            <span>MS in Computer Science</span>
+            <InlineTitle>MS in Computer Science</InlineTitle>
             The University of Texas at Dallas, Richardson, Texas
           </p>
           <p>2001.09 - 2005.07 
-            <span>BS in Chemistry</span> 
+            <InlineTitle>BS in Chemistry</InlineTitle> 
             Peking University, Beijing, China
           </p>
         </div>
@@ -91,30 +87,29 @@ const Education = (props) => {
                   <Link color="inherit" to="/education">
                   Course Projects
                   </Link>
-                  <Link color="inherit" to={`/education/${subject}"`}>
+                  {subject && <Link color="inherit" to={`/education/${subject}`}>
                     {getCourseNameByKey(subject)}
-                  </Link>
+                  </Link>}
                 </Breadcrumbs>
               )}
             >
-              {/* <Chip label="Deletable primary" onDelete={handleDeleteChip} color="primary" variant="outlined" /> */}
               {matchedCourseProjects.map((item, key) =>
                 <p
                   key={key}
                   className={item.keywords.join(' ')}
                 >
                   {item.period}
-                  <span>
+                  <InlineTitle>
                     {item.title}
-                    {item.url && <Link href={item.url} icon />}
-                    {item.keywords && item.keywords.map((keyword, i) =>
-                      <Badge
-                        key={i}
-                        visible={!isNavigable(keyword)}
-                        keyword={keyword}
-                      />
-                    )}
-                  </span>
+                  </InlineTitle>
+                  {item.url && <Link href={item.url} icon />}
+                  {item.keywords && item.keywords.map((keyword, i) =>
+                    <Badge
+                      key={i}
+                      hide={isNavigable(keyword)}
+                      keyword={keyword}
+                    />
+                  )}
                 </p>
               )}
             </Panel>

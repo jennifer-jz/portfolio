@@ -20,14 +20,10 @@ export default `
 
       > span {
         display:inline-block;
-        margin-right: 5px;
+        margin-right: 35px;
 
         &.active a {
           font-weight: bold;
-        }
-
-        &::after {
-          content: "; ";
         }
       }
     }

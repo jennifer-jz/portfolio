@@ -1,7 +1,7 @@
 export const BLUE = '#31708f';
 export const DARK_GRAY = '#777';
 
-export const BOLD_FONT_COLOR = '#555';
+export const BOLD_FONT_COLOR = '#666';
 export const FONT_COLOR = '#333';
 export const LINK_COLOR = BLUE;  // blue
 export const THEME_INFO = '#31708f';

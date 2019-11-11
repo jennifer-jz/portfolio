@@ -21,7 +21,7 @@ ul {
 	content: none !important;
 }
 
-p span {
+p span.title {
 	font-weight: bold;
 	padding: 20px;
 }

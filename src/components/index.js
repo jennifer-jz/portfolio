@@ -1,10 +1,11 @@
+import Badge from './Badge';
+import Body from './Body';
 import Button from './Button';
 import ButtonGroup from './ButtonGroup';
+import InlineTitle from './InlineTitle';
 import Link from './Link';
 import Modal from './Modal';
-import Body from './Body';
 import Panel from './Panel';
-import Badge from './Badge';
 import Tabs from './Tabs';
 import Tab from './Tab';
 import {
@@ -14,15 +15,17 @@ import {
 } from './icons';
 
 export {
+  Badge,
+  Body,
   Button,
   ButtonGroup,
+  InlineTitle,
   Link,
   Modal,
-  Body,
   Panel,
-  Badge,
   Tabs,
   Tab,
+  // icons
   Icon,
   LinkIcon,
   ThumbtackIcon,

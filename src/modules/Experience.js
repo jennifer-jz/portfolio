@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import DocumentMeta from 'react-document-meta';
 import { getMetaData } from '../utils';
-import { Link } from '../components';
+import { Link, InlineTitle } from '../components';
 import styles from './Experience.styles';
 
 const Experience = (props) => {
@@ -11,14 +11,14 @@ const Experience = (props) => {
   return (
     <DocumentMeta {...meta}>
       <div className={`container-fluid ${props.className}`}>
-        <p>2019.02 – Present <span>Senior Software Engineer</span>Shape Security, Mountain View, CA</p>
+        <p>2019.02 – Present <InlineTitle>Senior Software Engineer</InlineTitle>Shape Security, Mountain View, CA</p>
 
         <table>
           <tbody>
             <tr>
               <td>&nbsp;</td>
               <td>
-                <p><span>Development and Transformation of Alert System Web Portal</span></p>
+                <p><InlineTitle>Development and Transformation of Alert System Web Portal</InlineTitle></p>
                 <ul>
                   <li>Alerts data visualization by customizing D3 libraries</li>
                   <li>Website usability improvement by innovating features</li>
@@ -27,21 +27,21 @@ const Experience = (props) => {
                   <li>Improve API performance by identifying bottlenecks of query building in Django</li>
                   <li>Code review, release deployment, and mentor juniors</li>
                 </ul>
-                <p><span>Tech Stack</span> Node, React, Redux, Webpack, Babel, Python Django, MySQL, 
+                <p><InlineTitle>Tech Stack</InlineTitle> Node, React, Redux, Webpack, Babel, Python Django, MySQL, 
 				Scss, Styled-Components, D3, ESLint, Git, Jenkins, Docker, Kubernetes, Google Cloud</p>
               </td>
             </tr>
           </tbody>
         </table>
 
-        <p>2018.08 – 2018.12 <span>Senior Lead Software Engineer</span>DevelopScripts, Richardson, Texas</p>
+        <p>2018.08 – 2018.12 <InlineTitle>Senior Lead Software Engineer</InlineTitle>DevelopScripts, Richardson, Texas</p>
 
         <table>
           <tbody>
             <tr>
               <td>&nbsp;</td>
               <td>
-                <p><span>Lead Development of Website Features and Tech-Training</span></p>
+                <p><InlineTitle>Lead Development of Website Features and Tech-Training</InlineTitle></p>
                 <ul>
                   <li>Develop e-Commerce website features and online auction functionalities</li>
                   <li>Lead development and recommend best coding practices of the team</li>
@@ -51,7 +51,7 @@ const Experience = (props) => {
                   <li>Interview, tech-training and knowledge sharing</li>
                 </ul>
                 <p>
-                  <span>Tech Stack</span>
+                  <InlineTitle>Tech Stack</InlineTitle>
                   Node, Express, MySQL, Bootstrap, Javascript, JSON, Html5, CSS3, jQuery, 
                   Ajax, PHP, GIT version control and SVN, AWS, Assembla, Ubuntu Linux
                 </p>
@@ -60,7 +60,7 @@ const Experience = (props) => {
           </tbody>
         </table>
 
-        <p>2018.01 – 2018.07 <span>Full-Stack Developer</span>VoidRay (now Vega), Richardson, Texas</p>
+        <p>2018.01 – 2018.07 <InlineTitle>Full-Stack Developer</InlineTitle>VoidRay (now Vega), Richardson, Texas</p>
 
         <table>
           <tbody>
@@ -68,10 +68,10 @@ const Experience = (props) => {
               <td>&nbsp;</td>
               <td>
                 <p>
-                  <span>
+                  <InlineTitle>
                     Full Stack Development of Medication Dispensing System using 
                     Node, React, Typescript, Less, Postgres, Typeorm and Mongo
-                  </span>
+                  </InlineTitle>
                 </p>
                 <ul>
                   <li>Implement website features based on UI mockups</li>
@@ -81,7 +81,7 @@ const Experience = (props) => {
                   <li>Troubleshooting & Bug fixing in cooperation with testers</li>
                 </ul>
                 <p>
-                  <span>Tech Stack</span> 
+                  <InlineTitle>Tech Stack</InlineTitle> 
                   Node, React, Typescript, Javascript ES6, Less, Postgres, Typeorm, Mongo, 
                   Docker, Heroku, Git, RabbitMQ, Slack, Gira
                 </p>
@@ -90,14 +90,14 @@ const Experience = (props) => {
           </tbody>
         </table>
 
-        <p>2017.08 – 2017.12 <span>Node.JS Developer & Development Lead</span>DevelopScripts, Richardson, Texas</p>
+        <p>2017.08 – 2017.12 <InlineTitle>Node.JS Developer & Development Lead</InlineTitle>DevelopScripts, Richardson, Texas</p>
 
         <table>
           <tbody>
             <tr>
               <td>&nbsp;</td>
               <td>
-                <p><span>Maintenance of Auction Websites using Node.js</span></p>
+                <p><InlineTitle>Maintenance of Auction Websites using Node.js</InlineTitle></p>
                 <ul>
                   <li>Website issues troubleshooting, urgent bugs fixing, and new features development</li>
                   <li>Customer support with root cause explanation</li>
@@ -105,7 +105,7 @@ const Experience = (props) => {
                   <li>Provide comprehensive technical consultation & solution</li>
                 </ul>
                 <p>
-                  <span>Tech Stack</span> 
+                  <InlineTitle>Tech Stack</InlineTitle> 
                   Node, Express, MySQL, Bootstrap, Javascript, JSON, Html5, CSS3, jQuery, 
                   Ajax, PHP, GIT version control and SVN, AWS, Assembla, Ubuntu Linux
                 </p>
@@ -115,19 +115,19 @@ const Experience = (props) => {
         </table>
 	
 	
-        <p>2007.04 – 2016.07 <span>Founder</span> Cross Language Co., Ltd., Beijing, China</p>
+        <p>2007.04 – 2016.07 <InlineTitle>Founder</InlineTitle> Cross Language Co., Ltd., Beijing, China</p>
     
         <table>
           <tbody>
             <tr>
               <td>2012.06 – 2016.07</td>
               <td>
-                <p><span>Title: Senior Software Engineer</span></p>
+                <p><InlineTitle>Title: Senior Software Engineer</InlineTitle></p>
                 <p>
-                  <span>
+                  <InlineTitle>
                     Development of an <Link to="/product/erp">Enterprise Resource Planning (ERP) System</Link> 
                     for Translation Automation using .NET C# and MSSQL
-                  </span>
+                  </InlineTitle>
                 </p>
                 <p>
 					Develop an enterprise management system for translation automation, including subsystems of order 
@@ -138,7 +138,7 @@ const Experience = (props) => {
 					Develop fully owned NLP algorithms for sentence splitting, Chinese word segmentation, 
                     and phrase chunking, tailored for bilingual text.
                 </p>
-                <p><span>Development of a <Link to="/product/scidict">Bilingual Dictionary</Link> using .NET Web</span></p>
+                <p><InlineTitle>Development of a <Link to="/product/scidict">Bilingual Dictionary</Link> using .NET Web</InlineTitle></p>
                 <p>
 					Develop a wholly owned bilingual dictionary, <Link href="http://www.scidict.org">SCIdict</Link>, 
 					with less than 1 sec. response time to fuzzy string match request among up to 100 million entries. 
@@ -148,10 +148,10 @@ const Experience = (props) => {
 					restart of query server are also implemented.
                 </p>
                 <p>
-                  <span>
+                  <InlineTitle>
                     Development of a <Link to="/product/workbench">Computer-Aided Translation Workbench</Link> 
                     using .NET C#
-                  </span>
+                  </InlineTitle>
                 </p>
                 <p>
 					Develop a computer-aided translation workbench, as a desktop client software that helps translators 
@@ -165,8 +165,8 @@ const Experience = (props) => {
             <tr>
               <td>2010.12 – 2012.06</td>
               <td>
-                <p><span>Title: General Manager</span></p>
-                <p><span>General Management</span></p>
+                <p><InlineTitle>Title: General Manager</InlineTitle></p>
+                <p><InlineTitle>General Management</InlineTitle></p>
                 <p>
                   Establish internal quality standards for translation workflow; 
                   Produce manuals of working standards for translators; 
@@ -181,8 +181,8 @@ const Experience = (props) => {
             <tr>
               <td>2007.04 – 2010.12</td>
               <td>
-                <p><span>Title: Web Development Manager</span></p>
-                <p><span>Website Development, Optimization and Promotion</span></p>
+                <p><InlineTitle>Title: Web Development Manager</InlineTitle></p>
+                <p><InlineTitle>Website Development, Optimization and Promotion</InlineTitle></p>
                 <p>Development and maintenance of a medium-scale corporate website <Link href="http://www.scientrans.com">Scientrans</Link></p>
                 <p>
                   Website strategic planning and decision making; 

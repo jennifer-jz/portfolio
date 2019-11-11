@@ -13,8 +13,8 @@ export default `
     }
 
     span {
-      font-weight:bold;
-      padding:0px;
+      font-weight: bold;
+      padding-left: 0px;
     }
 
     a {

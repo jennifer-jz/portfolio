@@ -55,7 +55,7 @@ const Badge = styled(BadgeUnstyled)`
     padding: 0.25rem 0.6rem;
     font-size: 12px;
   `}
-  ${props => props.visible ? '' : 'display: none;'}
+  ${props => props.hide ? 'display: none;' : ''}
 
   font-weight: 700;
   line-height: 1;

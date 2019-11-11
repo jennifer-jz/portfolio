@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import DocumentMeta from 'react-document-meta';
 import DemoItem from './common/DemoItem';
 import { getMetaData } from '../utils';
-import { Panel, Badge } from '../components';
+import { Panel, Badge, InlineTitle } from '../components';
 import { nlpProjects, nlpProducts } from 'shared/data';
 import styles from './Nlp.styles';
 
@@ -24,9 +24,9 @@ const Nlp = (props) => {
               {nlpProjects.map((item, index) => (
                 <p key={index} className={item.keywords.join(' ')}>
                   {item.period}
-                  <span className="title">
+                  <InlineTitle>
                     {item.title}
-                  </span>
+                  </InlineTitle>
                   <span className="keywords">
                     {item.keywords && item.keywords.map((keyword, i) =>
                       <Badge key={i} keyword={keyword} />
