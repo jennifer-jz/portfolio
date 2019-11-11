@@ -3,8 +3,9 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import DocumentMeta from 'react-document-meta';
 import DemoItem from './common/DemoItem';
+import ProjectItem from './common/ProjectItem';
 import { getMetaData } from '../utils';
-import { Panel, Badge, InlineTitle } from '../components';
+import { Panel } from '../components';
 import { nlpProjects, nlpProducts } from 'shared/data';
 import styles from './Nlp.styles';
 
@@ -22,17 +23,7 @@ const Nlp = (props) => {
               title="Natural Language Processing (NLP) Projects"
             >
               {nlpProjects.map((item, index) => (
-                <p key={index} className={item.keywords.join(' ')}>
-                  {item.period}
-                  <InlineTitle>
-                    {item.title}
-                  </InlineTitle>
-                  <span className="keywords">
-                    {item.keywords && item.keywords.map((keyword, i) =>
-                      <Badge key={i} keyword={keyword} />
-                    )}
-                  </span>
-                </p>
+                <ProjectItem key={index} data={item} />
               ))}
             </Panel>
             <Panel

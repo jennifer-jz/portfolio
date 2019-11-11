@@ -138,7 +138,11 @@ const Experience = (props) => {
 					Develop fully owned NLP algorithms for sentence splitting, Chinese word segmentation, 
                     and phrase chunking, tailored for bilingual text.
                 </p>
-                <p><InlineTitle>Development of a <Link to="/product/scidict">Bilingual Dictionary</Link> using .NET Web</InlineTitle></p>
+                <p>
+                  <InlineTitle>
+                    Development of a <Link to="/product/scidict">Bilingual Dictionary</Link> using .NET Web
+                  </InlineTitle>
+                </p>
                 <p>
 					Develop a wholly owned bilingual dictionary, <Link href="http://www.scidict.org">SCIdict</Link>, 
 					with less than 1 sec. response time to fuzzy string match request among up to 100 million entries. 

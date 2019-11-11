@@ -4,9 +4,10 @@ import PropTypes from 'prop-types';
 import DocumentMeta from 'react-document-meta';
 import { Breadcrumbs } from '@material-ui/core';
 import { courseProjects } from 'shared/data';
+import ProjectItem from './common/ProjectItem';
 import { educationNavs, getCourseNameByKey } from 'shared/navigation';
 import { getMetaData, getRandomColor } from '../utils';
-import { Link, Panel, Badge, InlineTitle } from '../components';
+import { Link, Panel, InlineTitle } from '../components';
 import styles from './Education.styles';
 
 
@@ -29,10 +30,6 @@ const Education = (props) => {
     }
     return accu;
   }, []);
-
-  const isNavigable = (keyword) => {
-    return !!educationNavs.find(item => item.name === keyword);
-  };
 
   return (
     <DocumentMeta {...meta}>
@@ -93,24 +90,8 @@ const Education = (props) => {
                 </Breadcrumbs>
               )}
             >
-              {matchedCourseProjects.map((item, key) =>
-                <p
-                  key={key}
-                  className={item.keywords.join(' ')}
-                >
-                  {item.period}
-                  <InlineTitle>
-                    {item.title}
-                  </InlineTitle>
-                  {item.url && <Link href={item.url} icon />}
-                  {item.keywords && item.keywords.map((keyword, i) =>
-                    <Badge
-                      key={i}
-                      hide={isNavigable(keyword)}
-                      keyword={keyword}
-                    />
-                  )}
-                </p>
+              {matchedCourseProjects.map((item, index) =>
+                <ProjectItem key={index} data={item} />
               )}
             </Panel>
           </div>
