@@ -7,6 +7,7 @@ export default `
 
     .name {
         display: flex;
+        padding: 0 15px;
     }
 
     .description {

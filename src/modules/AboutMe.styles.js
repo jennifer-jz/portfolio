@@ -27,7 +27,7 @@ export default `
 
     i {
         font-size: 18px;
-        margin-right: 5px;
+        margin-right: 10px;
     }
   }
 `;

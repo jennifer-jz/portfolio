@@ -7,6 +7,7 @@ import {
   Link,
 } from 'components';
 import { filterNonHtmlProps } from 'utils';
+import { FONT_COLOR } from 'shared/styles';
 
 const DemoItemUnstyled = (props) => {
   const { className, urlHead, data: item, large, ...otherProps } = props;
@@ -146,7 +147,7 @@ const DemoItem = styled(DemoItemUnstyled)`
     .title {
       font-weight: bold;
       background: #E5E7E9;
-      color: black;
+      color: ${FONT_COLOR};
       padding: 2px 5px;
       opacity: 0.7;
       transition: font-size 0.5s ease-in-out;

@@ -45,12 +45,14 @@ em::after {
 h4 {
 	font-size: 18px;
 	font-weight: bold;
+	color: #555;
 }
 h5 {
 	font-size:16px;
 	font-weight:bold;
 	margin: 0.3rem 0;
-    line-height: 1rem;
+	line-height: 1rem;
+	color: #555;
 }
 h5.headline {
 	margin: 10px 0;

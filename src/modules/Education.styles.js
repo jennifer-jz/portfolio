@@ -1,3 +1,5 @@
+import { LINK_COLOR } from 'shared/styles';
+
 export default `
   .panel-group {
     max-width: 830px;
@@ -23,7 +25,7 @@ export default `
         margin-right: 35px;
 
         &.active a {
-          font-weight: bold;
+          border-bottom: 1px solid ${LINK_COLOR};
         }
       }
     }
