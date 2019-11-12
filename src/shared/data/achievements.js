@@ -1,28 +1,31 @@
 const achievements = [
   {
-    title: "Convert a traditional website to Node.js site from scratch",
-    keywords: ["node"],
+    title: "Revamp traditional website with modern javascript framework",
+    keywords: ["node", "react", "redux", "css-in-js"],
   },
   {
-    title: "Create reusable React component excercising best practices",
-    keywords: ["node", "react", "es6"],
+    title: "Incremental code refactor and code quality enhancement",
+    keywords: ["eslint", "componentization", "reusability"],
   },
   {
-    title: "Website optimization and Google performance score improvement",
-    keywords: ["seo"],
+    title: "Build UI component library",
+    keywords: ["react", "d3", "webpack", "babel"],
   },
   {
-    title: "MySQL connection encryption with API development ",
-    keywords: ["node", "mysql", "security"],
+    title: "Website performance improvement",
+    keywords: ["seo", "lighthouse", "gzip", "cache", "image"],
   },
   {
-    title: "Node modules customization ",
-    keywords: ["node"],
+    title: "API and DB query performance improvement",
+    keywords: ["mssql", "mysql", "Django"],
+  },
+  {
+    title: "Idenfity and solve tricky live site issues",
+    keywords: ["problem-solving"],
   },
   {
     title: "Develop a Bilingual Dictionary using IR technique",
     keywords: ["aspnet", "ir"],
-    // ref: <Link href="http://www.scidict.org" title="a web dictionary">SCIdict.org</Link>,
     ref: {
       title: "SCIdict.org",
       url: "http://www.scidict.org",

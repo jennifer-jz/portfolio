@@ -108,6 +108,45 @@ const subjectDict = {
   webpack: {
     name: "Webpack",
   },
+  babel: {
+    name: "Babel",
+  },
+  lighthouse: {
+    name: "Lighthouse",
+  },
+  django: {
+    name: "Django",
+  },
+  gzip: {
+    name: "Gzip",
+  },
+  d3: {
+    name: "D3",
+  },
+  eslint: {
+    name: "Eslint",
+  },
+  ["css-in-js"]: {
+    name: "CSS-in-JS",
+  },
+  redux: {
+    name: "Redux",
+  },
+  componentization: {
+    name: "Componentization",
+  },
+  cache: {
+    name: "Cache",
+  },
+  image: {
+    name: "Image",
+  },
+  reusability: {
+    name: "Reusability",
+  },
+  ["problem-solving"]: {
+    name: "Problem Solving",
+  },
 };
 
 export default subjectDict;
