@@ -1,9 +1,9 @@
 const selfIntroText = `
-IT Professional with 9 years of experience developing or leading development of ERP software system, 
-computer-aided translation workbench, online bilingual dictionary, and e-commerce website using C#, 
+IT Professional with 9 years of experience developing or leading development ERP software system, 
+computer-aided translation workbench, online bilingual dictionary, security alerts web portal and e-commerce website using C#, 
 asp.Net, SQL, Node, Express, React, Redux, Typescript, heavily exposed to Javascript ES6, Html/Css, 
-Less, Scss, Styled Components, React Hooks, D3, jQuery, Ajax, and involved in Java, Python Django, 
-NLP and ML, currently passionate in full stack web development and architecture, fully open to latest technologies.
+Less, Scss, Styled Components, React Hooks, D3, jQuery, Ajax, and involved in Webpack, Babel, ESlint, Java, Python and Django, 
+NLP and ML, currently passionate in full stack web development and architecture, adaptive to latest technologies.
 `;
 
 const contactInfo = {

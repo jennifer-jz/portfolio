@@ -133,7 +133,7 @@ const Experience = (props) => {
 					Develop an enterprise management system for translation automation, including subsystems of order 
 					management, client management, HR management, translation project management, translation and 
 					editing quality monitoring system, and bilingual corpus management. Implement text extraction 
-					and generation from/to MS Office Word using Microsoft&nbsp;
+					and generation from/to MS Office Word using C#&nbsp;
                   <Link to="/product/msword">Office Programming</Link>. 
 					Develop fully owned NLP algorithms for sentence splitting, Chinese word segmentation, 
                     and phrase chunking, tailored for bilingual text.

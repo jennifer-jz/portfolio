@@ -1,47 +1,51 @@
 const coreExperiences = [
   {
+    content: "Node + React",
+    strength: "2 years",
+  },
+  {
+    content: "Code Refactor",
+    strength: "2 years",
+  },
+  {
+    content: "Webpack + Babel + ESlint",
+    strength: "1 year",
+  },
+  {
+    content: "Sass + CSS-in-JS",
+    strength: "1 year",
+  },
+  {
+    content: "Website Performance Improvement",
+    strength: "4 years",
+  },
+  {
     content: "ERP System Development",
     strength: "4 years",
   },
   {
+    content: "Git",
+    strength: "2 year",
+  },
+  {
     content: "MSSQL/MYSQL",
-    strength: "4 years",
+    strength: "5 years",
   },
   {
-    content: "Responsive Website Building",
-    strength: "4 years",
+    content: "Website Building",
+    strength: "5 years",
   },
   {
-    content: "SEO",
+    content: "Web Server Deployment",
     strength: "3 years",
   },
   {
-    content: "MVC Pattern",
-    strength: "1 year",
-  },
-  {
-    content: "IIS Configuration",
-    strength: "3 years",
-  },
-  {
-    content: "C# Network Programming",
+    content: "C# Server + ASP.NET Web",
     strength: "2 years",
   },
   {
-    content: "MS Office Programming",
+    content: "C# Office Programming",
     strength: "2 years",
-  },
-  {
-    content: "CMS Development",
-    strength: "2 years",
-  },
-  {
-    content: "Git Version Control",
-    strength: "1 year",
-  },
-  {
-    content: "Unix/Linux",
-    strength: "1 year",
   },
 ];
   
