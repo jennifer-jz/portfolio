@@ -12,13 +12,13 @@ const coreAbilities = [
     content: "Make things happen with good time management and problem-solving ability",
   },
   {
-    content: "Communicate effectively and like to share information",
+    content: "Communicate effectively and share information",
   },
   {
     content: "Well understanding on needs from customers, managers and developers",
   },
   {
-    content: "Mentor junior developers with technoloty, share knowledge and growing path",
+    content: "Mentor junior developers with technology, share knowledge and growing path",
   },
   {
     content: "Willing to take challenges and higher responsibilities",
