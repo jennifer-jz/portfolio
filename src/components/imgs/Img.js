@@ -1,19 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import ImageLoader from 'react-load-image';
 import { filterNonHtmlProps } from 'utils';
+
+function Preloader() {
+  return (<div className="preloader">Loading...</div>);
+}
 
 const ImgUnstyled = (props) => {
   const { className, title, src, ...otherProps } = props;
-  const obj = require(`../../public${src}`);
-
+  // const obj = require(`../../public${src}`);
   return (
-    <img
-      className={className}
-      alt={title}
-      src={obj}
-      {...filterNonHtmlProps(otherProps)}
-    />
+    <ImageLoader src={src}>
+      <img
+        className={className}
+        alt={title}
+        {...filterNonHtmlProps(otherProps)}
+      />
+      <Preloader />
+    </ImageLoader>
   );
 };
 

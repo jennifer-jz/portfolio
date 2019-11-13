@@ -43,9 +43,11 @@ module.exports = {
               url: true,
               name(file) {
                 if (/\/png\//.test(file)) {
-                  return 'png/[name].[ext]'; 
+                  return 'png/[name].[ext]';
+                  // return `${rootDirectory}/png/[name].[ext]`;
                 } else if (/\/img\//.test(file)) {
                   return 'img/[name].[ext]';
+                  // return `${rootDirectory}/img/[name].[ext]`;
                 } else if (/\.(docx?|pdf)$/.test(file)) {
                   return 'doc/[name].[ext]';
                 } else if (file.endsWith('swf')) {

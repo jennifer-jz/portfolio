@@ -104,9 +104,15 @@ const DemoItem = styled(DemoItemUnstyled)`
     position: relative;
     transition: all 0.3s ease-in-out;
 
-    > a > img {
-      ${props => props.large ? 'height: auto;' : 'height: 150px; width: 280px;'}
-      margin: 0 auto;
+    > a > .imageloader {
+      & > img, & > .preloader {
+        ${props => props.large ? 'height: auto;' : 'height: 150px; width: 280px;'}
+        margin: 0 auto;
+      }
+
+      & > .preloader {
+        background: #E5E7E9;
+      }
     }
 
     &:hover {
