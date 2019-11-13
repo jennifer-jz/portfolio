@@ -47,6 +47,7 @@ export default `
     .demos {
       display: flex;
       flex-wrap: nowrap;
+      padding: 0;
   
       > div {
         margin-top: 0;
@@ -58,10 +59,6 @@ export default `
         &:last-child {
           padding-right: 15px;
         }
-  
-        // &:first-child {
-        //   margin-left: 0;
-        // }
       }
     }
   }
