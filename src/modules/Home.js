@@ -12,7 +12,9 @@ import {
   homeProducts,
   achievements,
   techLangs,
+  minCodeStrength,
   getColorByExperience,
+  getColorByCodeStrength,
   coreExperiences,
   coreAbilities,
 } from 'shared/data';
@@ -93,9 +95,21 @@ const Home = (props) => {
               titleUrl="capability"
             >
               <ButtonGroup>
-                {techLangs.map((item, index) => (
-                  <Button key={index} random data-tip={item.strength}>{item.content}</Button>
-                ))}
+                {techLangs.map((item, index) => {
+                  const value = item.value !== undefined ? item.value : minCodeStrength;
+                  const backgroundColor = getColorByCodeStrength(value);
+                  const color = getFontColorInBackground(backgroundColor);
+                  return (
+                    <Button
+                      key={index}
+                      random
+                      style={{ color, backgroundColor }}
+                      data-tip={item.strength}
+                    >
+                      {item.content}
+                    </Button>
+                  );
+                })}
               </ButtonGroup>
             </Panel>
           </div>
