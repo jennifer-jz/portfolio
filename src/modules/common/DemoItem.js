@@ -115,6 +115,12 @@ const DemoItem = styled(DemoItemUnstyled)`
       }
     }
 
+    p.title {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
     &:hover {
       box-shadow: 0 2px 12px 0 rgba(0,0,0,0.35);
       transform: translate(0, -10px);
@@ -122,6 +128,12 @@ const DemoItem = styled(DemoItemUnstyled)`
 
       p.title {
         font-size: 1rem;
+        white-space: normal;
+        position: absolute;
+      }
+
+      .imageloader {
+        margin-top: 2.5rem;
       }
 
       .badge {
