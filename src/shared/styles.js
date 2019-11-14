@@ -28,3 +28,4 @@ export const BACKGROUND_COLORS = [
   'teal',
   'cadetblue',
 ];
+

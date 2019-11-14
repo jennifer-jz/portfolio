@@ -12,6 +12,7 @@ import {
   homeProducts,
   achievements,
   techLangs,
+  getColorByExperience,
   coreExperiences,
   coreAbilities,
 } from 'shared/data';
@@ -106,7 +107,12 @@ const Home = (props) => {
             >
               <ButtonGroup>
                 {coreExperiences && coreExperiences.map((item, index) => (
-                  <Button key={index} random data-tip={item.strength}>
+                  <Button
+                    key={index}
+                    style={{ backgroundColor: getColorByExperience(item.value)}}
+                    random
+                    data-tip={`${item.value} years`}
+                  >
                     {item.content}
                   </Button>
                 ))}

@@ -5,7 +5,7 @@ import { homeProducts, nlpProducts } from './products';
 import nlpProjects from './nlpProjects';
 import achievements from './achievements';
 import techLangs from './techLangs';
-import coreExperiences from './coreExperiences';
+import coreExperiences, { getColorByExperience } from './coreExperiences';
 import coreAbilities from './coreAbilities';
 
 export {
@@ -17,6 +17,7 @@ export {
   nlpProjects,
   achievements,
   techLangs,
+  getColorByExperience,
   coreExperiences,
   coreAbilities,
 };
