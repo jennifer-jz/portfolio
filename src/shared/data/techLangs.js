@@ -7,6 +7,11 @@ const techLangs = [
     value: 100000,
   },
   {
+    content: "Redux",
+    strength: "100,00+ lines",
+    value: 10000,
+  },
+  {
     content: "Typescript",
     strength: "10,000+ lines",
     value: 10000,
@@ -23,6 +28,16 @@ const techLangs = [
   },
   {
     content: "Less",
+    strength: "10,000+ lines",
+    value: 10000,
+  },
+  {
+    content: "Styled-Components",
+    strength: "20,000+ lines",
+    value: 20000,
+  },
+  {
+    content: "D3",
     strength: "10,000+ lines",
     value: 10000,
   },
@@ -76,11 +91,11 @@ const techLangs = [
     strength: "5,000+ lines",
     value: 5000,
   },
-  {
-    content: "Angular JS",
-    strength: "1,000+ lines",
-    value: 1000,
-  },
+  // {
+  //   content: "Angular JS",
+  //   strength: "1,000+ lines",
+  //   value: 1000,
+  // },
   {
     content: "Android",
     strength: "2,000+ lines",
@@ -92,24 +107,29 @@ const techLangs = [
     value: 200000,
   },
   {
-    content: "jQuery / jQueryUI",
+    content: "jQuery",
     strength: "20,000+ lines",
     value: 20000,
   },
+  // {
+  //   content: "Ajax + XML",
+  //   strength: "5,000+ lines",
+  //   value: 5000,
+  // },
   {
-    content: "Ajax + XML",
-    strength: "5,000+ lines",
-    value: 5000,
+    content: "Python Django",
+    strength: "10,000+ lines",
+    value: 10000,
   },
   {
     content: "Restful API",
-    strength: "2,000+ lines",
-    value: 2000,
+    strength: "2,0000+ lines",
+    value: 20000,
   },
-  {
-    content: "Heroku",
-    strength: "",
-  },
+  // {
+  //   content: "Heroku",
+  //   strength: "",
+  // },
   {
     content: "RabbitMQ",
     strength: "2,000+ lines",
@@ -143,7 +163,7 @@ const strengthRange = techLangs.reduce((accu, curr) => {
 
 // One abnormally high value streches out the whole distribution
 // Hacky treatment to make visualization better without statistical tools
-strengthRange[1] = strengthRange[1] * 0.3;
+strengthRange[1] = strengthRange[1] * 0.1;
 
 const minCodeStrength = strengthRange[0];
 

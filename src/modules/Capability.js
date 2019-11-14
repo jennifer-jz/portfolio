@@ -1,7 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import DocumentMeta from 'react-document-meta';
-import { getMetaData } from '../utils';
+import { getMetaData, getFontColorInBackground } from '../utils';
+import {
+  techLangs,
+  minCodeStrength,
+  getColorByCodeStrength,
+} from 'shared/data';
 import { Button, Link, ButtonGroup, Panel } from '../components';
 
 const Capability = (props) => {
@@ -128,19 +133,22 @@ const Capability = (props) => {
               title="Programming Language"
             >
               <ButtonGroup>
-                <Button random data-tip="50,000+ lines">Node.js + Express.js + MySql</Button>
-                <Button random data-tip="300,000+ lines">Html 4/5 + CSS 2/3</Button>
-                <Button random data-tip="10,000+ lines">Bootstrap</Button>
-                <Button random data-tip="500,000+ lines">C# + SQL</Button>
-                <Button random data-tip="80,000+ lines">Asp.Net Web</Button>
-                <Button random data-tip="20,000+ lines">Java</Button>
-                <Button random data-tip="5,000+ lines">MySQL + PhP</Button>
-                <Button random data-tip="10,000+ lines">json</Button>
-                <Button random data-tip="1,000+ lines">Angular JS</Button>
-                <Button random data-tip="1,000+ lines">Mongo DB</Button>
-                <Button random data-tip="20,000+ lines">Javascript / jQuery / jQueryUI</Button>
-                <Button random data-tip="5,000+ lines">ajax + XML</Button>
-                <Button random data-tip="2,000+ lines">REST and SOAP Web Services</Button>
+                {techLangs.map((item, index) => {
+                  const value = item.value !== undefined ? item.value : minCodeStrength;
+                  const backgroundColor = getColorByCodeStrength(value);
+                  const color = getFontColorInBackground(backgroundColor);
+                  const strength = item.value !== undefined ? `${item.value}+ lines` : '';
+                  return (
+                    <Button
+                      key={index}
+                      random
+                      style={{ color, backgroundColor }}
+                      data-tip={strength}
+                    >
+                      {item.content}
+                    </Button>
+                  );
+                })}
               </ButtonGroup>
             </Panel>
 

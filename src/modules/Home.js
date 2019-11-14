@@ -99,12 +99,13 @@ const Home = (props) => {
                   const value = item.value !== undefined ? item.value : minCodeStrength;
                   const backgroundColor = getColorByCodeStrength(value);
                   const color = getFontColorInBackground(backgroundColor);
+                  const strength = item.value !== undefined ? `${item.value}+ lines` : '';
                   return (
                     <Button
                       key={index}
                       random
                       style={{ color, backgroundColor }}
-                      data-tip={item.strength}
+                      data-tip={strength}
                     >
                       {item.content}
                     </Button>
