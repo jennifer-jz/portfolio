@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import DocumentMeta from 'react-document-meta';
-import { getMetaData, getVideoURL } from '../utils';
+import { getMetaData, getVideoURL, getFontColorInBackground } from '../utils';
 import {
   selfIntroText,
   contactInfo,
@@ -106,16 +106,19 @@ const Home = (props) => {
               titleUrl="experience"
             >
               <ButtonGroup>
-                {coreExperiences && coreExperiences.map((item, index) => (
-                  <Button
-                    key={index}
-                    style={{ backgroundColor: getColorByExperience(item.value)}}
-                    random
-                    data-tip={`${item.value} years`}
-                  >
-                    {item.content}
-                  </Button>
-                ))}
+                {coreExperiences && coreExperiences.map((item, index) => {
+                  const backgroundColor = getColorByExperience(item.value);
+                  const color = getFontColorInBackground(backgroundColor);
+                  return (
+                    <Button
+                      key={index}
+                      style={{ color, backgroundColor }}
+                      random
+                      data-tip={`${item.value} years`}
+                    >
+                      {item.content}
+                    </Button>);
+                })}
               </ButtonGroup>
             </Panel>
 
