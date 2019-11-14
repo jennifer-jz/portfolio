@@ -18,6 +18,7 @@ const ImgUnstyled = (props) => {
         alt={title}
         {...filterNonHtmlProps(otherProps)}
       />
+      <div>Error</div>
       <Preloader />
     </ImageLoader>
   );
