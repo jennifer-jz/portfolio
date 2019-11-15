@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import DocumentMeta from 'react-document-meta';
-import { getMetaData, getVideoURL, getFontColorInBackground } from '../utils';
+import { getMetaData, getVideoURL } from '../utils';
 import {
   selfIntroText,
   contactInfo,
@@ -11,15 +11,12 @@ import {
 import {
   homeProducts,
   achievements,
-  techLangs,
-  minCodeStrength,
-  getColorByExperience,
-  getColorByCodeStrength,
-  coreExperiences,
   coreAbilities,
 } from 'shared/data';
 import DemoItem from './common/DemoItem';
-import { Button, ButtonGroup, Link, Modal, Panel, Badge } from '../components';
+import ProgrammingLanguages from './common/ProgrammingLanguages';
+import CoreExperiences from './common/CoreExperiences';
+import { Link, Modal, Panel, Badge } from '../components';
 import { Icon } from 'components/icons';
 import styles from './Home.styles';
 
@@ -88,34 +85,14 @@ const Home = (props) => {
                 ))}
               </ul>
             </Panel>
-            
-            <Panel
-              theme="danger"
+            <ProgrammingLanguages
               title="Programming Languages & Tools"
               titleUrl="capability"
-            >
-              <ButtonGroup>
-                {techLangs.map((item, index) => {
-                  const value = item.value !== undefined ? item.value : minCodeStrength;
-                  const backgroundColor = getColorByCodeStrength(value);
-                  const color = getFontColorInBackground(backgroundColor);
-                  const strength = item.value !== undefined ? `${item.value}+ lines` : '';
-                  return (
-                    <Button
-                      key={index}
-                      random
-                      style={{ color, backgroundColor }}
-                      data-tip={strength}
-                    >
-                      {item.content}
-                    </Button>
-                  );
-                })}
-              </ButtonGroup>
-            </Panel>
+            />
           </div>
           <div className="col-md-5">
-            <Panel
+            <CoreExperiences />
+            {/* <Panel
               theme="danger"
               title="Experience"
               titleUrl="experience"
@@ -135,7 +112,7 @@ const Home = (props) => {
                     </Button>);
                 })}
               </ButtonGroup>
-            </Panel>
+            </Panel> */}
 
             <Panel
               theme="info"

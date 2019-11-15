@@ -1,13 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import DocumentMeta from 'react-document-meta';
-import { getMetaData, getFontColorInBackground } from '../utils';
-import {
-  techLangs,
-  minCodeStrength,
-  getColorByCodeStrength,
-} from 'shared/data';
-import { Button, Link, ButtonGroup, Panel } from '../components';
+import { getMetaData } from '../utils';
+import ProgrammingLanguages from './common/ProgrammingLanguages';
+import { Link, Panel } from '../components';
 
 const Capability = (props) => {
   const meta = getMetaData(props);
@@ -128,29 +124,9 @@ const Capability = (props) => {
               </p>
             </Panel>
         
-            <Panel
-              theme="danger"
-              title="Programming Language"
-            >
-              <ButtonGroup>
-                {techLangs.map((item, index) => {
-                  const value = item.value !== undefined ? item.value : minCodeStrength;
-                  const backgroundColor = getColorByCodeStrength(value);
-                  const color = getFontColorInBackground(backgroundColor);
-                  const strength = item.value !== undefined ? `${item.value}+ lines` : '';
-                  return (
-                    <Button
-                      key={index}
-                      random
-                      style={{ color, backgroundColor }}
-                      data-tip={strength}
-                    >
-                      {item.content}
-                    </Button>
-                  );
-                })}
-              </ButtonGroup>
-            </Panel>
+            <ProgrammingLanguages
+              title="Programming Languages"
+            />
 
             <Panel
               id="Utilities"
