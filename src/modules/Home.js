@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import Loadable from 'react-loadable';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import DocumentMeta from 'react-document-meta';
@@ -14,11 +15,23 @@ import {
   coreAbilities,
 } from 'shared/data';
 import DemoItem from './common/DemoItem';
-import ProgrammingLanguages from './common/ProgrammingLanguages';
-import CoreExperiences from './common/CoreExperiences';
 import { Link, Modal, Panel, Badge } from '../components';
 import { Icon } from 'components/icons';
 import styles from './Home.styles';
+
+const CoreExperiences = Loadable({
+  loader: () => import('./common/CoreExperiences'),
+  loading() {
+    return (<div>Loading...</div>);
+  },
+});
+
+const ProgrammingLanguages = Loadable({
+  loader: () => import('./common/ProgrammingLanguages'),
+  loading() {
+    return (<div>Loading...</div>);
+  },
+});
 
 const Home = (props) => {
   const meta = getMetaData(props);
@@ -92,28 +105,6 @@ const Home = (props) => {
           </div>
           <div className="col-md-5">
             <CoreExperiences />
-            {/* <Panel
-              theme="danger"
-              title="Experience"
-              titleUrl="experience"
-            >
-              <ButtonGroup>
-                {coreExperiences && coreExperiences.map((item, index) => {
-                  const backgroundColor = getColorByExperience(item.value);
-                  const color = getFontColorInBackground(backgroundColor);
-                  return (
-                    <Button
-                      key={index}
-                      style={{ color, backgroundColor }}
-                      random
-                      data-tip={`${item.value} years`}
-                    >
-                      {item.content}
-                    </Button>);
-                })}
-              </ButtonGroup>
-            </Panel> */}
-
             <Panel
               theme="info"
               title="As a Development Lead"
