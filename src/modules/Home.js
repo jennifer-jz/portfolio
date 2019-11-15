@@ -14,10 +14,16 @@ import {
   achievements,
   coreAbilities,
 } from 'shared/data';
-import DemoItem from './common/DemoItem';
 import { Link, Modal, Panel, Badge } from '../components';
 import { Icon } from 'components/icons';
 import styles from './Home.styles';
+
+const DemoItem = Loadable({
+  loader: () => import('./common/DemoItem'),
+  loading() {
+    return (<div>Loading...</div>);
+  },
+});
 
 const CoreExperiences = Loadable({
   loader: () => import('./common/CoreExperiences'),
