@@ -104,5 +104,6 @@ module.exports = {
     openPage: rootDirectory.replace(/^\//, ''),
     historyApiFallback: true,
     hot: true,
-  }
+  },
+  mode: 'production',
 };
