@@ -5,4 +5,4 @@ export * from './getRootUrl';
 export * from './getRandomColor';
 export * from './getScaledColor';
 export * from './convertColors';
-export * from './dynamicLoad';
+// export * from './dynamicLoad';
