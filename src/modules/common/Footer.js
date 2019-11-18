@@ -25,7 +25,7 @@ FooterUnstyled.defaultProps = {
 const Footer = styled(FooterUnstyled)`
   border-top: 1px solid ${DARK_GRAY};
   width: calc(100% - 180px);
-  margin: 0 auto;
+  margin: 10px auto;
   padding: 15px;
   padding-top:30px;
   text-align: center;
