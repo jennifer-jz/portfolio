@@ -1,11 +1,11 @@
 import React from 'react';
 import Loadable from 'react-loadable';
+import { LoadingPlacehHolder } from 'components';
 
 export function dynamicLoad(path) {
   return Loadable({
     loader: () => import(path),
-    loading() {
-      return (<div>Loading...</div>);
-    },
+    // eslint-disable-next-line react/display-name
+    loading: () => <LoadingPlacehHolder />,
   });
 }

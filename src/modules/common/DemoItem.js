@@ -7,7 +7,7 @@ import {
   Link,
 } from 'components';
 import { filterNonHtmlProps } from 'utils';
-import { FONT_COLOR } from 'shared/styles';
+import { FONT_COLOR, TITLE_BACKGROUND, CONTENT_BACKGROUND } from 'shared/styles';
 
 const DemoItemUnstyled = (props) => {
   const { className, urlHead, data: item, large, ...otherProps } = props;
@@ -99,19 +99,15 @@ const DemoItem = styled(DemoItemUnstyled)`
   border-radius: 2px;
 
   .content {
-    background-color: #f2f4f4;
+    background-color: ${CONTENT_BACKGROUND};
     padding: 10px;
     position: relative;
     transition: all 0.3s ease-in-out;
 
     > a > .imageloader {
       & > img, & > .preloader {
-        ${props => props.large ? 'height: auto;' : 'height: 150px; width: 280px;'}
+        ${props => props.large ? 'height: 500px;' : 'height: 150px; width: 280px;'}
         margin: 0 auto;
-      }
-
-      & > .preloader {
-        background: #E5E7E9;
       }
     }
 
@@ -164,7 +160,7 @@ const DemoItem = styled(DemoItemUnstyled)`
 
     .title {
       font-weight: bold;
-      background: #E5E7E9;
+      background: ${TITLE_BACKGROUND};
       color: ${FONT_COLOR};
       padding: 2px 5px;
       opacity: 0.7;

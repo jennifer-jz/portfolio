@@ -3,10 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import ImageLoader from 'react-load-image';
 import { filterNonHtmlProps } from 'utils';
-
-function Preloader() {
-  return (<div className="preloader">Loading...</div>);
-}
+import LoadingPlaceHolder from '../LoadingPlaceHolder';
 
 const ImgUnstyled = (props) => {
   const { className, title, src, ...otherProps } = props;
@@ -19,7 +16,7 @@ const ImgUnstyled = (props) => {
         {...filterNonHtmlProps(otherProps)}
       />
       <div>Error</div>
-      <Preloader />
+      <LoadingPlaceHolder className="preloader" />
     </ImageLoader>
   );
 };

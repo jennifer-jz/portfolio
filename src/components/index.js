@@ -3,6 +3,7 @@ import Body from './Body';
 import Button from './Button';
 import ButtonGroup from './ButtonGroup';
 import InlineTitle from './InlineTitle';
+import LoadingPlacehHolder from './LoadingPlaceHolder';
 import Link from './Link';
 import Modal from './Modal';
 import Panel from './Panel';
@@ -20,6 +21,7 @@ export {
   Button,
   ButtonGroup,
   InlineTitle,
+  LoadingPlacehHolder,
   Link,
   Modal,
   Panel,

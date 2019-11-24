@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name */
 import React, { useState, useEffect, useRef } from 'react';
 import Loadable from 'react-loadable';
 import PropTypes from 'prop-types';
@@ -14,29 +15,23 @@ import {
   achievements,
   coreAbilities,
 } from 'shared/data';
-import { Link, Modal, Panel, Badge } from '../components';
+import { Link, Modal, Panel, Badge, LoadingPlacehHolder } from '../components';
 import { Icon } from 'components/icons';
 import styles from './Home.styles';
 
 const DemoItem = Loadable({
   loader: () => import('./common/DemoItem'),
-  loading() {
-    return (<div>Loading...</div>);
-  },
+  loading: () => <LoadingPlacehHolder />,
 });
 
-const CoreExperiences = Loadable({
+const CoreExperiences = new Loadable({
   loader: () => import('./common/CoreExperiences'),
-  loading() {
-    return (<div>Loading...</div>);
-  },
+  loading: () => <LoadingPlacehHolder />,
 });
 
 const ProgrammingLanguages = Loadable({
   loader: () => import('./common/ProgrammingLanguages'),
-  loading() {
-    return (<div>Loading...</div>);
-  },
+  loading: () => <LoadingPlacehHolder />,
 });
 
 const Home = (props) => {

@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { BOLD_FONT_COLOR, THEME_INFO, THEME_DANGER } from 'shared/styles';
+import { CONTENT_BACKGROUND, BOLD_FONT_COLOR, THEME_INFO, THEME_DANGER } from 'shared/styles';
 import Link from './Link';
 
 const PanelUnstyled = (props) => {
@@ -53,7 +53,7 @@ const Panel = styled(PanelUnstyled)`
 
   .panel-heading {
     padding: 3px 15px;
-    background-color:#F2F3F4 !important;
+    background-color: ${CONTENT_BACKGROUND};
     border-bottom: 0;
 
     ${props => {
