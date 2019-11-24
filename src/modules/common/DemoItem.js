@@ -106,8 +106,26 @@ const DemoItem = styled(DemoItemUnstyled)`
 
     > a > .imageloader {
       & > img, & > .preloader {
-        ${props => props.large ? 'height: 500px;' : 'height: 150px; width: 280px;'}
+        ${props => props.large ? `
+          height: auto;
+        ` : `
+          height: 150px;
+          width: 280px;
+        `}
         margin: 0 auto;
+      }
+      & > .preloader {
+        ${props => props.large ? `
+          @media (min-width: 768px) {
+            height: 500px;
+          }
+          @media (min-width: 576px) and (max-width: 768px) {
+            height: 300px;
+          }
+          @media (max-width: 576px) {
+            height: 100px;
+          }
+        ` : ''}
       }
     }
 

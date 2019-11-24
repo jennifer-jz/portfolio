@@ -18,7 +18,7 @@ const Router = () => {
     <>
       <Navigation />
       <Body>
-        <Suspense fallback={<LoadingIndicator height="400px" />}>
+        <Suspense fallback={<LoadingIndicator page />}>
           <Switch>
             <Route exact path={Paths.ROOT} render={(props) =>
               <Home

@@ -40,6 +40,7 @@ const LoadingIndicatorStyled = styled(LoadingIndicator)`
       color: ${BLUE};
     }
   `}
+  ${props => props.page ? 'height: calc(100vh - 120px);' : ''}
 `;
 LoadingIndicatorStyled.displayName = 'LoadingIndicatorStyled';
 

@@ -12,6 +12,14 @@ export default `
       }
     }
 
+    @media (max-width: 576px) {
+      margin-left: 0;
+
+      td:first-child {
+        width: 0;
+      }
+    }
+
     span {
       font-weight: bold;
       padding-left: 0px;

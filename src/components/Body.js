@@ -27,11 +27,11 @@ const Body = styled(BodyUnstyled)`
   padding: 80px 60px 20px;
   min-height: calc(100vh - 120px);
 
-  @media (max-width: 768px) and (min-width: 578px) {
+  @media (max-width: 768px) and (min-width: 576px) {
     padding: 80px 30px 20px;
   }
 
-  @media (max-width: 578px) {
+  @media (max-width: 576px) {
     padding: 80px 10px 20px;
   }
 

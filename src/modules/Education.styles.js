@@ -6,7 +6,8 @@ export default `
   }
   .education-history {
     margin-left:15px;
-		margin-bottom: 30px;
+    margin-bottom: 30px;
+    padding: 0 15px;
   }
   .courses .panel-body {
     > div {
