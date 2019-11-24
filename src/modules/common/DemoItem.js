@@ -22,11 +22,10 @@ const DemoItemUnstyled = (props) => {
   const renderDemoVideo = () => {
     return (
       <>
-        <Link id={id} to={demoLink} title={caption}>
+        <Link to={demoLink} title={caption}>
           <Img title={caption} src={imgUrl} />
         </Link>
         <Badge
-          id={id}
           large
           keyword="Demo Video"
           to={demoLink}
