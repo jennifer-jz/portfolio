@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import DocumentMeta from 'react-document-meta';
 import { getMetaData } from '../utils';
-import ProgrammingLanguages from './common/ProgrammingLanguages';
+import ProgrammingLanguages from './home/ProgrammingLanguages';
 import { Link, Panel } from '../components';
 
 const Capability = (props) => {

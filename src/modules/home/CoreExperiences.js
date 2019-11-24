@@ -8,11 +8,12 @@ import { Button, ButtonGroup, Panel } from 'components';
 import { coreExperiences } from '../../shared/data';
 
 const CoreExperiences = (props) => {
-  const { title, titleUrl, className, ...restProps } = props; 
+  const { title, titleUrl, theme, className, id, ...restProps } = props; 
 
   return (
     <Panel
-      theme="danger"
+      theme={theme}
+      id={id}
       title={title}
       titleUrl={titleUrl}
       className={className}
@@ -39,12 +40,15 @@ const CoreExperiences = (props) => {
 
 CoreExperiences.displayName = "CoreExperiences";
 CoreExperiences.propTypes = {
+  id: PropTypes.string,
   title: PropTypes.string,
+  theme: PropTypes.string,
   className: PropTypes.string,
   titleUrl: PropTypes.string,
 };
 CoreExperiences.defaultProps = {
   title: "Experience",
+  theme: "info",
   className: "",
   titleUrl: "experience",
 };

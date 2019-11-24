@@ -12,25 +12,33 @@ import {
 } from '../shared/constants';
 import {
   homeProducts,
-  achievements,
-  coreAbilities,
 } from 'shared/data';
-import { Link, Modal, Panel, Badge, LoadingIndicator } from '../components';
+import { Link, Modal, LoadingIndicator } from '../components';
 import { Icon } from 'components/icons';
 import styles from './Home.styles';
 
-const DemoItem = Loadable({
-  loader: () => import('./common/DemoItem'),
+const CoreExperiences = Loadable({
+  loader: () => import('./home/CoreExperiences'),
   loading: () => <LoadingIndicator image />,
 });
 
-const CoreExperiences = new Loadable({
-  loader: () => import('./common/CoreExperiences'),
+const CoreAbilities = Loadable({
+  loader: () => import('./home/CoreAbilities'),
   loading: () => <LoadingIndicator image />,
 });
 
 const ProgrammingLanguages = Loadable({
-  loader: () => import('./common/ProgrammingLanguages'),
+  loader: () => import('./home/ProgrammingLanguages'),
+  loading: () => <LoadingIndicator image />,
+});
+
+const Achievement = Loadable({
+  loader: () => import('./home/Achievement'),
+  loading: () => <LoadingIndicator image />,
+});
+
+const HomeDemos = Loadable({
+  loader: () => import('./home/HomeDemos'),
   loading: () => <LoadingIndicator image />,
 });
 
@@ -81,62 +89,36 @@ const Home = (props) => {
 
         <div className="row">
           <div className="col-md-7">
-            <Panel
+            <Achievement
               id="Achievement"
               theme="info"
               title="Technical Achievement"
               titleUrl="capability"
-            >
-              <ul className="list-group">
-                {achievements.map((item, index) => (
-                  <li key={index} className="list-group-item">
-                    {item.title}
-                    {item.keywords && item.keywords.reverse().map((keyword, i) =>
-                      <Badge key={i} keyword={keyword} />
-                    )}
-                    {item.ref && <Badge keyword={item.ref.title} href={item.ref.url} />}
-                  </li>
-                ))}
-              </ul>
-            </Panel>
+            />
             <ProgrammingLanguages
               title="Programming Languages & Tools"
               titleUrl="capability"
             />
           </div>
           <div className="col-md-5">
-            <CoreExperiences />
-            <Panel
+            <CoreExperiences
+              title="Experience"
+              titleUrl="experience"
+            />
+            <CoreAbilities
               theme="info"
               title="As a Development Lead"
               titleUrl="capability"
-            >
-              <ul className="list-group">
-                {coreAbilities && coreAbilities.map((item, index) => (
-                  <li key={index} className="list-group-item">{item.content}</li>
-                ))}
-              </ul>
-            </Panel>
+            />
           </div>
         </div>
         <div ref={demoRef}>
-          <Panel
+          <HomeDemos
             theme="danger"
             title="Product Demo"
             titleUrl="product"
             className="product-demo"
-          >
-            <div className="container-fluid row demos">
-              {homeProducts.map((item, key) => (
-                <DemoItem
-                  key={key}
-                  data={item}
-                  urlHead="/home"
-                  className="col-lg-3 col-md-6 col-sm-12"
-                />
-              ))}
-            </div>
-          </Panel>
+          />
         </div>
       </div>
       {modelData && <Modal
