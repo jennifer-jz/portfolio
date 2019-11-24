@@ -15,23 +15,23 @@ import {
   achievements,
   coreAbilities,
 } from 'shared/data';
-import { Link, Modal, Panel, Badge, LoadingPlacehHolder } from '../components';
+import { Link, Modal, Panel, Badge, LoadingIndicator } from '../components';
 import { Icon } from 'components/icons';
 import styles from './Home.styles';
 
 const DemoItem = Loadable({
   loader: () => import('./common/DemoItem'),
-  loading: () => <LoadingPlacehHolder />,
+  loading: () => <LoadingIndicator image />,
 });
 
 const CoreExperiences = new Loadable({
   loader: () => import('./common/CoreExperiences'),
-  loading: () => <LoadingPlacehHolder />,
+  loading: () => <LoadingIndicator image />,
 });
 
 const ProgrammingLanguages = Loadable({
   loader: () => import('./common/ProgrammingLanguages'),
-  loading: () => <LoadingPlacehHolder />,
+  loading: () => <LoadingIndicator image />,
 });
 
 const Home = (props) => {

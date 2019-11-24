@@ -3,7 +3,7 @@ import Body from './Body';
 import Button from './Button';
 import ButtonGroup from './ButtonGroup';
 import InlineTitle from './InlineTitle';
-import LoadingPlacehHolder from './LoadingPlaceHolder';
+import LoadingIndicator from './LoadingIndicator';
 import Link from './Link';
 import Modal from './Modal';
 import Panel from './Panel';
@@ -21,13 +21,13 @@ export {
   Button,
   ButtonGroup,
   InlineTitle,
-  LoadingPlacehHolder,
+  LoadingIndicator,
   Link,
   Modal,
   Panel,
   Tabs,
   Tab,
-  // icons
+  /** icons */ 
   Icon,
   LinkIcon,
   ThumbtackIcon,

@@ -11,14 +11,14 @@ const Nlp = React.lazy(() => import('modules/Nlp'));
 const AboutMe = React.lazy(() => import('modules/AboutMe'));
 import Paths from 'shared/routePaths';
 import metaData from 'shared/metaData';
-import { Body } from 'components';
+import { Body, LoadingIndicator } from 'components';
 
 const Router = () => {
   return (
     <>
       <Navigation />
       <Body>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<LoadingIndicator height="400px" />}>
           <Switch>
             <Route exact path={Paths.ROOT} render={(props) =>
               <Home
