@@ -1,4 +1,5 @@
 const path = require('path');
+// require("babel-register");
 const webpack = require('webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
@@ -101,9 +102,11 @@ module.exports = {
     new BundleAnalyzerPlugin(),
   ],
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
+    static: {
+      directory: path.join(__dirname, 'dist')
+    },
     port: 9000,
-    openPage: rootDirectory.replace(/^\//, ''),
+    // open: rootDirectory.replace(/^\//, ''),
     historyApiFallback: true,
     hot: true,
   },

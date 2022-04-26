@@ -18,3 +18,8 @@ This repo shows an example of how to revamp a site and how refactoring can impro
 # Other Highlights
 1. Integration of SEO using react-document-meta
 2. Semantic version control
+
+# How to run the app
+npm run dev -- local testing
+npm run build -- build site
+siteConfig.json -- configure the sub directory of the site, for example use "/2019" if we want the site address to be http://localhost:9000/2019
