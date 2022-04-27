@@ -22,7 +22,7 @@ const DemoItemUnstyled = (props) => {
   const renderDemoVideo = () => {
     return (
       <>
-        <Link to={demoLink} title={caption}>
+        <Link id={id} to={demoLink} title={caption}>
           <Img title={caption} src={imgUrl} />
         </Link>
         <Badge
