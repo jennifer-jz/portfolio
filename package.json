@@ -18,7 +18,7 @@
     "create-react-app": "^5.0.1",
     "d3": "^4.13.0",
     "debug": "~2.6.9",
-    "npm": "^8.7.0",
+    "npm": "^8.11.0",
     "react-favicon": "0.0.17",
     "react-load-image": "^0.1.7",
     "react-loadable": "^5.5.0",
