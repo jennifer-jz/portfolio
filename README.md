@@ -32,22 +32,22 @@ npm run dev -- local testing
 
 npm run build -- build site
 
-App version
+### App version
 
 This app has its version specified in package.json. Bump version at each change. Then don't forget to build before committing code and push.
 
-How to deploy the site?
+### How to deploy the site?
 
 After building the site, find files under dist, and upload them to be hosted as static site. IIS rewrite is needed for react router if hosting on IIS Manager.
 
-What's the purpose of siteConfig.json?
+### What's the purpose of siteConfig.json?
 
 configure the sub directory of the site, for example use "/2019" if we want the site address to be http://localhost:9000/2019
 
-What is web.config?
+### What is web.config?
 
 IIS configuration file, if hosting site at a subfolder, update the rewrite rule to target the corresponding subfolder, for example: <action type="Rewrite" url="/2019/" appendQueryString="true" />, if hosting at the root, <action type="Rewrite" url="/" appendQueryString="true" />
 
-How to upgrade dependency?
+### How to upgrade dependency?
 
 Dependency versions are correlated with each other, when using webpack 4.0, babel-loader, node-sass, css-loader, style-loader, etc. are limited at certain versions. Otherwise npm install gives errors.
