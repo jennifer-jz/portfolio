@@ -126,7 +126,7 @@ const products = [
     img: "/img/scidict2.jpg",
     imgFull: "",
     caption: "ASP.NET Web Bilingual Dictionary",
-    url: "http://www.scidict.org",
+    url: "http://www.scidict.org/en",
     home: true,
   },
   {
@@ -174,7 +174,7 @@ const products = [
     img: "/img/textanalysis.jpg",
     imgFull: "/img/textanalysis.jpg",
     caption: "Bilingual Full Text Analysis",
-    url: "http://www.scidict.org/termtrans",
+    url: "http://www.scidict.org/en",
     nlp: true,
   },
   {

@@ -28,7 +28,7 @@ const achievements = [
     keywords: ["aspnet", "ir"],
     ref: {
       title: "SCIdict.org",
-      url: "http://www.scidict.org",
+      url: "http://www.scidict.org/en",
     }
   },
   {

@@ -144,7 +144,7 @@ const Experience = (props) => {
                   </InlineTitle>
                 </p>
                 <p>
-					Develop a wholly owned bilingual dictionary, <Link href="http://www.scidict.org">SCIdict</Link>, 
+					Develop a wholly owned bilingual dictionary, <Link href="http://www.scidict.org/en">SCIdict</Link>, 
 					with less than 1 sec. response time to fuzzy string match request among up to 100 million entries. 
 					Implement a dictionary server that feeds data for both web UI and desktop client applications. 
 					Information retrieval technologies are used to prioritize terminology ranking. Inverted index is 
