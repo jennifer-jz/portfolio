@@ -5,8 +5,8 @@ const selfIntroText = `
 const contactInfo = {
   email: 'jesczhao@gmail.com',
   phone: '650-314-3134',
-  location: 'Mountain View, CA',
-  futureLocation: 'Austin, TX or The Southern Bay Area',
+  location: 'Irvine, CA',
+  futureLocation: '',
   linkedIn: 'https://www.linkedin.com/in/jennifer-zhao-ca',
   gitHub: 'https://github.com/jennifer-jz',
 };

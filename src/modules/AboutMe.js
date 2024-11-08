@@ -39,7 +39,7 @@ const AboutMe = (props) => {
             My official name is Juanjuan Zhao. In workplace, people also call me Jennifer which is my English name.
               </p>
               <p>
-            I am an {selfIntroText}
+            I have {selfIntroText}
               </p>
               <p>
             I basically spent 10 years in China working in translation industry, out of which 7 years were 
@@ -68,7 +68,7 @@ const AboutMe = (props) => {
             clean code: React, ESLint, Webpack, Babel, Styled Components, React Hooks, ES6, etc.
               </p>
               <p>
-            I’m currently open for permanent positions (no contract) in {futureLocation} as a senior software engineer, 
+            I’m currently open for positions as a senior software engineer focusing on front end, 
             senior full-stack engineer, or technical lead. My current location is {location}.
               </p>
               <p>If you are impressed with my portfolio, please feel free to contact me.</p>
