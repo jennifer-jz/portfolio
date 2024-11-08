@@ -3,28 +3,28 @@ import { getSingleScaledColor, getControlledColor } from 'utils';
 const coreExperiences = [
   {
     content: "Node + React",
-    strength: "2 years",
-    value: 2,
+    strength: "5 years",
+    value: 5,
   },
   {
     content: "Code Refactor",
-    strength: "2 years",
-    value: 2,
+    strength: "4 years",
+    value: 4,
   },
   {
     content: "Webpack + Babel + ESlint",
-    strength: "1 year",
-    value: 1,
+    strength: "3 year",
+    value: 3,
   },
   {
     content: "Sass + CSS-in-JS",
-    strength: "1 year",
-    value: 1,
+    strength: "5 year",
+    value: 5,
   },
   {
     content: "Website Performance Improvement",
-    strength: "4 years",
-    value: 4,
+    strength: "7 years",
+    value: 7,
   },
   {
     content: "ERP System Development",
@@ -33,8 +33,8 @@ const coreExperiences = [
   },
   {
     content: "Git",
-    strength: "2 year",
-    value: 2,
+    strength: "7 year",
+    value: 7,
   },
   {
     content: "MSSQL/MYSQL",
@@ -48,13 +48,13 @@ const coreExperiences = [
   },
   {
     content: "Web Server Deployment",
-    strength: "3 years",
-    value: 3,
+    strength: "6 years",
+    value: 6,
   },
   {
     content: "C# Server + ASP.NET Web",
-    strength: "2 years",
-    value: 2,
+    strength: "4 years",
+    value: 4,
   },
   {
     content: "C# Office Programming",
