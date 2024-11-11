@@ -11,7 +11,7 @@ const Experience = (props) => {
   return (
     <DocumentMeta {...meta}>
       <div className={`container-fluid ${props.className}`}>
-      <p>2020.02 – 2024.11 <InlineTitle>Senior Software Engineer - Front End</InlineTitle>Medallia, Irvine, CA</p>
+      <p>2020.02 – Present <InlineTitle>Senior Software Engineer - Front End</InlineTitle>Medallia, Irvine, CA</p>
 
       <table>
         <tbody>
