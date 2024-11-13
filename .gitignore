@@ -18,6 +18,11 @@ src/private/
 # Windows compilation files
 bin/
 
+# build
+build_history
+deploy.sh
+
+
 # Local files
 .DS_Store
 package-lock.json
