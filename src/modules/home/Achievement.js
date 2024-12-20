@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {
   achievements,
 } from 'shared/data';
-import { Badge, Panel } from 'components';
+import { Link, Panel } from 'components';
 
 const Achievement = (props) => {
   const { title, titleUrl, theme, className, id, ...restProps } = props; 
@@ -21,10 +21,10 @@ const Achievement = (props) => {
         {achievements.map((item, index) => (
           <li key={index} className="list-group-item">
             {item.title}
-            {item.keywords && item.keywords.reverse().map((keyword, i) =>
+            {/* {item.keywords && item.keywords.reverse().map((keyword, i) =>
               <Badge key={i} keyword={keyword} />
-            )}
-            {item.ref && <Badge keyword={item.ref.title} href={item.ref.url} />}
+            )} */}
+            {item.ref && <Link href={item.ref.url}>{item.ref.title}</Link>}
           </li>
         ))}
       </ul>

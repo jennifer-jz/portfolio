@@ -6,7 +6,6 @@ const Home = React.lazy(() => import('modules/Home'));
 const Education = React.lazy(() => import('modules/Education'));
 const Experience = React.lazy(() => import('modules/Experience'));
 const Product = React.lazy(() => import('modules/Product'));
-const Capability = React.lazy(() => import('modules/Capability'));
 const Nlp = React.lazy(() => import('modules/Nlp'));
 const AboutMe = React.lazy(() => import('modules/AboutMe'));
 import Paths from 'shared/routePaths';
@@ -47,11 +46,6 @@ const Router = () => {
             ]} render={(props) =>
               <Product
                 {...metaData.PRODUCT}
-                {...props}
-              />} />
-            <Route path={Paths.CAPABILITY} render={(props) =>
-              <Capability
-                {...metaData.CAPABILITY}
                 {...props}
               />} />
             <Route path={Paths.NLP} render={(props) =>

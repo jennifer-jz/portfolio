@@ -27,15 +27,23 @@ export default `
   }
 
   .panel {
+    .list-group {
+      margin: 12px;
+    }
+
     .list-group-item {
+      display: list-item;
       border: none;
       font-weight: bold;
       color: ${BOLD_FONT_COLOR};
-      padding: 7px 5px 7px 0;
+      padding: 7px;
 
       .badge {
-        float: right;
         margin: 2px 3px;
+      }
+
+      a {
+        margin: 18px;
       }
     }
   }

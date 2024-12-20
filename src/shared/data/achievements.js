@@ -1,6 +1,6 @@
 const achievements = [
   {
-    title: "Revamp traditional website with modern javascript framework",
+    title: "Revamped traditional website with modern javascript framework",
     keywords: ["node", "react", "redux", "css-in-js"],
   },
   {
@@ -8,7 +8,7 @@ const achievements = [
     keywords: ["eslint", "componentization", "reusability"],
   },
   {
-    title: "Build UI component library",
+    title: "Built UI component library",
     keywords: ["react", "d3", "webpack", "babel"],
   },
   {
@@ -20,11 +20,11 @@ const achievements = [
     keywords: ["mssql", "mysql", "Django"],
   },
   {
-    title: "Idenfity and solve tricky live site issues",
+    title: "Troubleshoot and solve tricky live website issues",
     keywords: ["problem-solving"],
   },
   {
-    title: "Develop a Bilingual Dictionary using IR technique",
+    title: "Developed a Bilingual Dictionary using IR technique",
     keywords: ["aspnet", "ir"],
     ref: {
       title: "SCIdict.org",
@@ -32,7 +32,7 @@ const achievements = [
     }
   },
   {
-    title: "Develop a large-scale ERP system for translation industry",
+    title: "Developed a large-scale ERP system for translation industry",
     keywords: ["csharp", "mssql", "networking"],
   },
   {

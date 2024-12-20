@@ -2,7 +2,6 @@ import { getRootUrl } from 'utils';
 
 export const ROOT = getRootUrl('/');
 export const HOME = getRootUrl('/home');
-export const CAPABILITY = getRootUrl('/capability');
 export const EDUCATION = getRootUrl('/education');
 export const EXPERIENCE = getRootUrl('/experience');
 export const NLP = getRootUrl('/nlp');
@@ -14,7 +13,6 @@ const Paths = {
   HOME,
   EXPERIENCE,
   PRODUCT,
-  CAPABILITY,
   EDUCATION,
   NLP,
   ABOUTME,

@@ -8,7 +8,7 @@ import Link from './Link';
 import Modal from './Modal';
 import Panel from './Panel';
 import Tabs from './Tabs';
-import Tab from './Tab';
+import Tab, { SmallTab } from './Tab';
 import {
   Icon,
   LinkIcon,
@@ -26,6 +26,7 @@ export {
   Modal,
   Panel,
   Tabs,
+  SmallTab,
   Tab,
   /** icons */ 
   Icon,

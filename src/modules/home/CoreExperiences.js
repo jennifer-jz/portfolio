@@ -21,14 +21,14 @@ const CoreExperiences = (props) => {
     >
       <ButtonGroup>
         {coreExperiences && coreExperiences.map((item, index) => {
-          const backgroundColor = getColorByExperience(item.value);
+          const backgroundColor = getColorByExperience(3);
           const color = getFontColorInBackground(backgroundColor);
           return (
             <Button
               key={index}
               style={{ color, backgroundColor }}
               random
-              data-tip={`${item.value} years`}
+              // data-tip={`${item.value} years`}
             >
               {item.content}
             </Button>);

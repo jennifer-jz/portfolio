@@ -11,26 +11,26 @@ const Experience = (props) => {
   return (
     <DocumentMeta {...meta}>
       <div className={`container-fluid ${props.className}`}>
-      <p>2020.02 – Present <InlineTitle>Senior Software Engineer - Front End</InlineTitle>Medallia, Irvine, CA</p>
+        <p>2020.02 – 2024.12 <InlineTitle>Senior Software Engineer - Front End</InlineTitle>Medallia, Irvine, CA</p>
 
-      <table>
-        <tbody>
-          <tr>
-            <td>&nbsp;</td>
-            <td>
-              <p><InlineTitle>Rebuild and Scale Reporting Web of Medallia Experience Cloud Platform</InlineTitle></p>
-              <ul>
-                <li>Work closely with PM, Design and BE teams to implement complex user interfaces, new features and enhancements for Medallia’s experience cloud platform.</li>
-                <li>Deliver product features that are compliant with standards in mockups and design specifications, user acceptance testing, web/mobile responsiveness, performance testing and code quality.</li>
-                <li>Lead projects by initiating conversations involving multiple teams regarding requirement clarification, feasibility analysis and root cause investigation, to facilitate tickets being delivered as planned.</li>
-                <li>Participate in a thriving Front-End Engineering community, help shape mid/long-term technical roadmap and FE architecture patterns for the global Engineering organization.</li>
-                <li>Help junior and mid-level engineers improve code quality via mentorship and in code review, encourage best practices, code maintainability and unit test coverage.</li>
-              </ul>
-              <p><InlineTitle>Tech Stack</InlineTitle> Node, React, Typescript, GraphQL, Java, Styled-Components, D3, ESLint, Git, Jenkins, Jest</p>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+        <table>
+          <tbody>
+            <tr>
+              <td>&nbsp;</td>
+              <td>
+                <p><InlineTitle>Rebuild and Scale Reporting Web of Medallia Experience Cloud Platform</InlineTitle></p>
+                <ul>
+                  <li>Work closely with PM, Design and BE teams to implement complex user interfaces, new features and enhancements for Medallia’s experience cloud platform.</li>
+                  <li>Deliver product features that are compliant with standards in mockups and design specifications, user acceptance testing, web/mobile responsiveness, performance testing and code quality.</li>
+                  <li>Lead projects by initiating conversations involving multiple teams regarding requirement clarification, feasibility analysis and root cause investigation, to facilitate tickets being delivered as planned.</li>
+                  <li>Participate in a thriving Front-End Engineering community, help shape mid/long-term technical roadmap and FE architecture patterns for the global Engineering organization.</li>
+                  <li>Help junior and mid-level engineers improve code quality via mentorship and in code review, encourage best practices, code maintainability and unit test coverage.</li>
+                </ul>
+                <p><InlineTitle>Tech Stack</InlineTitle> Node, React, Typescript, GraphQL, Java, Styled-Components, D3, ESLint, Git, Jenkins, Jest</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
 
         <p>2019.02 – 2020.01 <InlineTitle>Senior Software Engineer</InlineTitle>Shape Security, Mountain View, CA</p>
 
@@ -104,7 +104,7 @@ const Experience = (props) => {
                 <p>
                   <InlineTitle>Tech Stack</InlineTitle> 
                   Node, React, Typescript, Javascript ES6, Less, Postgres, Typeorm, Mongo, 
-                  Docker, Heroku, Git, RabbitMQ, Slack, Gira
+                  Docker, Heroku, Git, RabbitMQ, Slack, Jira
                 </p>
               </td>
             </tr>

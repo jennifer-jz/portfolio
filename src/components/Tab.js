@@ -18,4 +18,13 @@ const Tab = withStyles({
   }
 })(props => <MaterialTab {...props} disableRipple />);
 
+export const SmallTab = withStyles({
+  root: {
+    minWidth: 0,
+    '&:focus': {
+      outline: 'none',
+    }
+  }
+})(props => <Tab {...props}/>);
+
 export default Tab;

@@ -1,6 +1,6 @@
 const brightnessThreshold = 160;
-const colorLightGray = 'rgb(220, 220, 220)';
-const colorDarkGray = 'rgb(100, 100, 100)';
+const colorLightGray = 'rgb(255, 255, 255)';
+const colorDarkGray = 'rgb(10, 10, 10)';
 
 const parseRGBStr = (rgbStr) => {
   const str = rgbStr.replace(/^.*\(/, '').replace(/\).*$/, '').replace(/\s/g, '');

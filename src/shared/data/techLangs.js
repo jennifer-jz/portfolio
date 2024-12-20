@@ -1,130 +1,267 @@
 import { getSingleScaledColor, getControlledColor } from 'utils';
 
+// const TechLangType = { FE: "fe", MB: "mb", BE: "be", AI: "ai", TL: "tl" };
+export const TechLangTypes = [{ key: "al", label: "All" }, { key: "fe", label: "FE" }, 
+  // { key: "mb", label: "Mobile" }, 
+  {key: "be", label: "BE" }, { key: "ai", label: "AI" }, {key: "tl", label: "Tool"}];
+
 const techLangs = [
   {
     content: "React",
-    strength: "100,000+ lines",
-    value: 100000,
+    // value: 100000,
+    value: 7,
+    type: "fe"
+  },
+  {
+    content: "React Hooks",
+    // value: 100000,
+    value: 5,
+    type: "fe"
   },
   {
     content: "Redux",
-    strength: "100,00+ lines",
-    value: 10000,
+    // value: 10000,
+    value: 3,
+    type: "fe"
+  },
+  {
+    content: "GraphQL",
+    // value: 100000,
+    value: 3,
+    type: "fe"
+  },
+  {
+    content: "Jest",
+    // value: 10000,
+    value: 5,
+    type: "fe"
+  },
+  {
+    content: "React Testing Library",
+    // value: 10000,
+    value: 5,
+    type: "fe"
   },
   {
     content: "Typescript",
-    strength: "10,000+ lines",
-    value: 10000,
+    // value: 10000,
+    value: 6,
+    type: "fe"
+  },
+  {
+    content: "Node.js",
+    // value: 10000,
+    value: 7,
+    type: "fe"
+  },
+  {
+    content: "Express",
+    // value: 10000,
+    value: 3,
+    type: "fe"
+  },
+  {
+    content: "Websocket",
+    // value: 10000,
+    value: 3,
+    type: "fe"
+  },
+  {
+    content: "Webpack",
+    // value: 10000,
+    value: 5,
+    type: "fe"
+  },
+  {
+    content: "Jenkins",
+    // value: 10000,
+    value: 5,
+    type: "fe"
+  },
+  {
+    content: "Babel",
+    // value: 10000,
+    value: 5,
+    type: "fe"
+  },
+  {
+    content: "ESLint",
+    // value: 10000,
+    value: 5,
+    type: "fe"
   },
   {
     content: "Css",
-    strength: "100,000+ lines",
-    value: 100000,
+    // value: 100000,
+    value: 11,
+    type: "fe"
   },
   {
     content: "Sass",
-    strength: "50,000+ lines",
-    value: 50000,
+    // value: 50000,
+    value: 3,
+    type: "fe"
   },
   {
     content: "Less",
-    strength: "10,000+ lines",
-    value: 10000,
+    // value: 10000,
+    value: 1,
+    type: "fe"
   },
   {
     content: "Styled-Components",
-    strength: "20,000+ lines",
-    value: 20000,
+    // value: 20000,
+    value: 4,
+    type: "fe"
   },
   {
     content: "D3",
     strength: "10,000+ lines",
-    value: 10000,
+    // value: 10000,
+    value: 1,
+    type: "fe"
   },
   {
     content: "Typeorm",
-    strength: "5,000+ lines",
-    value: 50000,
+    // value: 50000,
+    value: 1,
+    type: "fe"
   },
   {
     content: "Node + Express",
-    strength: "50,000+ lines",
-    value: 50000,
+    // value: 50000,
+    value: 7,
+    type: "fe"
   },
   {
     content: "Html",
-    strength: "300,000+ lines",
-    value: 300000,
+    // value: 300000,
+    value: 11,
+    type: "fe"
+  },
+  {
+    content: "Html5",
+    // value: 300000,
+    value: 5,
+    type: "fe"
   },
   {
     content: "Material UI",
-    strength: "5,000+ lines",
-    value: 5000,
+    // value: 5000,
+    value: 3,
+    type: "fe"
   },
   {
     content: "Bootstrap",
-    strength: "10,000+ lines",
-    value: 10000,
-  },
-  {
-    content: "C#",
-    strength: "500,000+ lines",
-    value: 500000,
-  },
-  {
-    content: "MsSQL",
-    strength: "100,000+ lines",
-    value: 100000,
-  },
-  {
-    content: "Asp.Net Web",
-    strength: "80,000+ lines",
-    value: 80000,
-  },
-  {
-    content: "Java",
-    strength: "20,000+ lines",
-    value: 20000,
-  },
-  {
-    content: "MySQL",
-    strength: "5,000+ lines",
-    value: 5000,
+    // value: 10000,
+    value: 2,
+    type: "fe"
   },
   // {
   //   content: "Angular JS",
-  //   strength: "1,000+ lines",
   //   value: 1000,
   // },
   {
     content: "Android",
-    strength: "2,000+ lines",
-    value: 2000,
+    // value: 2000,
+    value: 1,
+    type: "fe"
   },
   {
     content: "Javascript",
-    strength: "200,000+ lines",
-    value: 200000,
+    // value: 200000,
+    value: 11,
+    type: "fe"
   },
   {
     content: "jQuery",
-    strength: "20,000+ lines",
-    value: 20000,
+    // value: 20000,
+    value: 3,
+    type: "fe"
   },
-  // {
-  //   content: "Ajax + XML",
-  //   strength: "5,000+ lines",
-  //   value: 5000,
-  // },
+  {
+    content: "Ajax + XML",
+    // value: 5000,
+    value: 2,
+    type: "fe"
+  },
+  {
+    content: "C#",
+    // value: 500000,
+    value: 5,
+    type: "be"
+  },
+  {
+    content: ".Net Core",
+    // value: 500000,
+    value: 2,
+    type: "be"
+  },
+  {
+    content: "Asp.Net Web",
+    // value: 80000,
+    value: 3,
+    type: "fe"
+  },
+  {
+    content: "Java",
+    // value: 20000,
+    value: 2,
+    type: "be"
+  },
+  {
+    content: "Groovy",
+    // value: 20000,
+    value: 1,
+    type: "be"
+  },
+  {
+    content: "MySQL",
+    // value: 50000,
+    value: 5,
+    type: "be"
+  },
+  {
+    content: "MSSQL",
+    // value: 100000,
+    value: 5,
+    type: "be"
+  },
+  {
+    content: "PostgreSQL",
+    // value: 100000,
+    value: 1,
+    type: "be"
+  },
+  {
+    content: "MongoDB",
+    // value: 100000,
+    value: 1,
+    type: "be"
+  },
+  {
+    content: "Memcached",
+    // value: 100000,
+    value: 1,
+    type: "be"
+  },
+  {
+    content: "Microsoft Offic Programming",
+    // value: 100000,
+    value: 3,
+    type: "be"
+  },
   {
     content: "Python Django",
-    strength: "10,000+ lines",
-    value: 10000,
+    // value: 10000,
+    value: 1,
+    type: "be"
   },
   {
     content: "Restful API",
-    strength: "2,0000+ lines",
-    value: 20000,
+    // value: 20000,
+    value: 5,
+    type: "be"
   },
   // {
   //   content: "Heroku",
@@ -132,21 +269,63 @@ const techLangs = [
   // },
   {
     content: "RabbitMQ",
-    strength: "2,000+ lines",
-    value: 2000,
+    // value: 2000,
+    value: 1,
+    type: "be"
   },
   {
     content: "Docker",
-    strength: "",
+    value: 3,
+    type: "be"
   },
   {
-    content: "Gira",
-    strength: "",
+    content: "Jira",
+    value: 6,
+    type: "tl"
+  },
+  {
+    content: "Git",
+    value: 7,
+    type: "tl"
+  },
+  {
+    content: "AWS",
+    value: 3,
+    type: "tl"
+  },
+  {
+    content: "Azure",
+    value: 3,
+    type: "tl"
+  },
+  {
+    content: "Google Cloud",
+    value: 1,
+    type: "tl"
   },
   {
     content: "Stanford CoreNLP",
-    strength: "3,000+ lines",
-    value: 3000,
+    // value: 3000,
+    value: 1,
+    type: "ai"
+  },
+  {
+    content: "Information Retrieval",
+    // value: 3000,
+    value: 5,
+    type: "ai"
+  },
+  {
+    content: "Natural Language Processing",
+    // value: 3000,
+    value: 5,
+    type: "ai"
+  },
+  {
+    content: "Speech Recognition",
+    // value: 3000,
+    value: 1,
+    type: "ai"
   },
 ];
 
@@ -163,7 +342,7 @@ const strengthRange = techLangs.reduce((accu, curr) => {
 
 // One abnormally high value streches out the whole distribution
 // Hacky treatment to make visualization better without statistical tools
-strengthRange[1] = strengthRange[1] * 0.1;
+// strengthRange[1] = strengthRange[1] * 0.1;
 
 const minCodeStrength = strengthRange[0];
 

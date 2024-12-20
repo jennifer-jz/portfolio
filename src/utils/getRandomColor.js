@@ -6,7 +6,7 @@ export function getRandomColor() {
 }
 
 export function getControlledColor() {
-  const num = RANDOM_BACKGROUND_COLORS.length;
-  const index = Math.floor(Math.random() * 1000) % num;
-  return RANDOM_BACKGROUND_COLORS[index];
+  // const num = RANDOM_BACKGROUND_COLORS.length;
+  // const index = Math.floor(Math.random() * 1000) % num;
+  return RANDOM_BACKGROUND_COLORS[0];
 }

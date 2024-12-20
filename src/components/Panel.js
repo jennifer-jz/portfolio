@@ -81,6 +81,7 @@ const Panel = styled(PanelUnstyled)`
 
     ul.list-group {
       margin-bottom:0;
+      margin-top: 0;
     }
   }
 
