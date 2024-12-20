@@ -20,6 +20,14 @@ export default `
         text-indent: 20px;
         margin-bottom: 5px;
     }
+    
+    ul {
+      margin-left: 14px;
+
+      li { 
+        padding-left: 12px;
+      }
+    }
   }
 
   .contactme {
@@ -30,4 +38,6 @@ export default `
         margin-right: 10px;
     }
   }
+
+
 `;

@@ -16,6 +16,6 @@ const Tab = withStyles({
   selected: {
     color: BLUE,
   }
-})(props => <MaterialTab {...props} />);
+})(props => <MaterialTab {...props} disableRipple />);
 
 export default Tab;

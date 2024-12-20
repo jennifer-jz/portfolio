@@ -1,5 +1,10 @@
 const selfIntroText = `
-10 years of experience developing or leading development of modern data-viz reporting platform, ERP software system, computer-aided translation workbench, online bilingual dictionary, and e-commerce website using C#, .Net, SQL, Node, Express, React, Redux, Typescript, Javascript, Html/Css, Less, Scss, Styled Components, React Hooks, and involved in Java, Python Django, NLP and ML.
+11 years of experience developing or leading development of modern data-viz reporting platform, e-commerce 
+websites, enterprise resource planning system, customer relationship management system, computer-aided translation workbench, 
+online bilingual dictionary, using modern front-end tech stack: React, Hooks, Redux, Typescript, Node.js, Express, Websocket,
+HTML, CSS, less, sass, styled component, Webpack, eslint, backend technologies in C#, .Net, Java, Groovy, Python Django, 
+MSSQL, MYSQL, MongoDB, PostgreSQL, Memcached, RabbitMQ, AWS, Azure, and AI technologies including information retrieval, 
+natural language processing and speech recognition.
 `;
 
 const contactInfo = {

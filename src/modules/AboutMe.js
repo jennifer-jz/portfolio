@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import DocumentMeta from 'react-document-meta';
 import { getMetaData } from '../utils';
 import {
-  selfIntroText,
   contactInfo,
   filePath,
 } from '../shared/constants';
@@ -14,7 +13,7 @@ import styles from './AboutMe.styles';
 
 const AboutMe = (props) => {
   const meta = getMetaData(props);
-  const { email, linkedIn, phone, futureLocation, location, gitHub } = contactInfo;
+  const { email, linkedIn, phone, gitHub } = contactInfo;
   const { resumeDocPath, resumePdfPath } = filePath;
   return (
     <DocumentMeta {...meta}>
@@ -35,43 +34,65 @@ const AboutMe = (props) => {
             </div>
 
             <div className="about">
-              <p>
-            My official name is Juanjuan Zhao. In workplace, people also call me Jennifer which is my English name.
+              <p>Hi, I’m Jennifer, a seasoned software engineer with a passion for crafting exceptional web 
+                experiences and scalable software solutions. 
+                With expert-level skills in React and TypeScript, combined with backend expertise in C# .NET, Python, and Java, 
+                I excel in creating dynamic, high-performance web applications and REST APIs.</p>
+
+              <p>Over the past six years, I have honed my skills while working with leading platforms such as Medallia 
+                (a large-scale experience cloud platform) and Shape Security (a cutting-edge security platform). 
+                My contributions include building intuitive web-based visualization dashboards and implementing a wide 
+                range of features such as:</p>
+              <ul>
+                <li>Notification side panels and watchlist subscriptions</li>
+
+                <li>Routing, navigation, and hierarchical multiselect components</li>
+
+                <li>Collapsible breadcrumbs and interactive modals</li>
+
+                <li>Search control panels and chat applications</li>
+
+                <li>Email editors and internationalization support</li>
+
+                <li>Accessibility, responsiveness, and performance optimizations</li>
+              </ul>
+              <p>In addition, I have significant experience developing e-commerce websites using modern JavaScript frameworks. 
+                My work has encompassed delivering essential features like:
               </p>
-              <p>
-            I have {selfIntroText}
+              <ul>
+                <li>Product listing pages</li>
+                <li>Order checkout flows and payment processor integrations</li>
+
+                <li>Online bidding and auction systems
+                </li>
+                <li>User authentication and notification systems
+                </li>
+              </ul>
+              <p>My expertise extends to enhancing user experience, boosting website performance, 
+                and architecting scalable features for millions of users. 
+                I leverage advanced techniques such as lazy loading, code splitting, pagination, caching, 
+                and comprehensive code refactoring and migration strategies.
               </p>
-              <p>
-            I basically spent 10 years in China working in translation industry, out of which 7 years were 
-            technology focused, including 3 years as a web development manager and 4 years as a senior software engineer. 
-            All my efforts in the period were to build an automated system to help innovate traditional translation 
-            workflow and enhance core competitiveness of Cross Language.
+              <p>As a leader in frontend development, I thrive in team environments, driving engineering goals 
+                through accurate estimations, technical communication, and mentorship.
+                 My ability to effectively share knowledge with stakeholders and mentor junior engineers has 
+                 been pivotal in delivering successful projects.
               </p>
-              <p>
-            In 2016, I decided to pursue a master&apos;s degree in computer science at University of Texas at Dallas, 
-            and graduated in December 2018.
+              <p>I am proficient in managing the complete lifecycle of web applications, from feature 
+                development to deployment and launch, across cloud platforms such as Azure, AWS, and Google Cloud.
               </p>
-              <p>
-            Starting from August 2017, I resumed work as a web developer using modern Javascript frameworks, Node, React, 
-            Typescript, etc. While being fond of the elegancy and possibilities of modern Javascript frameworks, 
-            I quickly grew into a senior software engineer with extensive exposure to web technologies.
+              <p>Beyond web development, my background includes significant achievements in the language and information 
+                retrieval industries. 
+                I developed <Link href="https://www.scidict.org">SCIDICT</Link>, 
+                a bilingual terminology dictionary capable of delivering full-text search results for millions 
+                of phrase pairs in under a second. This was accomplished through the design and implementation 
+                of a bespoke search engine using information retrieval techniques, inverted indexing, and
+                 Memcached for optimization.
               </p>
-              <p>
-            Also I found myself well adapted to the work environment in US, in particular for communication in workplace, 
-            time management, and team leading, based on my previous management experience in Cross Language.
+              <p>I am driven by innovation, collaboration, and a relentless commitment to delivering exceptional 
+                user experiences. Let’s build something amazing together!
               </p>
-              <p>
-            I&apos;ve learned tremendous values by getting involved in agile development tools such as Jira; 
-            CICD tools and technologies such as Heroku, Docker, Wercker, and Assembla; version management tools 
-            such as Git and SVN; Scaling tools and platforms such AWS autoscaling, GCP, and Kubernetes. 
-            Also I highly appreciate modern Javascript libraries which make possible efficient development and 
-            clean code: React, ESLint, Webpack, Babel, Styled Components, React Hooks, ES6, etc.
-              </p>
-              <p>
-            I’m currently open for positions as a senior software engineer focusing on front end, 
-            senior full-stack engineer, or technical lead. My current location is {location}.
-              </p>
-              <p>If you are impressed with my portfolio, please feel free to contact me.</p>
+
             </div>
 
             <div className="contactme">
