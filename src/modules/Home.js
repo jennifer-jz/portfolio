@@ -68,7 +68,7 @@ const Home = (props) => {
     <DocumentMeta {...meta}>
       <div className={`container-fluid ${props.className}`}>
         <div className="intro">
-          <div className="name"><h4>Juanjuan Zhao (also Jennifer)</h4>
+          <div className="name"><h4>Juanjuan Zhao (Jennifer)</h4>
             <Link href={resumePdfPath} title="Resume">
               <Icon id="fa-file-pdf-o" />
             </Link>

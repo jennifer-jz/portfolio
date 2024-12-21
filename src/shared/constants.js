@@ -17,8 +17,8 @@ const contactInfo = {
 };
 
 const filePath = {
-  resumeDocPath: 'doc/resume.docx',
-  resumePdfPath: 'doc/resume.pdf',
+  resumeDocPath: '/doc/resume.docx',
+  resumePdfPath: '/doc/resume.pdf',
 };
 
 export {

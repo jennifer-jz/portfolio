@@ -9,7 +9,7 @@ const FooterUnstyled = (props) => {
   return (
     <footer className={className}>
       <p>Portfolio of Juanjuan Zhao, Version {version}</p>
-      <p>2017 &copy; All Rights Reserved.</p>
+      <p>2024 &copy; All Rights Reserved.</p>
     </footer>
   );
 };
