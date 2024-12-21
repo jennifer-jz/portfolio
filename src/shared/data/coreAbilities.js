@@ -6,19 +6,19 @@ const coreAbilities = [
     content: "Strong attention to detail and its context",
   },
   {
-    content: "Sharp eyes on root cause of technical issues",
+    content: "Excels at identifying root causes of technical issues",
   },
   {
-    content: "Make things happen with good time management and problem-solving ability",
+    content: "Drive results with effective time management and problem-solving skills",
   },
   {
-    content: "Communicate effectively and share information",
+    content: "Proactively cooperate with stake-holders with strong technical communication skills",
   },
   {
-    content: "Well understanding on needs from customers, managers and developers",
+    content: "Deep understanding of customer, manager, and developer needs",
   },
   {
-    content: "Mentor junior developers with technology, share knowledge and growing path",
+    content: "Fosters collaboration and mentors engineers through effective knowledge sharing",
   },
   {
     content: "Willing to take challenges and higher responsibilities",

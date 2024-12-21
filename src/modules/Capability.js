@@ -17,14 +17,16 @@ const Capability = (props) => {
               theme="danger"
               title="Highlight: As a Senior Developer and Technical Lead"
             >
-              <p>- <span>Sharp eyes on root cause of technical issues</span></p>
-              <p>- <span>Good communication skills with maximized information sharing</span></p>
-              <p>- <span>Well understanding on needs from customers, managers and developers</span></p>
-              <p>- <span>Able to implement requirement in detail</span></p>
-              <p>- <span>Make things happen by actively asking correct questions</span></p>
-              <p>- <span>Able to interview and train new developers</span></p>
+              <p>- <span>Adaptability to Emerging Technologies</span></p>
+              <p>- <span>Excels at identifying root causes of technical issues</span></p>
+              <p>- <span>Strong technical communication skills</span></p>
+              <p>- <span>Deep understanding of customer, manager, and developer needs</span></p>
+              <p>- <span>Implement pixel-perfect web UI components</span></p>
+              <p>- <span>Clarify and enhance requirement to achieve engineering goalss</span></p>
+              <p>- <span>Proactively cooperate with stake-holders and ask correct questions</span></p>
+              <p>- <span>Fosters collaboration and mentors engineers through effective knowledge sharing</span></p>
               <p>- <span>Willing to take challenges and higher responsibilities</span></p>
-              <p>- <span>Able to provide comprehensive technical consultation & solution</span></p>
+              <p>- <span>Forward-thinking to ensure engineering scalability and extendability</span></p>
             </Panel>
 
             <Panel
