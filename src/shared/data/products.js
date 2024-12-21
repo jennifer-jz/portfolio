@@ -2,7 +2,7 @@ const products = [
   {
     id: "scidictdesk",
     title: "SCIDict Desktop Version",
-    keywords: ["workbench", "featured", "scidict", "csharp", "networking", "ir"],
+    keywords: ["featured", "scidict", "csharp", "networking", "ir"],
     img: "/img/scidict.png",
     imgFull: "",
   },
@@ -45,7 +45,7 @@ const products = [
   {
     id: "ordersubmit",
     title: "Order Submission: Web",
-    keywords: "erp website featured aspnet mssql".split(' '),
+    keywords: "website featured aspnet mssql".split(' '),
     img: "/img/orderonline2.jpg",
     imgFull: "",
     caption: "ASP.NET Order Submission",

@@ -5,18 +5,19 @@ import DocumentMeta from 'react-document-meta';
 import { getMetaData, getVideoURL } from '../utils';
 import {
   Link,
-  Modal,
-  ThumbtackIcon,
+  Modal
 } from 'components';
 import { products } from 'shared/data';
 import { productNavs } from 'shared/navigation';
 import DemoItem from './common/DemoItem';
 import styles from './Product.styles';
+import { Tabs, SmallTab } from '../components';
 
 const Product = (props) => {
   const meta = getMetaData(props);
   const { subject = 'all', activedemo = '' } = props.match.params;
   const [modelData, setModelData] = useState(null);
+  const [currTabId, setCurrTabId] = useState(0);
 
   const matchedProducts = subject !== 'all' ?
     products.filter(item => item.keywords.includes(subject)) :
@@ -37,28 +38,28 @@ const Product = (props) => {
     return key === subject ? "active" : "";
   };
 
+  const handleTabChange = (e, tabId) => {
+    setCurrTabId(tabId);
+  };
+
   return (
     <DocumentMeta {...meta}>
       <div className={`product-view ${props.className}`}>
         <div className="row">
           <div>
-            <ul id="myBtnContainer">
-              {productNavs.map((item, index) => {
+            <Tabs variant="standard" orientation="vertical" value={currTabId} onChange={handleTabChange}>{
+              productNavs.map((item, key) => {
                 const className = getActiveClassName(item.name);
                 const isDull = className !== "active";
-                return (
-                  <li key={index} className={className}>
-                    {!isDull && <ThumbtackIcon />}
-                    <Link
-                      to={`/product/${item.name}`}
-                      dull={isDull}
-                    >
-                      {item.title}
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
+
+                return (<SmallTab key={key} label={<Link
+                  to={`/product/${item.name}`}
+                  dull={isDull}
+                >
+                  {item.title}
+                </Link>} />);
+              })
+            }</Tabs>
           </div>
           <div className="col-md-9">
             <div className="demos container-fluid">
@@ -74,26 +75,6 @@ const Product = (props) => {
             </div>
           </div>
         </div>
-
-        {/* <div className="container-fluid">
-          <h4>Functional Modules</h4>
-          <div>
-            <ul>
-              <li>Email Notifications</li>
-              <li>Pricing System</li>
-              <li>File Upload/Download</li>
-              <li>Automatic Webpage Content Updating</li>
-              <li>MS Word Content Extraction and Generation</li>
-              <li>MS PPT Content Extraction and Generation</li>
-              <li>Real-time Spell Check</li>
-              <li>Sentence Alignment</li>
-              <li>File Management</li>
-              <li>Corpus Management System</li>
-              <li>Text Classification</li>
-              <li>Text Clustering</li>
-            </ul>
-          </div>
-        </div> */}
       </div>
       {modelData && <Modal
         visible={!!modelData}

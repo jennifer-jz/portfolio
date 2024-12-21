@@ -1,5 +1,3 @@
-import { BLUE, DARK_GRAY } from 'shared/styles';
-
 export default `
     .demos {
         div.row > div {
@@ -7,34 +5,9 @@ export default `
         }
     }
 
-    ul#myBtnContainer {
-        padding: 0;
-        position: sticky;
-        top: 100px;
-        left: 0;
-        width: 100%;
-        min-width: 210px;
-        z-index: 10;
-        list-style-type: none;
-
-        li {
-            border: none;
-            outline: none;
-            padding: 8px 16px;
-            cursor: pointer;
-            text-align: end;
-            color: ${DARK_GRAY};
-            > i {
-                font-size: 1.2rem;
-                margin-right: 10px;
-            }
-        }
-
-        li:hover, li.active {
-            color: ${BLUE};
-            box-shadow: none;
-            font-weight: bold;
-        }
+    span.MuiTab-wrapper {
+        flex-direction: row;
+        justify-content: flex-end;
     }
 
     @media (max-width: 960px) {

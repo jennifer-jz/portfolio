@@ -34,7 +34,7 @@ const ProgrammingLanguages = (props) => {
     >
       <div>
         <Tabs variant="standard" value={currTabId} onChange={handleTabChange}>{
-          TechLangTypes.map((langType, key) => (<SmallTab sx={{ }} key={key} label={langType.label} />))
+          TechLangTypes.map((langType, key) => (<SmallTab key={key} label={langType.label} />))
         }</Tabs>
         <ButtonGroup>
           {getFilteredTechLangs().map((item, index) => {
