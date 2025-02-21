@@ -11,7 +11,27 @@ const Experience = (props) => {
   return (
     <DocumentMeta {...meta}>
       <div className={`container-fluid ${props.className}`}>
-        <p>02/2020 – 12/2024 <InlineTitle>Senior Software Engineer - Front End</InlineTitle>Medallia, Irvine, CA</p>
+        <p>12/2024 – Now <InlineTitle>Staff Software Engineer</InlineTitle>Cross Language LLC, Irvine, CA</p>
+
+        <table>
+          <tbody>
+            <tr>
+              <td>&nbsp;</td>
+              <td>
+                <ul>
+                  <li>Innovate dictionary search experience by visualization of phrase and sentence alignment;</li>
+                  <li>Architect new features on smart dictionary using LLM;</li>
+                  <li>Streamline corpus data processing;</li>
+                  <li>Architect automatic document translation system with post-editing;</li>
+                </ul>
+                <p><InlineTitle>Tech Stack</InlineTitle> Node, React, Typescript, C#, Memcached, Python, MySQL, 
+			 Styled-Components, ESLint, Git, Jenkins, Docker, Kubernetes, Azure</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>02/2020 – 12/2024 <InlineTitle>Senior Software Engineer</InlineTitle>Medallia, Irvine, CA</p>
 
         <table>
           <tbody>
